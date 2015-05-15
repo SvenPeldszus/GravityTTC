@@ -1,0 +1,36 @@
+digraph "ParamTypeCreateRule" {
+	label="_____________________________\n eq(jType.name,tType.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "jTypeToTType : ClassToTClass" [shape=hexagon, color=green];
+	          "extendedParameterToTParameter : ExtendedParameterToTParameter" [shape=hexagon, color=black];
+
+	          "jTypeToTType : ClassToTClass" -> "tType : TClass" [color=green, label="target", fontsize=11];
+	          "extendedParameterToTParameter : ExtendedParameterToTParameter" -> "extendedParameter : ExtendedParameter" [color=black, label="source", fontsize=11];
+	          "extendedParameterToTParameter : ExtendedParameterToTParameter" -> "tParameter : TParameter" [color=black, label="target", fontsize=11];
+	          "jTypeToTType : ClassToTClass" -> "jType : Class" [color=green, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jType : Class" [shape=record, color=black, label="{jType : Class | }"];
+	          "extendedParameter : ExtendedParameter" [shape=record, color=black, label="{extendedParameter : ExtendedParameter | }"];
+
+	          "extendedParameter : ExtendedParameter" -> "jType : Class" [color=green, label="type", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tMethod : TMethod" [shape=record, color=black, label="{tMethod : TMethod | }"];
+	          "tExistingType : TClass" [shape=record, color=blue, label="{tExistingType : TClass | }"];
+	          "tType : TClass" [shape=record, color=green, label="{tType : TClass | }"];
+	          "tParameterList : TParameterList" [shape=record, color=black, label="{tParameterList : TParameterList | }"];
+	          "tMethodSignature : TMethodSignature" [shape=record, color=black, label="{tMethodSignature : TMethodSignature | }"];
+	          "tParameter : TParameter" [shape=record, color=black, label="{tParameter : TParameter | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+
+	          "tMethodSignature : TMethodSignature" -> "tParameterList : TParameterList" [color=black, label="paramList", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tMethod : TMethod" [color=black, label="method", fontsize=11];
+	          "tParameterList : TParameterList" -> "tParameter : TParameter" [color=black, label="entries", fontsize=11];
+	          "tParameter : TParameter" -> "tType : TClass" [color=green, label="tClass", fontsize=11];
+	          "pg : TypeGraph" -> "tType : TClass" [color=green, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "tMethod : TMethod" [color=black, label="methods", fontsize=11];
+	          "pg : TypeGraph" -> "tExistingType : TClass" [color=black, label="classes", fontsize=11];
+	}
+}

@@ -1,0 +1,21 @@
+digraph "ReturnVoid" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" [shape=hexagon, color=black];
+
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" -> "jMethod : ClassMethod" [color=black, label="source", fontsize=11];
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" -> "tMethoddefinition : TMethodDefinition" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jPrimitiveType : Void" [shape=record, color=green, label="{jPrimitiveType : Void | }"];
+	          "jMethod : ClassMethod" [shape=record, color=black, label="{jMethod : ClassMethod | }"];
+
+	          "jMethod : ClassMethod" -> "jPrimitiveType : Void" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tMethoddefinition : TMethodDefinition" [shape=record, color=black, label="{tMethoddefinition : TMethodDefinition | }"];
+
+
+	}
+}

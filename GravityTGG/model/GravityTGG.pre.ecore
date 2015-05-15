@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activities="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//activities" xmlns:callExpressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//calls/callExpressions" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:expressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//expressions" xmlns:patternExpressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//patterns/patternExpressions" name="GravityTGG" nsURI="platform:/plugin/GravityTGG/model/GravityTGG.ecore" nsPrefix="GravityTGG">
+  <eClassifiers xsi:type="ecore:EClass" name="MemberToTMember">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Member"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassMethodToTMethod">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassMethodToTMethodDefinition">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassMethodToTMethodSignature">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassToTClass">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompilationUnitToTClass">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedJamoppJavaContainerToTypeGraph">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedJamoppPackageElementToTPackage">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterListToTClass">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterListToTParameter">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterListToTParameterList">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterToTParameter">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldToTField">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldToTFieldDefinition">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldToTFieldSignature">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeToTClass">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//types/Type"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterToTypeGraph">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedTypeToTypeGraph">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedTypeToTClass">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterListToTMethodSignature">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IdentifierReferenceToTMethodDefinition">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/IdentifierReference"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedMethodNameToTMethod">
+    <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractCorrespondence"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eSubpackages name="Rules" nsURI="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules" nsPrefix="Rules">
+    <eClassifiers xsi:type="ecore:EClass" name="ClassDefault">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterTypeLibCreate">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FieldNameExisting">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterTypeLibLink">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodDefinitionLinkSignature">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodLinkClass">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Inheritance">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterListLinkFirst">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterTypeUserDefined">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodSignatureLinkDefinition">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterLinkListNext">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FieldNameCreate">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodNameCreate">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Class1">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MethodSignatureCreate">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PackageRoot">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PackageChild">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProgramGraphCreate">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnTypeUserDefined">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnTypeFromLibCreate">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ReturnTypeFromLibLink">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterCreateNew">
+      <eSuperTypes href="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore#//AbstractRule"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="Postprocessing" nsURI="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Postprocessing" nsPrefix="Postprocessing">
+    <eClassifiers xsi:type="ecore:EClass" name="MemberCorrespondence">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1">
+        <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Member"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TGGPostprocessing">
+      <eOperations xsi:type="activities:MoflonEOperation" name="createAccessEdgesForMethod">
+        <eParameters name="match" eType="//ClassMethodToTMethodDefinition"/>
+        <activity owningOperation="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod">
+          <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.0"/>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode1" comment="ActivityNode1" outgoing="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.1" incoming="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.0">
+            <storyPattern comment="ActivityNode1">
+              <objectVariable type="//ClassMethodToTMethodDefinition" name="match" outgoingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0 //Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+              <objectVariable name="jMethod" incomingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+              </objectVariable>
+              <objectVariable name="tDefinition" incomingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" bindingState="BOUND"/>
+              <linkVariable name="source" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" type="//ClassMethodToTMethodDefinition/source"/>
+              <linkVariable name="target" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" type="//ClassMethodToTMethodDefinition/target"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode2" comment="ActivityNode2" outgoing="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.2 //Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.3" incoming="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.1 //Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.6" forEach="true">
+            <storyPattern comment="ActivityNode2">
+              <objectVariable name="jMethod" outgoingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+              </objectVariable>
+              <objectVariable name="returnStatement" incomingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//statements/Return"/>
+              </objectVariable>
+              <objectVariable name="identifierReference" incomingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/IdentifierReference"/>
+              </objectVariable>
+              <linkVariable name="statements" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//statements/StatementListContainer/statements"/>
+              </linkVariable>
+              <linkVariable name="returnValue" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1">
+                <type href="http://www.emftext.org/java#//statements/Return/returnValue"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode4" comment="ActivityNode4" outgoing="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.4 //Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.5" incoming="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.3 //Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.7" forEach="true">
+            <storyPattern comment="ActivityNode4">
+              <objectVariable name="jMethod" outgoingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+              </objectVariable>
+              <objectVariable name="expressionStatement" incomingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//statements/ExpressionStatement"/>
+              </objectVariable>
+              <objectVariable name="identifierReference2" incomingLink="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/IdentifierReference"/>
+              </objectVariable>
+              <linkVariable name="statements" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//statements/StatementListContainer/statements"/>
+              </linkVariable>
+              <linkVariable name="expression" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1">
+                <type href="http://www.emftext.org/java#//statements/ExpressionStatement/expression"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode12" outgoing="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.6" incoming="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.2">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/handleElementReference">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/reference">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.2"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/tMethod">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.3"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode13" outgoing="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.7" incoming="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.4">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/handleElementReference">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/reference">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/tMethod">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.3"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityEdge.5"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.4" guard="EACH_TIME"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3" guard="END"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.5" guard="EACH_TIME"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.6" guard="END"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.4" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.2"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/createAccessEdgesForMethod/@activity/@ownedActivityNode.3"/>
+        </activity>
+      </eOperations>
+      <eOperations xsi:type="activities:MoflonEOperation" name="handleElementReference">
+        <eParameters name="reference">
+          <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/ElementReference"/>
+        </eParameters>
+        <eParameters name="tMethod">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+        </eParameters>
+        <activity owningOperation="//Postprocessing/TGGPostprocessing/handleElementReference">
+          <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.0"/>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode6" comment="ActivityNode6" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.1 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.2" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.16">
+            <storyPattern comment="ActivityNode6">
+              <objectVariable name="reference" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/ElementReference"/>
+              </objectVariable>
+              <objectVariable name="method" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/ClassMethod"/>
+              </objectVariable>
+              <linkVariable name="target" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//references/ElementReference/target"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode7" comment="ActivityNode7" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.3 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.4" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.1">
+            <storyPattern comment="ActivityNode7">
+              <objectVariable name="reference" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/ElementReference"/>
+              </objectVariable>
+              <objectVariable name="field" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+              </objectVariable>
+              <linkVariable name="target" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//references/ElementReference/target"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode8" comment="ActivityNode8" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.5 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.6" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.2">
+            <storyPattern comment="ActivityNode8">
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+              <objectVariable type="//Postprocessing/MemberCorrespondence" name="correspondence" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1"/>
+              <objectVariable name="method" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/ClassMethod"/>
+              </objectVariable>
+              <linkVariable name="memberCorrespondences" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0" type="//Postprocessing/TGGPostprocessing/memberCorrespondences"/>
+              <linkVariable name="source" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" type="//Postprocessing/MemberCorrespondence/source"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode20" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.7" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.6">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/creadeAndLink">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/creadeAndLink/jAccessed">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/creadeAndLink/tAccessing">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode10" comment="ActivityNode10" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.8" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.5">
+            <storyPattern comment="ActivityNode10">
+              <objectVariable name="tMethod" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <objectVariable type="//Postprocessing/MemberCorrespondence" name="correspondence" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+              <objectVariable name="targetMethod" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <linkVariable name="access" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+              </linkVariable>
+              <linkVariable name="target" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" type="//Postprocessing/MemberCorrespondence/target"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode8" comment="ActivityNode8" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.9 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.10" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.4">
+            <storyPattern comment="ActivityNode8">
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+              <objectVariable type="//Postprocessing/MemberCorrespondence" name="correspondence2" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.1"/>
+              <objectVariable name="field" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+              </objectVariable>
+              <linkVariable name="memberCorrespondences" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0" type="//Postprocessing/TGGPostprocessing/memberCorrespondences"/>
+              <linkVariable name="source" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" type="//Postprocessing/MemberCorrespondence/source"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode10" comment="ActivityNode10" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.11" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.9">
+            <storyPattern comment="ActivityNode10">
+              <objectVariable name="tMethod" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <objectVariable type="//Postprocessing/MemberCorrespondence" name="correspondence2" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+              <objectVariable name="targetField" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+              </objectVariable>
+              <linkVariable name="access" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+              </linkVariable>
+              <linkVariable name="target" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1" type="//Postprocessing/MemberCorrespondence/target"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode11" comment="ActivityNode11" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.12 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.13" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.3 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.7 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.8 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.11 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.15">
+            <storyPattern comment="ActivityNode11">
+              <objectVariable name="reference" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/ElementReference"/>
+              </objectVariable>
+              <objectVariable name="call" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/MethodCall"/>
+              </objectVariable>
+              <linkVariable name="next" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//references/Reference/next"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode15" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.14" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.17">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/handleElementReference">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/reference">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.1"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/tMethod">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.14"/>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode19" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.15" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.10">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/createAndLink">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/createAndLink/jAccessed">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/createAndLink/tAccessing">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.18"/>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode33" comment="ActivityNode33" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.16" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.0">
+            <storyPattern comment="ActivityNode33">
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" bindingState="BOUND"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode38" comment="ActivityNode38" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.17 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.18" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.12 //Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.19">
+            <storyPattern comment="ActivityNode38">
+              <objectVariable name="reference" outgoingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/ElementReference"/>
+              </objectVariable>
+              <objectVariable name="next" incomingLink="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/ElementReference"/>
+              </objectVariable>
+              <linkVariable name="next" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//references/Reference/next"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode39" outgoing="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.19" incoming="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityEdge.13">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/handleArguments">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleArguments/reference">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleArguments/tMethod">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.13"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.4" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.4" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.6" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.11" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.7" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.15" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.9" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.10"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.11" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.8"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.13" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.1"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.9" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.12" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.15" target="//Postprocessing/TGGPostprocessing/handleElementReference/@activity/@ownedActivityNode.14"/>
+        </activity>
+      </eOperations>
+      <eOperations xsi:type="activities:MoflonEOperation" name="creadeAndLink">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="jAccessed">
+          <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/ClassMethod"/>
+        </eParameters>
+        <eParameters name="tAccessing">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+        </eParameters>
+        <activity owningOperation="//Postprocessing/TGGPostprocessing/creadeAndLink">
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode21" comment="ActivityNode21" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.0 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.1" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.8">
+            <storyPattern comment="ActivityNode21">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tClass" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+                <attributeAssignment>
+                  <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                  <valueExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/getFullyQualifiedName">
+                    <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/getFullyQualifiedName/jCompilationUnit">
+                      <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2"/>
+                    </ownedParameterBindings>
+                    <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1"/>
+                  </valueExpression>
+                </attributeAssignment>
+              </objectVariable>
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <linkVariable name="classes" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+              </linkVariable>
+              <linkVariable name="defines" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode22" comment="ActivityNode22" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.2" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.5">
+            <storyPattern comment="ActivityNode22">
+              <objectVariable name="pg" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+              <linkVariable name="pg" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" type="//Postprocessing/TGGPostprocessing/pg"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode23" comment="ActivityNode23" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.3 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.4" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.15 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.17">
+            <storyPattern comment="ActivityNode23">
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <objectVariable name="tMethod" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.1 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.3">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0">
+                      <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <objectVariable name="tNewSignature" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.1 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.2 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+              </objectVariable>
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.3" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tParamList" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.2" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+              </objectVariable>
+              <linkVariable name="definitions" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.2" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+              </linkVariable>
+              <linkVariable name="method" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.2" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/method"/>
+              </linkVariable>
+              <linkVariable name="paramList" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.4" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.2" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/paramList"/>
+              </linkVariable>
+              <linkVariable name="methods" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.3">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.1">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.5"/>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode16" comment="ActivityNode16" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.6 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.7" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.2">
+            <storyPattern comment="ActivityNode16">
+              <objectVariable name="jAccessed" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/ClassMethod"/>
+              </objectVariable>
+              <objectVariable name="jClass" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+              </objectVariable>
+              <objectVariable name="jCompilationUnit" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+              </objectVariable>
+              <linkVariable name="members" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1">
+                <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+              </linkVariable>
+              <linkVariable name="classifiers" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2">
+                <type href="http://www.emftext.org/java#//containers/CompilationUnit/classifiers"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode17" comment="ActivityNode17" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.8 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.9" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.14">
+            <storyPattern comment="ActivityNode17">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tClass" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/getFullyQualifiedName">
+                      <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/getFullyQualifiedName/jCompilationUnit">
+                        <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2"/>
+                      </ownedParameterBindings>
+                      <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <linkVariable name="classes" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode18" comment="ActivityNode18" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.10 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.11" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.9">
+            <storyPattern comment="ActivityNode18">
+              <objectVariable name="tClass" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.1" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/getFullyQualifiedName">
+                      <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/getFullyQualifiedName/jCompilationUnit">
+                        <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2"/>
+                      </ownedParameterBindings>
+                      <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <linkVariable name="defines" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+              </linkVariable>
+              <linkVariable name="classes" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.2">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode27" comment="ActivityNode27" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.12 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.13" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.4 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.18" forEach="true">
+            <storyPattern comment="ActivityNode27">
+              <objectVariable name="jAccessed" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/ClassMethod"/>
+              </objectVariable>
+              <objectVariable name="jParam" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//parameters/OrdinaryParameter"/>
+              </objectVariable>
+              <linkVariable name="parameters" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//parameters/Parametrizable/parameters"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.11">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.3">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode24" comment="ActivityNode24" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.14" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.6">
+            <storyPattern comment="ActivityNode24">
+              <objectVariable name="tAccessing" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.11/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+              </objectVariable>
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.11/@storyPattern/@linkVariable.0" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+              </objectVariable>
+              <linkVariable name="access" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode25" comment="ActivityNode25" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.15 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.16" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.0 //Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.10">
+            <storyPattern comment="ActivityNode25">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tMethod" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0">
+                      <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.1">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <linkVariable name="methods" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.0">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode26" comment="ActivityNode26" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.17" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.16">
+            <storyPattern comment="ActivityNode26">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.13/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tMethod" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.13/@storyPattern/@linkVariable.0" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+                <attributeAssignment>
+                  <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod/tName"/>
+                  <valueExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0">
+                    <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+                  </valueExpression>
+                </attributeAssignment>
+              </objectVariable>
+              <linkVariable name="methods" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode30" comment="ActivityNode30" outgoing="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.18" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.12">
+            <storyPattern comment="ActivityNode30">
+              <objectVariable name="tParamList" outgoingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+              </objectVariable>
+              <objectVariable name="tParam" incomingLink="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.0" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+              </objectVariable>
+              <linkVariable name="entries" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList/entries"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.13">
+            <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityEdge.7">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.3" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.10" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.4" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.1"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.11" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.16" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.0" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.7" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.9" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.14" guard="EACH_TIME"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.15" guard="END"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.11" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.6"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.12" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.13" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.13" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.2"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.14" target="//Postprocessing/TGGPostprocessing/creadeAndLink/@activity/@ownedActivityNode.8"/>
+        </activity>
+      </eOperations>
+      <eOperations xsi:type="activities:MoflonEOperation" name="getFullyQualifiedName">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eParameters name="jCompilationUnit">
+          <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+        </eParameters>
+      </eOperations>
+      <eOperations xsi:type="activities:MoflonEOperation" name="createAndLink">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        <eParameters name="jAccessed">
+          <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+        </eParameters>
+        <eParameters name="tAccessing">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+        </eParameters>
+        <activity owningOperation="//Postprocessing/TGGPostprocessing/createAndLink">
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode028" comment="ActivityNode028" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.0 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.1" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.13">
+            <storyPattern comment="ActivityNode028">
+              <objectVariable name="jCompilationunit" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+              </objectVariable>
+              <objectVariable name="jClass" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+              </objectVariable>
+              <objectVariable name="jAccessed" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+              </objectVariable>
+              <linkVariable name="classifiers" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//containers/CompilationUnit/classifiers"/>
+              </linkVariable>
+              <linkVariable name="members" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1">
+                <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode029" comment="ActivityNode029" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.2" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.0">
+            <storyPattern comment="ActivityNode029">
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+              </objectVariable>
+              <objectVariable name="tAccessing" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+              </objectVariable>
+              <linkVariable name="access" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.7">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode017" comment="ActivityNode017" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.3 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.4" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.2">
+            <storyPattern comment="ActivityNode017">
+              <objectVariable name="tClass" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/getFullyQualifiedName">
+                      <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/getFullyQualifiedName/jCompilationUnit">
+                        <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0"/>
+                      </ownedParameterBindings>
+                      <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.0"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <linkVariable name="classes" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode018" comment="ActivityNode018" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.5 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.6" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.4">
+            <storyPattern comment="ActivityNode018">
+              <objectVariable name="tClass" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.1" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/getFullyQualifiedName">
+                      <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/getFullyQualifiedName/jCompilationUnit">
+                        <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0"/>
+                      </ownedParameterBindings>
+                      <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.0"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+              </objectVariable>
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <linkVariable name="defines" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+              </linkVariable>
+              <linkVariable name="classes" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.2">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode021" comment="ActivityNode021" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.7 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.8" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.3">
+            <storyPattern comment="ActivityNode021">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tClass" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+                <attributeAssignment>
+                  <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                  <valueExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/getFullyQualifiedName">
+                    <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/getFullyQualifiedName/jCompilationUnit">
+                      <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0"/>
+                    </ownedParameterBindings>
+                    <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.0"/>
+                  </valueExpression>
+                </attributeAssignment>
+              </objectVariable>
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+              </objectVariable>
+              <linkVariable name="classes" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+              </linkVariable>
+              <linkVariable name="defines" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.6">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode025" comment="ActivityNode025" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.9 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.10" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.5 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.8">
+            <storyPattern comment="ActivityNode025">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tField" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2">
+                      <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <linkVariable name="fields" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/fields"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode031" comment="ActivityNode031" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.11" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.9 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.12">
+            <storyPattern comment="ActivityNode031">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tField" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+                <constraint>
+                  <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                    <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2">
+                      <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+                    </rightExpression>
+                    <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1">
+                      <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField/tName"/>
+                    </leftExpression>
+                  </constraintExpression>
+                </constraint>
+              </objectVariable>
+              <objectVariable name="tNewSignature" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1 //Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.2" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature"/>
+              </objectVariable>
+              <objectVariable name="tAccessed" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.2" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+              </objectVariable>
+              <linkVariable name="fields" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/fields"/>
+              </linkVariable>
+              <linkVariable name="field" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature/field"/>
+              </linkVariable>
+              <linkVariable name="definitions" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.3" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature/definitions"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.11">
+            <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode032" comment="ActivityNode032" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.12" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.10">
+            <storyPattern comment="ActivityNode032">
+              <objectVariable name="pg" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.10/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <objectVariable name="tField" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.10/@storyPattern/@linkVariable.0" bindingOperator="CREATE">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+                <attributeAssignment>
+                  <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField/tName"/>
+                  <valueExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2">
+                    <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+                  </valueExpression>
+                </attributeAssignment>
+              </objectVariable>
+              <linkVariable name="fields" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.10/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.10/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+                <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/fields"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode022" comment="ActivityNode022" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.13" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.14">
+            <storyPattern comment="ActivityNode022">
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" outgoingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+              <objectVariable name="pg" incomingLink="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+              </objectVariable>
+              <linkVariable name="pg" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11/@storyPattern/@objectVariable.0" type="//Postprocessing/TGGPostprocessing/pg"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.1">
+            <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityEdge.14"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.1" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.12" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.4" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.6" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.2" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8" guard="SUCCESS"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.7" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.10" guard="FAILURE"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.9"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.10" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.8"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.0"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.13" target="//Postprocessing/TGGPostprocessing/createAndLink/@activity/@ownedActivityNode.11"/>
+        </activity>
+      </eOperations>
+      <eOperations xsi:type="activities:MoflonEOperation" name="handleArguments">
+        <eParameters name="reference">
+          <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/MethodCall"/>
+        </eParameters>
+        <eParameters name="tMethod">
+          <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+        </eParameters>
+        <activity owningOperation="//Postprocessing/TGGPostprocessing/handleArguments">
+          <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.0"/>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode34" comment="ActivityNode34" outgoing="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.1 //Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.2" incoming="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.4 //Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.6" forEach="true">
+            <storyPattern comment="ActivityNode34">
+              <objectVariable name="reference" outgoingLink="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/MethodCall"/>
+              </objectVariable>
+              <objectVariable name="additive" incomingLink="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//expressions/AdditiveExpression"/>
+              </objectVariable>
+              <linkVariable name="arguments" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0">
+                <type href="http://www.emftext.org/java#//references/Argumentable/arguments"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode35" comment="ActivityNode35" outgoing="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.3 //Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.4" incoming="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.1 //Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.5" forEach="true">
+            <storyPattern comment="ActivityNode35">
+              <objectVariable name="identifierReference" incomingLink="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//references/IdentifierReference"/>
+              </objectVariable>
+              <objectVariable name="additive" outgoingLink="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" bindingState="BOUND">
+                <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//expressions/AdditiveExpression"/>
+              </objectVariable>
+              <linkVariable name="children" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0" source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1">
+                <type href="http://www.emftext.org/java#//expressions/AdditiveExpression/children"/>
+              </linkVariable>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode36" outgoing="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.5" incoming="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.3">
+            <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Postprocessing/TGGPostprocessing/handleElementReference">
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/reference">
+                <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0"/>
+              </ownedParameterBindings>
+              <ownedParameterBindings parameter="//Postprocessing/TGGPostprocessing/handleElementReference/tMethod">
+                <valueExpression xsi:type="callExpressions:ParameterExpression" parameter="//Postprocessing/TGGPostprocessing/handleArguments/tMethod"/>
+              </ownedParameterBindings>
+              <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0"/>
+            </statementExpression>
+          </ownedActivityNode>
+          <ownedActivityNode xsi:type="activities:StopNode" incoming="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.2"/>
+          <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode37" comment="ActivityNode37" outgoing="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.6" incoming="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityEdge.0">
+            <storyPattern comment="ActivityNode37">
+              <objectVariable type="//Postprocessing/TGGPostprocessing" name="this" bindingState="BOUND"/>
+            </storyPattern>
+          </ownedActivityNode>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.0" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.5"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2" guard="EACH_TIME"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.4" guard="END"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.3" guard="EACH_TIME"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1" guard="END"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.3" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.2"/>
+          <ownedActivityEdge source="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.5" target="//Postprocessing/TGGPostprocessing/handleArguments/@activity/@ownedActivityNode.1"/>
+        </activity>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="memberCorrespondences" upperBound="-1" eType="//Postprocessing/MemberCorrespondence" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="pg" lowerBound="1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

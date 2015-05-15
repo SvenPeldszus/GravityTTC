@@ -1,0 +1,26 @@
+digraph "PackageRoot" {
+	label="_____________________________\n eq(extendedJamoppPackageElement.name,tPackage.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "typeGraphToExtendedJamoppJavaContainer : ExtendedJamoppJavaContainerToTypeGraph" [shape=hexagon, color=black];
+	          "tPackageToExtendedJamoppPackageElement : ExtendedJamoppPackageElementToTPackage" [shape=hexagon, color=green];
+
+	          "tPackageToExtendedJamoppPackageElement : ExtendedJamoppPackageElementToTPackage" -> "tPackage : TPackage" [color=green, label="target", fontsize=11];
+	          "tPackageToExtendedJamoppPackageElement : ExtendedJamoppPackageElementToTPackage" -> "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [color=green, label="source", fontsize=11];
+	          "typeGraphToExtendedJamoppJavaContainer : ExtendedJamoppJavaContainerToTypeGraph" -> "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [color=black, label="source", fontsize=11];
+	          "typeGraphToExtendedJamoppJavaContainer : ExtendedJamoppJavaContainerToTypeGraph" -> "typeGraph : TypeGraph" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [shape=record, color=green, label="{extendedJamoppPackageElement : ExtendedJamoppPackageElement | }"];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [shape=record, color=black, label="{extendedJamoppJavaContainer : ExtendedJamoppJavaContainer | }"];
+
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" -> "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [color=green, label="extendedJamoppPackageElement", fontsize=11];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" -> "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [color=green, label="roots", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "typeGraph : TypeGraph" [shape=record, color=black, label="{typeGraph : TypeGraph | }"];
+	          "tPackage : TPackage" [shape=record, color=green, label="{tPackage : TPackage | }"];
+
+	          "typeGraph : TypeGraph" -> "tPackage : TPackage" [color=green, label="packages", fontsize=11];
+	}
+}

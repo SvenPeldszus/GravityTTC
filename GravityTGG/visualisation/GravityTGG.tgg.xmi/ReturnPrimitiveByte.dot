@@ -1,0 +1,30 @@
+digraph "ReturnPrimitiveByte" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" [shape=hexagon, color=black];
+	          "jPrimitiveTypeToTPrimitiveType : ByteToTClass" [shape=hexagon, color=green];
+
+	          "jPrimitiveTypeToTPrimitiveType : ByteToTClass" -> "tPrimitiveType : TClass" [color=green, label="target", fontsize=11];
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" -> "jMethod : ClassMethod" [color=black, label="source", fontsize=11];
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" -> "tMethoddefinition : TMethodDefinition" [color=black, label="target", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : ByteToTClass" -> "jPrimitiveType : Byte" [color=green, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jMethod : ClassMethod" [shape=record, color=black, label="{jMethod : ClassMethod | }"];
+	          "jPrimitiveType : Byte" [shape=record, color=green, label="{jPrimitiveType : Byte | }"];
+
+	          "jMethod : ClassMethod" -> "jPrimitiveType : Byte" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tPrimitiveType : TClass" [shape=record, color=black, label="{tPrimitiveType : TClass | tName == \"byte\"}"];
+	          "tMethoddefinition : TMethodDefinition" [shape=record, color=black, label="{tMethoddefinition : TMethodDefinition | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tClass : TClass" [shape=record, color=black, label="{tClass : TClass | }"];
+
+	          "tMethoddefinition : TMethodDefinition" -> "tPrimitiveType : TClass" [color=green, label="returnType", fontsize=11];
+	          "pg : TypeGraph" -> "tPrimitiveType : TClass" [color=black, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "tClass : TClass" [color=black, label="classes", fontsize=11];
+	          "tClass : TClass" -> "tMethoddefinition : TMethodDefinition" [color=black, label="defines", fontsize=11];
+	}
+}

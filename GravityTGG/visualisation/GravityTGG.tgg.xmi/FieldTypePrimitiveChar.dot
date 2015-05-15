@@ -1,0 +1,30 @@
+digraph "FieldTypePrimitiveChar" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jPrimitiveTypeToTPrimitiveType : PrimitiveTypeToTClass" [shape=hexagon, color=green];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" [shape=hexagon, color=black];
+
+	          "jPrimitiveTypeToTPrimitiveType : PrimitiveTypeToTClass" -> "tPrimitiveType : TClass" [color=green, label="target", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : PrimitiveTypeToTClass" -> "jPrimitiveType : Char" [color=green, label="source", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jPrimitiveType : Char" [shape=record, color=green, label="{jPrimitiveType : Char | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "jField : Field" -> "jPrimitiveType : Char" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tField : TField" [shape=record, color=black, label="{tField : TField | }"];
+	          "tPrimitiveType : TClass" [shape=record, color=black, label="{tPrimitiveType : TClass | tName == \"char\"}"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+
+	          "pg : TypeGraph" -> "tField : TField" [color=black, label="fields", fontsize=11];
+	          "pg : TypeGraph" -> "tPrimitiveType : TClass" [color=black, label="classes", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tPrimitiveType : TClass" [color=green, label="type", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tField : TField" [color=black, label="field", fontsize=11];
+	}
+}

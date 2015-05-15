@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: Refactorings;singleton:=true
+Export-Package: Refactorings.impl,
+ Refactorings.Containers.impl,
+ Refactorings,
+ Refactorings.util,
+ Refactorings.Containers.util,
+ Refactorings.Containers
+Bundle-Name: Refactorings
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: TypeGraphBasic,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.moflon.dependencies,
+ org.emftext.language.java;bundle-version="1.4.0"
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: TU Darmstadt

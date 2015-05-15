@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ExtendedJamopp" nsURI="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore" nsPrefix="ExtendedJamopp">
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedClassMethod">
+    <eSuperTypes href="http://www.emftext.org/java#//members/ClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedMethodName" eType="//ExtendedMethodName" eOpposite="//ExtendedMethodName/extendedClassMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter_list" eType="//ExtendedParameterList" eOpposite="//ExtendedParameterList/methods"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedReturnType" eType="//ExtendedType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedJamoppJavaContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compilationUnit" upperBound="-1" containment="true">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roots" upperBound="-1" eType="//ExtendedJamoppPackageElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedJamoppPackageElement" upperBound="-1" eType="//ExtendedJamoppPackageElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedParameterList" upperBound="-1" eType="//ExtendedParameterList" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedMethodName" upperBound="-1" eType="//ExtendedMethodName" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedJamoppPackageElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="successor" upperBound="-1" eType="//ExtendedJamoppPackageElement" eOpposite="//ExtendedJamoppPackageElement/predessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predessor" eType="//ExtendedJamoppPackageElement" eOpposite="//ExtendedJamoppPackageElement/successor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compilationUnit" upperBound="-1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="//ExtendedParameter" eOpposite="//ExtendedParameter/previous"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="//ExtendedParameter" eOpposite="//ExtendedParameter/next"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedParameterType" eType="//ExtendedType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedParameterList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" lowerBound="1" upperBound="-1" eType="//ExtendedClassMethod" eOpposite="//ExtendedClassMethod/parameter_list"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1" eType="//ExtendedParameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="first" eType="//ExtendedParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1">
+      <eType xsi:type="ecore:EClass" href="http://www.emftext.org/java#//types/Type"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFromLib" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedMethodName">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedClassMethod" upperBound="-1" eType="//ExtendedClassMethod" eOpposite="//ExtendedClassMethod/extendedMethodName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdmUtil:CompilerInjection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sdmUtil="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//sdmUtil">
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;compilationUnit&quot;, compilationUnit);&#xA;match.registerObject(&quot;jClass&quot;, jClass);&#xA;match.registerObject(&quot;jContainer&quot;, jContainer);&#xA;match.registerObject(&quot;jPackage&quot;, jPackage);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_jClass_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jClass.name&quot;, true, csp);&#xD;&#xA;var_jClass_name.setValue(jClass.getName());&#xD;&#xA;var_jClass_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tClass_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tClass.tName&quot;, csp);&#xD;&#xA;var_tClass_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jClass_name,var_tClass_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;compilationUnit&quot;,compilationUnit);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainer&quot;,jContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jPackage&quot;,jPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jPackageToTPackage&quot;,jPackageToTPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackage&quot;,tPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraph&quot;,typeGraph);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraphToJContainer&quot;,typeGraphToJContainer);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;compilationUnit&quot;, compilationUnit);&#xA;ruleresult.registerObject(&quot;compilationUnitToTClass&quot;, compilationUnitToTClass);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;jContainer&quot;, jContainer);&#xA;ruleresult.registerObject(&quot;jPackage&quot;, jPackage);&#xA;ruleresult.registerObject(&quot;jPackageToTPackage&quot;, jPackageToTPackage);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;tPackage&quot;, tPackage);&#xA;ruleresult.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;ruleresult.registerObject(&quot;typeGraphToJContainer&quot;, typeGraphToJContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;compilationUnit&quot;).eClass().equals(org.emftext.language.java.containers.ContainersPackage.eINSTANCE.getCompilationUnit()) &amp;&amp; match.getObject(&quot;jClass&quot;).eClass().equals(org.emftext.language.java.classifiers.ClassifiersPackage.eINSTANCE.getClass_());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;tPackage&quot;, tPackage);&#xA;match.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tClass_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tClass.tName&quot;, true, csp);&#xD;&#xA;var_tClass_tName.setValue(tClass.getTName());&#xD;&#xA;var_tClass_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_jClass_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jClass.name&quot;, csp);&#xD;&#xA;var_jClass_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jClass_name,var_tClass_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainer&quot;,jContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jPackage&quot;,jPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jPackageToTPackage&quot;,jPackageToTPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackage&quot;,tPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraph&quot;,typeGraph);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraphToJContainer&quot;,typeGraphToJContainer);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;compilationUnit&quot;, compilationUnit);&#xA;ruleresult.registerObject(&quot;compilationUnitToTClass&quot;, compilationUnitToTClass);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;jContainer&quot;, jContainer);&#xA;ruleresult.registerObject(&quot;jPackage&quot;, jPackage);&#xA;ruleresult.registerObject(&quot;jPackageToTPackage&quot;, jPackageToTPackage);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;tPackage&quot;, tPackage);&#xA;ruleresult.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;ruleresult.registerObject(&quot;typeGraphToJContainer&quot;, typeGraphToJContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tClass&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTClass());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jParameter&quot;, jParameter);&#xA;match.registerObject(&quot;extendedType&quot;, extendedType);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, true, csp);&#xD;&#xA;var_extendedType_typeName.setValue(extendedType.getTypeName());&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tClass_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tClass.tName&quot;, csp);&#xD;&#xA;var_tClass_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tClass_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedType&quot;,extendedType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToPg&quot;,jParameterToPg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;extendedTypeToTClass&quot;, extendedTypeToTClass);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;jParameterToPg&quot;, jParameterToPg);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedType&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedType());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tParameter&quot;, tParameter);&#xA;match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tMethod&quot;, tMethod);&#xA;match.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tClass_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tClass.tName&quot;, true, csp);&#xD;&#xA;var_tClass_tName.setValue(tClass.getTName());&#xD;&#xA;var_tClass_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, csp);&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tClass_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToPg&quot;,jParameterToPg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;extendedTypeToTClass&quot;, extendedTypeToTClass);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;jParameterToPg&quot;, jParameterToPg);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tClass&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTClass());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jContainingClass&quot;, jContainingClass);&#xA;match.registerObject(&quot;jField&quot;, jField);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_jField_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jField.name&quot;, true, csp);&#xD;&#xA;var_jField_name.setValue(jField.getName());&#xD;&#xA;var_jField_name.setType(&quot;String&quot;);&#xD;&#xA;Variable var_tField_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tField.tName&quot;, true, csp);&#xD;&#xA;var_tField_tName.setValue(tField.getTName());&#xD;&#xA;var_tField_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jField_name,var_tField_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainingClass&quot;,jContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jField&quot;,jField);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tContainingClass&quot;,tContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tContainingClassToJContainingClass&quot;,tContainingClassToJContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tField&quot;,tField);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jContainingClass&quot;, jContainingClass);&#xA;ruleresult.registerObject(&quot;jField&quot;, jField);&#xA;ruleresult.registerObject(&quot;jFieldToTField&quot;, jFieldToTField);&#xA;ruleresult.registerObject(&quot;jFieldToTFieldDefinition&quot;, jFieldToTFieldDefinition);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tContainingClass&quot;, tContainingClass);&#xA;ruleresult.registerObject(&quot;tContainingClassToJContainingClass&quot;, tContainingClassToJContainingClass);&#xA;ruleresult.registerObject(&quot;tField&quot;, tField);&#xA;ruleresult.registerObject(&quot;tFieldDefinition&quot;, tFieldDefinition);&#xA;ruleresult.registerObject(&quot;tFieldSignature&quot;, tFieldSignature);&#xA;ruleresult.registerObject(&quot;tFieldSignatureToJField&quot;, tFieldSignatureToJField);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jField&quot;).eClass().equals(org.emftext.language.java.members.MembersPackage.eINSTANCE.getField());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tContainingClass&quot;, tContainingClass);&#xA;match.registerObject(&quot;tField&quot;, tField);&#xA;match.registerObject(&quot;tFieldDefinition&quot;, tFieldDefinition);&#xA;match.registerObject(&quot;tFieldSignature&quot;, tFieldSignature);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tField_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tField.tName&quot;, true, csp);&#xD;&#xA;var_tField_tName.setValue(tField.getTName());&#xD;&#xA;var_tField_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_jField_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jField.name&quot;, csp);&#xD;&#xA;var_jField_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jField_name,var_tField_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainingClass&quot;,jContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tContainingClass&quot;,tContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tContainingClassToJContainingClass&quot;,tContainingClassToJContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tField&quot;,tField);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tFieldDefinition&quot;,tFieldDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tFieldSignature&quot;,tFieldSignature);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jContainingClass&quot;, jContainingClass);&#xA;ruleresult.registerObject(&quot;jField&quot;, jField);&#xA;ruleresult.registerObject(&quot;jFieldToTField&quot;, jFieldToTField);&#xA;ruleresult.registerObject(&quot;jFieldToTFieldDefinition&quot;, jFieldToTFieldDefinition);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tContainingClass&quot;, tContainingClass);&#xA;ruleresult.registerObject(&quot;tContainingClassToJContainingClass&quot;, tContainingClassToJContainingClass);&#xA;ruleresult.registerObject(&quot;tField&quot;, tField);&#xA;ruleresult.registerObject(&quot;tFieldDefinition&quot;, tFieldDefinition);&#xA;ruleresult.registerObject(&quot;tFieldSignature&quot;, tFieldSignature);&#xA;ruleresult.registerObject(&quot;tFieldSignatureToJField&quot;, tFieldSignatureToJField);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tFieldDefinition&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTFieldDefinition()) &amp;&amp; match.getObject(&quot;tFieldSignature&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTFieldSignature());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;extendedType&quot;, extendedType);&#xA;match.registerObject(&quot;jParameter&quot;, jParameter);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, true, csp);&#xD;&#xA;var_extendedType_typeName.setValue(extendedType.getTypeName());&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;Variable var_tClass_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tClass.tName&quot;, true, csp);&#xD;&#xA;var_tClass_tName.setValue(tClass.getTName());&#xD;&#xA;var_tClass_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tClass_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedType&quot;,extendedType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToPg&quot;,jParameterToPg);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;extendedTypeToTClass&quot;, extendedTypeToTClass);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;ruleresult.registerObject(&quot;jParameterToPg&quot;, jParameterToPg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedType&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedType());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tParameter&quot;, tParameter);&#xA;match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tMethod&quot;, tMethod);&#xA;match.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tClass_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tClass.tName&quot;, true, csp);&#xD;&#xA;var_tClass_tName.setValue(tClass.getTName());&#xD;&#xA;var_tClass_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, csp);&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tClass_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToPg&quot;,jParameterToPg);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;extendedTypeToTClass&quot;, extendedTypeToTClass);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;ruleresult.registerObject(&quot;jParameterToPg&quot;, jParameterToPg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;match.registerObject(&quot;JMethodname&quot;, JMethodname);&#xA;match.registerObject(&quot;jParamList&quot;, jParamList);&#xA;match.registerObject(&quot;ejjc&quot;, ejjc);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodSignature&quot;,jMethodToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;JMethodname&quot;,JMethodname);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;JMethodnameToTMethod&quot;,JMethodnameToTMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamList&quot;,jParamList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamListToTMethodSignature&quot;,jParamListToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;ejjc&quot;,ejjc);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodSignature&quot;, jMethodToTMethodSignature);&#xA;ruleresult.registerObject(&quot;JMethodname&quot;, JMethodname);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;JMethodnameToTMethod&quot;, JMethodnameToTMethod);&#xA;ruleresult.registerObject(&quot;jParamList&quot;, jParamList);&#xA;ruleresult.registerObject(&quot;jParamListToTMethodSignature&quot;, jParamListToTMethodSignature);&#xA;ruleresult.registerObject(&quot;ejjc&quot;, ejjc);&#xA;ruleresult.registerObject(&quot;jMethodToTMethod&quot;, jMethodToTMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tMethod&quot;, tMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodSignature&quot;,jMethodToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;JMethodname&quot;,JMethodname);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;JMethodnameToTMethod&quot;,JMethodnameToTMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamList&quot;,jParamList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamListToTMethodSignature&quot;,jParamListToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;ejjc&quot;,ejjc);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodSignature&quot;, jMethodToTMethodSignature);&#xA;ruleresult.registerObject(&quot;JMethodname&quot;, JMethodname);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;JMethodnameToTMethod&quot;, JMethodnameToTMethod);&#xA;ruleresult.registerObject(&quot;jParamList&quot;, jParamList);&#xA;ruleresult.registerObject(&quot;jParamListToTMethodSignature&quot;, jParamListToTMethodSignature);&#xA;ruleresult.registerObject(&quot;ejjc&quot;, ejjc);&#xA;ruleresult.registerObject(&quot;jMethodToTMethod&quot;, jMethodToTMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;match.registerObject(&quot;jClass&quot;, jClass);&#xA;match.registerObject(&quot;jParamList&quot;, jParamList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodSignature&quot;,jMethodToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamList&quot;,jParamList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamListToTMethodSignature&quot;,jParamListToTMethodSignature);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodSignature&quot;, jMethodToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;jParamList&quot;, jParamList);&#xA;ruleresult.registerObject(&quot;jParamListToTMethodSignature&quot;, jParamListToTMethodSignature);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tClass&quot;, tClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodSignature&quot;,jMethodToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamList&quot;,jParamList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParamListToTMethodSignature&quot;,jParamListToTMethodSignature);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodSignature&quot;, jMethodToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;jParamList&quot;, jParamList);&#xA;ruleresult.registerObject(&quot;jParamListToTMethodSignature&quot;, jParamListToTMethodSignature);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;classifierReference&quot;, classifierReference);&#xA;match.registerObject(&quot;jClass&quot;, jClass);&#xA;match.registerObject(&quot;jParentClass&quot;, jParentClass);&#xA;match.registerObject(&quot;nameSpace&quot;, nameSpace);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;classifierReference&quot;,classifierReference);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParentClass&quot;,jParentClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParentClassToTParentClass&quot;,jParentClassToTParentClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;nameSpace&quot;,nameSpace);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParentClass&quot;,tParentClass);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;classifierReference&quot;, classifierReference);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;jParentClass&quot;, jParentClass);&#xA;ruleresult.registerObject(&quot;jParentClassToTParentClass&quot;, jParentClassToTParentClass);&#xA;ruleresult.registerObject(&quot;nameSpace&quot;, nameSpace);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;tParentClass&quot;, tParentClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;classifierReference&quot;).eClass().equals(org.emftext.language.java.types.TypesPackage.eINSTANCE.getClassifierReference()) &amp;&amp; match.getObject(&quot;nameSpace&quot;).eClass().equals(org.emftext.language.java.types.TypesPackage.eINSTANCE.getNamespaceClassifierReference());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;tParentClass&quot;, tParentClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParentClass&quot;,jParentClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParentClassToTParentClass&quot;,jParentClassToTParentClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParentClass&quot;,tParentClass);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;classifierReference&quot;, classifierReference);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;jParentClass&quot;, jParentClass);&#xA;ruleresult.registerObject(&quot;jParentClassToTParentClass&quot;, jParentClassToTParentClass);&#xA;ruleresult.registerObject(&quot;nameSpace&quot;, nameSpace);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;tParentClass&quot;, tParentClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jParameter&quot;, jParameter);&#xA;match.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTParameterList&quot;,jParameterListToTParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tParameter&quot;, tParameter);&#xA;match.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTParameterList&quot;,jParameterListToTParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;extendedType&quot;, extendedType);&#xA;match.registerObject(&quot;jParameter&quot;, jParameter);&#xA;match.registerObject(&quot;jClass&quot;, jClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedType&quot;,extendedType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;extendedTypeToTClass&quot;, extendedTypeToTClass);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedType&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedType());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;tParameter&quot;, tParameter);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;extendedTypeToTClass&quot;, extendedTypeToTClass);&#xA;ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;match.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTParameterList&quot;,jParameterListToTParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodSignature&quot;, jMethodToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTParameterList&quot;,jParameterListToTParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodSignature&quot;, jMethodToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jNextParameter&quot;, jNextParameter);&#xA;match.registerObject(&quot;jParameter&quot;, jParameter);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jNextParameter&quot;,jNextParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;nextPArameterToTnextPArameter&quot;,nextPArameterToTnextPArameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tNextParameter&quot;,tNextParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jNextParameter&quot;, jNextParameter);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;nextPArameterToTnextPArameter&quot;, nextPArameterToTnextPArameter);&#xA;ruleresult.registerObject(&quot;tNextParameter&quot;, tNextParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tNextParameter&quot;, tNextParameter);&#xA;match.registerObject(&quot;tParameter&quot;, tParameter);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jNextParameter&quot;,jNextParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterToTParameter&quot;,jParameterToTParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;nextPArameterToTnextPArameter&quot;,nextPArameterToTnextPArameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tNextParameter&quot;,tNextParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jNextParameter&quot;, jNextParameter);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;nextPArameterToTnextPArameter&quot;, nextPArameterToTnextPArameter);&#xA;ruleresult.registerObject(&quot;tNextParameter&quot;, tNextParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jContainingClass&quot;, jContainingClass);&#xA;match.registerObject(&quot;jField&quot;, jField);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_jField_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jField.name&quot;, true, csp);&#xD;&#xA;var_jField_name.setValue(jField.getName());&#xD;&#xA;var_jField_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tField_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tField.tName&quot;, csp);&#xD;&#xA;var_tField_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jField_name,var_tField_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainingClass&quot;,jContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tContainingClass&quot;,tContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jField&quot;,jField);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainingClassToTContainingClass&quot;,jContainingClassToTContainingClass);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tFieldSignature&quot;, tFieldSignature);&#xA;ruleresult.registerObject(&quot;tFieldDefinition&quot;, tFieldDefinition);&#xA;ruleresult.registerObject(&quot;jFieldToTFieldSignature&quot;, jFieldToTFieldSignature);&#xA;ruleresult.registerObject(&quot;jFieldToTFieldDefinition&quot;, jFieldToTFieldDefinition);&#xA;ruleresult.registerObject(&quot;jContainingClass&quot;, jContainingClass);&#xA;ruleresult.registerObject(&quot;tContainingClass&quot;, tContainingClass);&#xA;ruleresult.registerObject(&quot;jField&quot;, jField);&#xA;ruleresult.registerObject(&quot;jFieldToTField&quot;, jFieldToTField);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tField&quot;, tField);&#xA;ruleresult.registerObject(&quot;jContainingClassToTContainingClass&quot;, jContainingClassToTContainingClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jField&quot;).eClass().equals(org.emftext.language.java.members.MembersPackage.eINSTANCE.getField());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tFieldSignature&quot;, tFieldSignature);&#xA;match.registerObject(&quot;tFieldDefinition&quot;, tFieldDefinition);&#xA;match.registerObject(&quot;tContainingClass&quot;, tContainingClass);&#xA;match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tField&quot;, tField);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tField_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tField.tName&quot;, true, csp);&#xD;&#xA;var_tField_tName.setValue(tField.getTName());&#xD;&#xA;var_tField_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_jField_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jField.name&quot;, csp);&#xD;&#xA;var_jField_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jField_name,var_tField_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tFieldSignature&quot;,tFieldSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tFieldDefinition&quot;,tFieldDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainingClass&quot;,jContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tContainingClass&quot;,tContainingClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tField&quot;,tField);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jContainingClassToTContainingClass&quot;,jContainingClassToTContainingClass);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;tFieldSignature&quot;, tFieldSignature);&#xA;ruleresult.registerObject(&quot;tFieldDefinition&quot;, tFieldDefinition);&#xA;ruleresult.registerObject(&quot;jFieldToTFieldSignature&quot;, jFieldToTFieldSignature);&#xA;ruleresult.registerObject(&quot;jFieldToTFieldDefinition&quot;, jFieldToTFieldDefinition);&#xA;ruleresult.registerObject(&quot;jContainingClass&quot;, jContainingClass);&#xA;ruleresult.registerObject(&quot;tContainingClass&quot;, tContainingClass);&#xA;ruleresult.registerObject(&quot;jField&quot;, jField);&#xA;ruleresult.registerObject(&quot;jFieldToTField&quot;, jFieldToTField);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tField&quot;, tField);&#xA;ruleresult.registerObject(&quot;jContainingClassToTContainingClass&quot;, jContainingClassToTContainingClass);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tFieldSignature&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTFieldSignature()) &amp;&amp; match.getObject(&quot;tFieldDefinition&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTFieldDefinition()) &amp;&amp; match.getObject(&quot;tField&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTField());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;match.registerObject(&quot;ejjc&quot;, ejjc);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_jMethod_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jMethod.name&quot;, true, csp);&#xD;&#xA;var_jMethod_name.setValue(jMethod.getName());&#xD;&#xA;var_jMethod_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tMethod_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tMethod.tName&quot;, csp);&#xD;&#xA;var_tMethod_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jMethod_name,var_tMethod_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;ejjc&quot;,ejjc);&#xD;&#xA;isApplicableMatch.registerObject(&quot;ejjcToPg&quot;,ejjcToPg);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethodToTMethod&quot;, jMethodToTMethod);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;ejjc&quot;, ejjc);&#xA;ruleresult.registerObject(&quot;ejjcToPg&quot;, ejjcToPg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jMethod&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedMethodName());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethod&quot;, tMethod);&#xA;match.registerObject(&quot;pg&quot;, pg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tMethod_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tMethod.tName&quot;, true, csp);&#xD;&#xA;var_tMethod_tName.setValue(tMethod.getTName());&#xD;&#xA;var_tMethod_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_jMethod_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jMethod.name&quot;, csp);&#xD;&#xA;var_jMethod_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jMethod_name,var_tMethod_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;ejjc&quot;,ejjc);&#xD;&#xA;isApplicableMatch.registerObject(&quot;ejjcToPg&quot;,ejjcToPg);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethodToTMethod&quot;, jMethodToTMethod);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;ejjc&quot;, ejjc);&#xA;ruleresult.registerObject(&quot;ejjcToPg&quot;, ejjcToPg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tMethod&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTMethod());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jMethod&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedClassMethod());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tMethodDefinition&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTMethodDefinition());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jParameterListToTMethodSignature&quot;, jParameterListToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jParameterList&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedParameterList());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jParameterListToTMethodSignature&quot;, jParameterListToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tMethodSignature&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTMethodSignature()) &amp;&amp; match.getObject(&quot;tParameterList&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTParameterList());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;match.registerObject(&quot;extendedJamoppPackageElement&quot;, extendedJamoppPackageElement);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_extendedJamoppPackageElement_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedJamoppPackageElement.name&quot;, true, csp);&#xD;&#xA;var_extendedJamoppPackageElement_name.setValue(extendedJamoppPackageElement.getName());&#xD;&#xA;var_extendedJamoppPackageElement_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tPackage_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tPackage.tName&quot;, csp);&#xD;&#xA;var_tPackage_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedJamoppPackageElement_name,var_tPackage_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppPackageElement&quot;,extendedJamoppPackageElement);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraph&quot;,typeGraph);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraphToExtendedJamoppJavaContainer&quot;,typeGraphToExtendedJamoppJavaContainer);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;extendedJamoppPackageElement&quot;, extendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;tPackage&quot;, tPackage);&#xA;ruleresult.registerObject(&quot;tPackageToExtendedJamoppPackageElement&quot;, tPackageToExtendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;ruleresult.registerObject(&quot;typeGraphToExtendedJamoppJavaContainer&quot;, typeGraphToExtendedJamoppJavaContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedJamoppPackageElement&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedJamoppPackageElement());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tPackage&quot;, tPackage);&#xA;match.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tPackage_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tPackage.tName&quot;, true, csp);&#xD;&#xA;var_tPackage_tName.setValue(tPackage.getTName());&#xD;&#xA;var_tPackage_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_extendedJamoppPackageElement_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedJamoppPackageElement.name&quot;, csp);&#xD;&#xA;var_extendedJamoppPackageElement_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedJamoppPackageElement_name,var_tPackage_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackage&quot;,tPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraph&quot;,typeGraph);&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraphToExtendedJamoppJavaContainer&quot;,typeGraphToExtendedJamoppJavaContainer);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;extendedJamoppPackageElement&quot;, extendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;tPackage&quot;, tPackage);&#xA;ruleresult.registerObject(&quot;tPackageToExtendedJamoppPackageElement&quot;, tPackageToExtendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;ruleresult.registerObject(&quot;typeGraphToExtendedJamoppJavaContainer&quot;, typeGraphToExtendedJamoppJavaContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tPackage&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTPackage());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;match.registerObject(&quot;extendedJamoppPackageElement&quot;, extendedJamoppPackageElement);&#xA;match.registerObject(&quot;jSubPackage&quot;, jSubPackage);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_jSubPackage_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jSubPackage.name&quot;, true, csp);&#xD;&#xA;var_jSubPackage_name.setValue(jSubPackage.getName());&#xD;&#xA;var_jSubPackage_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tSubPackage_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tSubPackage.tName&quot;, csp);&#xD;&#xA;var_tSubPackage_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jSubPackage_name,var_tSubPackage_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppPackageElement&quot;,extendedJamoppPackageElement);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jSubPackage&quot;,jSubPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackage&quot;,tPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackageToExtendedJamoppPackageElement&quot;,tPackageToExtendedJamoppPackageElement);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;extendedJamoppPackageElement&quot;, extendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;jSubPackage&quot;, jSubPackage);&#xA;ruleresult.registerObject(&quot;tPackage&quot;, tPackage);&#xA;ruleresult.registerObject(&quot;tPackageToExtendedJamoppPackageElement&quot;, tPackageToExtendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;tSubPackage&quot;, tSubPackage);&#xA;ruleresult.registerObject(&quot;tSubPackageToJSubPackage&quot;, tSubPackageToJSubPackage);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jSubPackage&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedJamoppPackageElement());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tPackage&quot;, tPackage);&#xA;match.registerObject(&quot;tSubPackage&quot;, tSubPackage);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tSubPackage_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tSubPackage.tName&quot;, true, csp);&#xD;&#xA;var_tSubPackage_tName.setValue(tSubPackage.getTName());&#xD;&#xA;var_tSubPackage_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_jSubPackage_name = CSPFactoryHelper.eINSTANCE.createVariable(&quot;jSubPackage.name&quot;, csp);&#xD;&#xA;var_jSubPackage_name.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_jSubPackage_name,var_tSubPackage_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppPackageElement&quot;,extendedJamoppPackageElement);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackage&quot;,tPackage);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tPackageToExtendedJamoppPackageElement&quot;,tPackageToExtendedJamoppPackageElement);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tSubPackage&quot;,tSubPackage);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;extendedJamoppPackageElement&quot;, extendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;jSubPackage&quot;, jSubPackage);&#xA;ruleresult.registerObject(&quot;tPackage&quot;, tPackage);&#xA;ruleresult.registerObject(&quot;tPackageToExtendedJamoppPackageElement&quot;, tPackageToExtendedJamoppPackageElement);&#xA;ruleresult.registerObject(&quot;tSubPackage&quot;, tSubPackage);&#xA;ruleresult.registerObject(&quot;tSubPackageToJSubPackage&quot;, tSubPackageToJSubPackage);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tSubPackage&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTPackage());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;ruleresult.registerObject(&quot;typeGraphToExtendedJamoppJavaContainer&quot;, typeGraphToExtendedJamoppJavaContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedJamoppJavaContainer&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedJamoppJavaContainer());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;typeGraph&quot;,typeGraph);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;typeGraph&quot;, typeGraph);&#xA;ruleresult.registerObject(&quot;typeGraphToExtendedJamoppJavaContainer&quot;, typeGraphToExtendedJamoppJavaContainer);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;typeGraph&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTypeGraph());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jMethodName&quot;, jMethodName);&#xA;match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;match.registerObject(&quot;extendedType&quot;, extendedType);&#xA;match.registerObject(&quot;jType&quot;, jType);&#xA;match.registerObject(&quot;extendedParameterList&quot;, extendedParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodName&quot;,jMethodName);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedType&quot;,extendedType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jType&quot;,jType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tType&quot;,tType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jTypeToTType&quot;,jTypeToTType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedParameterList&quot;,extendedParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethodName&quot;, jMethodName);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;jType&quot;, jType);&#xA;ruleresult.registerObject(&quot;tType&quot;, tType);&#xA;ruleresult.registerObject(&quot;jTypeToTType&quot;, jTypeToTType);&#xA;ruleresult.registerObject(&quot;extendedParameterList&quot;, extendedParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedType&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedType());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;match.registerObject(&quot;tType&quot;, tType);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodName&quot;,jMethodName);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jType&quot;,jType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tType&quot;,tType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jTypeToTType&quot;,jTypeToTType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedParameterList&quot;,extendedParameterList);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jMethodName&quot;, jMethodName);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;jType&quot;, jType);&#xA;ruleresult.registerObject(&quot;tType&quot;, tType);&#xA;ruleresult.registerObject(&quot;jTypeToTType&quot;, jTypeToTType);&#xA;ruleresult.registerObject(&quot;extendedParameterList&quot;, extendedParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jClass&quot;, jClass);&#xA;match.registerObject(&quot;extendedType&quot;, extendedType);&#xA;match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, true, csp);&#xD;&#xA;var_extendedType_typeName.setValue(extendedType.getTypeName());&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_tType_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tType.tName&quot;, csp);&#xD;&#xA;var_tType_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tType_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedType&quot;,extendedType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;tType&quot;, tType);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;extendedTypeToTType&quot;, extendedTypeToTType);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedType&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedType());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;tType&quot;, tType);&#xA;match.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;match.registerObject(&quot;pg&quot;, pg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tType_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tType.tName&quot;, true, csp);&#xD;&#xA;var_tType_tName.setValue(tType.getTName());&#xD;&#xA;var_tType_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, csp);&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tType_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tType&quot;,tType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;tType&quot;, tType);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;extendedTypeToTType&quot;, extendedTypeToTType);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tType&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTClass());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;jClass&quot;, jClass);&#xA;match.registerObject(&quot;extendedType&quot;, extendedType);&#xA;match.registerObject(&quot;jMethod&quot;, jMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, true, csp);&#xD;&#xA;var_extendedType_typeName.setValue(extendedType.getTypeName());&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;Variable var_tType_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tType.tName&quot;, true, csp);&#xD;&#xA;var_tType_tName.setValue(tType.getTName());&#xD;&#xA;var_tType_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tType_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tType&quot;,tType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedType&quot;,extendedType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tType&quot;, tType);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;extendedTypeToTType&quot;, extendedTypeToTType);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;extendedType&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedType());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;tClass&quot;, tClass);&#xA;match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tType&quot;, tType);&#xA;match.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;Variable var_tType_tName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;tType.tName&quot;, true, csp);&#xD;&#xA;var_tType_tName.setValue(tType.getTName());&#xD;&#xA;var_tType_tName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;Variable var_extendedType_typeName = CSPFactoryHelper.eINSTANCE.createVariable(&quot;extendedType.typeName&quot;, csp);&#xD;&#xA;var_extendedType_typeName.setType(&quot;String&quot;);&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;Eq eq = new Eq();&#xD;&#xA;&#xD;&#xA;csp.getConstraints().add(eq);&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;eq.setRuleName(&quot;&quot;);&#xD;&#xA;eq.solve(var_extendedType_typeName,var_tType_tName);&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClass&quot;,jClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tClass&quot;,tClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jClassToTClass&quot;,jClassToTClass);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tType&quot;,tType);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodDefinition&quot;,tMethodDefinition);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethod&quot;,jMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodToTMethodDefinition&quot;,jMethodToTMethodDefinition);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;jClass&quot;, jClass);&#xA;ruleresult.registerObject(&quot;tClass&quot;, tClass);&#xA;ruleresult.registerObject(&quot;jClassToTClass&quot;, jClassToTClass);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;tType&quot;, tType);&#xA;ruleresult.registerObject(&quot;extendedType&quot;, extendedType);&#xA;ruleresult.registerObject(&quot;tMethodDefinition&quot;, tMethodDefinition);&#xA;ruleresult.registerObject(&quot;jMethod&quot;, jMethod);&#xA;ruleresult.registerObject(&quot;jMethodToTMethodDefinition&quot;, jMethodToTMethodDefinition);&#xA;ruleresult.registerObject(&quot;extendedTypeToTType&quot;, extendedTypeToTType);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isAppropriate_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;match.registerObject(&quot;jMethodName&quot;, jMethodName);&#xA;match.registerObject(&quot;jParameter&quot;, jParameter);&#xA;match.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/registerObjectsToMatch_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isAppropriate_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainerToPg&quot;,extendedJamoppJavaContainerToPg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTMethodSignature&quot;,jParameterListToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodName&quot;,jMethodName);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameter&quot;,jParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTParameterList&quot;,jParameterListToTParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodNameToTMethod&quot;,jMethodNameToTMethod);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isApplicable_solveCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isApplicable_checkCsp_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;extendedJamoppJavaContainerToPg&quot;, extendedJamoppJavaContainerToPg);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterListToTMethodSignature&quot;, jParameterListToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterToPg&quot;, jParameterToPg);&#xA;ruleresult.registerObject(&quot;jMethodName&quot;, jMethodName);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;jMethodNameToTMethod&quot;, jMethodNameToTMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/registerObjects_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;jParameter&quot;).eClass().equals(ExtendedJamopp.ExtendedJamoppPackage.eINSTANCE.getExtendedParameter());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkTypes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isAppropriate_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="match.registerObject(&quot;pg&quot;, pg);&#xA;match.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;match.registerObject(&quot;tMethod&quot;, tMethod);&#xA;match.registerObject(&quot;tParameter&quot;, tParameter);&#xA;match.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/registerObjectsToMatch_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isAppropriate_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// Create CSP&#xD;&#xA;CSP csp = CspFactory.eINSTANCE.createCSP();&#xD;&#xA;isApplicableMatch.getAttributeInfo().add(csp);&#xD;&#xA;&#xD;&#xA;// Create literals&#xD;&#xA;&#xD;&#xA;// Create attribute variables&#xD;&#xA;&#xD;&#xA;// Create unbound variables&#xD;&#xA;&#xD;&#xA;// Create constraints&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;// Solve CSP&#xD;&#xA;&#xD;&#xA;// Snapshot pattern match on which CSP is solved&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainer&quot;,extendedJamoppJavaContainer);&#xD;&#xA;isApplicableMatch.registerObject(&quot;pg&quot;,pg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;extendedJamoppJavaContainerToPg&quot;,extendedJamoppJavaContainerToPg);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethodSignature&quot;,tMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTMethodSignature&quot;,jParameterListToTMethodSignature);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodName&quot;,jMethodName);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tMethod&quot;,tMethod);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameter&quot;,tParameter);&#xD;&#xA;isApplicableMatch.registerObject(&quot;tParameterList&quot;,tParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterList&quot;,jParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jParameterListToTParameterList&quot;,jParameterListToTParameterList);&#xD;&#xA;isApplicableMatch.registerObject(&quot;jMethodNameToTMethod&quot;,jMethodNameToTMethod);&#xD;&#xA;return csp;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isApplicable_solveCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return csp.check();">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isApplicable_checkCsp_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="ruleresult.registerObject(&quot;extendedJamoppJavaContainer&quot;, extendedJamoppJavaContainer);&#xA;ruleresult.registerObject(&quot;pg&quot;, pg);&#xA;ruleresult.registerObject(&quot;extendedJamoppJavaContainerToPg&quot;, extendedJamoppJavaContainerToPg);&#xA;ruleresult.registerObject(&quot;tMethodSignature&quot;, tMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterListToTMethodSignature&quot;, jParameterListToTMethodSignature);&#xA;ruleresult.registerObject(&quot;jParameterToPg&quot;, jParameterToPg);&#xA;ruleresult.registerObject(&quot;jMethodName&quot;, jMethodName);&#xA;ruleresult.registerObject(&quot;tMethod&quot;, tMethod);&#xA;ruleresult.registerObject(&quot;jParameter&quot;, jParameter);&#xA;ruleresult.registerObject(&quot;tParameter&quot;, tParameter);&#xA;ruleresult.registerObject(&quot;tParameterList&quot;, tParameterList);&#xA;ruleresult.registerObject(&quot;jParameterList&quot;, jParameterList);&#xA;ruleresult.registerObject(&quot;jParameterListToTParameterList&quot;, jParameterListToTParameterList);&#xA;ruleresult.registerObject(&quot;jParameterToTParameter&quot;, jParameterToTParameter);&#xA;ruleresult.registerObject(&quot;jMethodNameToTMethod&quot;, jMethodNameToTMethod);&#xA;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/registerObjects_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tParameter&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTParameter());">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkTypes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkAttributes_FWD"/>
+  </compilerInjectionEntries>
+  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+    <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkAttributes_BWD"/>
+  </compilerInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="org.moflon.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="csp.constraints.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew"/>
+  </importInjectionEntries>
+  <importInjectionEntries content="TGGLanguage.csp.*">
+    <eClass href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew"/>
+  </importInjectionEntries>
+</sdmUtil:CompilerInjection>

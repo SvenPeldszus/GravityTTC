@@ -1,0 +1,39 @@
+digraph "FieldNameExisting" {
+	label="_____________________________\n eq(jField.name,tField.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "jFieldToTFieldDefinition : FieldToTFieldDefinition" [shape=hexagon, color=green];
+	          "jFieldToTField : FieldToTField" [shape=hexagon, color=green];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" [shape=hexagon, color=green];
+	          "tContainingClassToJContainingClass : ClassToTClass" [shape=hexagon, color=black];
+
+	          "jFieldToTField : FieldToTField" -> "jField : Field" [color=green, label="source", fontsize=11];
+	          "jFieldToTFieldDefinition : FieldToTFieldDefinition" -> "jField : Field" [color=green, label="source", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "jField : Field" [color=green, label="source", fontsize=11];
+	          "jFieldToTFieldDefinition : FieldToTFieldDefinition" -> "tFieldDefinition : TFieldDefinition" [color=green, label="target", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=green, label="target", fontsize=11];
+	          "jFieldToTField : FieldToTField" -> "tField : TField" [color=green, label="target", fontsize=11];
+	          "tContainingClassToJContainingClass : ClassToTClass" -> "tContainingClass : TClass" [color=black, label="target", fontsize=11];
+	          "tContainingClassToJContainingClass : ClassToTClass" -> "jContainingClass : Class" [color=black, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jField : Field" [shape=record, color=green, label="{jField : Field | }"];
+	          "jContainingClass : Class" [shape=record, color=black, label="{jContainingClass : Class | }"];
+
+	          "jContainingClass : Class" -> "jField : Field" [color=green, label="members", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tContainingClass : TClass" [shape=record, color=black, label="{tContainingClass : TClass | }"];
+	          "tFieldDefinition : TFieldDefinition" [shape=record, color=green, label="{tFieldDefinition : TFieldDefinition | }"];
+	          "tFieldSignature : TFieldSignature" [shape=record, color=green, label="{tFieldSignature : TFieldSignature | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tField : TField" [shape=record, color=black, label="{tField : TField | }"];
+
+	          "tContainingClass : TClass" -> "tFieldDefinition : TFieldDefinition" [color=green, label="defines", fontsize=11];
+	          "tContainingClass : TClass" -> "tFieldSignature : TFieldSignature" [color=green, label="signature", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tFieldDefinition : TFieldDefinition" [color=green, label="definitions", fontsize=11];
+	          "pg : TypeGraph" -> "tContainingClass : TClass" [color=black, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "tField : TField" [color=black, label="fields", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tField : TField" [color=green, label="field", fontsize=11];
+	}
+}

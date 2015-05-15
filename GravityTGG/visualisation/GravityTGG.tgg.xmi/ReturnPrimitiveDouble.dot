@@ -1,0 +1,30 @@
+digraph "ReturnPrimitiveDouble" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" [shape=hexagon, color=black];
+	          "jPrimitiveTypeToTPrimitiveType : DoubleToTClass" [shape=hexagon, color=green];
+
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" -> "jMethod : ClassMethod" [color=black, label="source", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : DoubleToTClass" -> "jPrimitiveType : Double" [color=green, label="source", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : DoubleToTClass" -> "tPrimitiveType : TClass" [color=green, label="target", fontsize=11];
+	          "jMethodToTMethoddefinition : ClassMethodToTMethodDefinition" -> "tMethoddefinition : TMethodDefinition" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jMethod : ClassMethod" [shape=record, color=black, label="{jMethod : ClassMethod | }"];
+	          "jPrimitiveType : Double" [shape=record, color=green, label="{jPrimitiveType : Double | }"];
+
+	          "jMethod : ClassMethod" -> "jPrimitiveType : Double" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tClass : TClass" [shape=record, color=black, label="{tClass : TClass | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tMethoddefinition : TMethodDefinition" [shape=record, color=black, label="{tMethoddefinition : TMethodDefinition | }"];
+	          "tPrimitiveType : TClass" [shape=record, color=black, label="{tPrimitiveType : TClass | tName == \"double\"}"];
+
+	          "pg : TypeGraph" -> "tClass : TClass" [color=black, label="classes", fontsize=11];
+	          "tClass : TClass" -> "tMethoddefinition : TMethodDefinition" [color=black, label="defines", fontsize=11];
+	          "tMethoddefinition : TMethodDefinition" -> "tPrimitiveType : TClass" [color=green, label="returnType", fontsize=11];
+	          "pg : TypeGraph" -> "tPrimitiveType : TClass" [color=black, label="classes", fontsize=11];
+	}
+}

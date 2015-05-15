@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: TypeGraphBasic;singleton:=true
+Export-Package: TypeGraphBasic,
+ TypeGraphBasic.util,
+ TypeGraphBasic.impl
+Bundle-Name: TypeGraphBasic
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.moflon.dependencies
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: TU Darmstadt

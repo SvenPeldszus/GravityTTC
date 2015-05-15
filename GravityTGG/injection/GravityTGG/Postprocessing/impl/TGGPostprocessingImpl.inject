@@ -1,0 +1,13 @@
+
+partial class TGGPostprocessingImpl {
+
+
+
+@model getFullyQualifiedName (CompilationUnit jCompilationUnit) <--
+
+
+		String name = jCompilationUnit.getName();
+		return name.substring(0, name.length()-5);
+-->
+
+}

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Refactorings/gen" modelPluginID="Refactorings"
+    modelName="Refactorings" updateClasspath="false" codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.genmodel#//TypeGraphBasic"
+    operationReflection="true">
+  <foreignModel>Refactorings.ecore</foreignModel>
+  <genPackages prefix="Refactorings" disposableProviderFactory="true" ecorePackage="platform:/plugin/Refactorings/model/Refactorings.ecore#/">
+    <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pg"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/search"/>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/csc_isApplicable">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/csc_isApplicable/child"/>
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/csc_isApplicable/new_parent"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/csc_Perform">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/csc_Perform/child"/>
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/csc_Perform/new_parent"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pum_isApplicable">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pum_isApplicable/method"/>
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pum_isApplicable/parent"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pum_Perform">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pum_Perform/method"/>
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Refactoring/pum_Perform/parent"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/pg"/>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/getBasePackage">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/getBasePackage/tClass"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/getBasePackage.1">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/getBasePackage.1/tPackage"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/isChild">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/isChild/child"/>
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/isChild/parent"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/linkClass">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/linkClass/tClass"/>
+      </genOperations>
+      <genOperations ecoreOperation="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/equivalent">
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/equivalent/package2"/>
+        <genParameters ecoreParameter="platform:/plugin/Refactorings/model/Refactorings.ecore#//Search/equivalent/package1"/>
+      </genOperations>
+    </genClasses>
+    <nestedGenPackages prefix="Containers" disposableProviderFactory="true" ecorePackage="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers">
+      <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/CSCContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/CSCContainer/new_parent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/CSCContainer/child"/>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/PUMContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/PUMContainer/parent"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/PUMContainer/method"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/RefactoringContainer"/>
+      <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/TAccessContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/TAccessContainer/tMember"/>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/TClassContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/TClassContainer/tClass"/>
+      </genClasses>
+      <genClasses ecoreClass="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/TMethodDefinitionContainer">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers/TMethodDefinitionContainer/tMethodDefinition"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

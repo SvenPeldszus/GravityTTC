@@ -1,0 +1,51 @@
+digraph "MethodSignatureCreate" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" [shape=hexagon, color=green];
+	          "extendedJamoppJavaContainerToPg : ExtendedJamoppJavaContainerToTypeGraph" [shape=hexagon, color=black];
+	          "jMethodToTMethodSignature : ClassMethodToTMethodSignature" [shape=hexagon, color=green];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" [shape=hexagon, color=black];
+	          "tClassToJClass : ClassToTClass" [shape=hexagon, color=black];
+	          "jMethodToTMethod : ClassMethodToTMethod" [shape=hexagon, color=black];
+
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" -> "tParameterList : TParameterList" [color=green, label="target", fontsize=11];
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" -> "jParameterList : ExtendedParameterList" [color=green, label="source", fontsize=11];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" -> "jMethod : ExtendedClassMethod" [color=black, label="source", fontsize=11];
+	          "extendedJamoppJavaContainerToPg : ExtendedJamoppJavaContainerToTypeGraph" -> "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [color=black, label="source", fontsize=11];
+	          "tClassToJClass : ClassToTClass" -> "jClass : Class" [color=black, label="source", fontsize=11];
+	          "tClassToJClass : ClassToTClass" -> "tClass : TClass" [color=black, label="target", fontsize=11];
+	          "jMethodToTMethodSignature : ClassMethodToTMethodSignature" -> "tMethodSignature : TMethodSignature" [color=green, label="target", fontsize=11];
+	          "jMethodToTMethod : ClassMethodToTMethod" -> "jMethod : ExtendedClassMethod" [color=black, label="source", fontsize=11];
+	          "jMethodToTMethod : ClassMethodToTMethod" -> "tMethod : TMethod" [color=black, label="target", fontsize=11];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" -> "tMethodDefinition : TMethodDefinition" [color=black, label="target", fontsize=11];
+	          "extendedJamoppJavaContainerToPg : ExtendedJamoppJavaContainerToTypeGraph" -> "pg : TypeGraph" [color=black, label="target", fontsize=11];
+	          "jMethodToTMethodSignature : ClassMethodToTMethodSignature" -> "jMethod : ExtendedClassMethod" [color=green, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jParameterList : ExtendedParameterList" [shape=record, color=green, label="{jParameterList : ExtendedParameterList | }"];
+	          "jClass : Class" [shape=record, color=black, label="{jClass : Class | }"];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [shape=record, color=black, label="{extendedJamoppJavaContainer : ExtendedJamoppJavaContainer | }"];
+	          "jMethod : ExtendedClassMethod" [shape=record, color=black, label="{jMethod : ExtendedClassMethod | }"];
+
+	          "jParameterList : ExtendedParameterList" -> "jMethod : ExtendedClassMethod" [color=green, label="methods", fontsize=11];
+	          "jClass : Class" -> "jMethod : ExtendedClassMethod" [color=black, label="members", fontsize=11];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" -> "jParameterList : ExtendedParameterList" [color=green, label="extendedParameterList", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tParameterList : TParameterList" [shape=record, color=green, label="{tParameterList : TParameterList | }"];
+	          "tMethodSignature : TMethodSignature" [shape=record, color=green, label="{tMethodSignature : TMethodSignature | }"];
+	          "tMethod : TMethod" [shape=record, color=black, label="{tMethod : TMethod | }"];
+	          "tClass : TClass" [shape=record, color=black, label="{tClass : TClass | }"];
+	          "tMethodDefinition : TMethodDefinition" [shape=record, color=black, label="{tMethodDefinition : TMethodDefinition | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+
+	          "tMethodSignature : TMethodSignature" -> "tParameterList : TParameterList" [color=green, label="paramList", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tMethod : TMethod" [color=green, label="method", fontsize=11];
+	          "tClass : TClass" -> "tMethodSignature : TMethodSignature" [color=green, label="signature", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tMethodDefinition : TMethodDefinition" [color=green, label="definitions", fontsize=11];
+	          "tClass : TClass" -> "tMethodDefinition : TMethodDefinition" [color=black, label="defines", fontsize=11];
+	          "pg : TypeGraph" -> "tMethod : TMethod" [color=black, label="methods", fontsize=11];
+	          "pg : TypeGraph" -> "tClass : TClass" [color=black, label="classes", fontsize=11];
+	}
+}

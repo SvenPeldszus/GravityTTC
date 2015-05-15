@@ -1,0 +1,32 @@
+digraph "Inheritance" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jParentClassToTParentClass : ClassToTClass" [shape=hexagon, color=black];
+	          "jClassToTClass : ClassToTClass" [shape=hexagon, color=black];
+
+	          "jParentClassToTParentClass : ClassToTClass" -> "jParentClass : Class" [color=black, label="source", fontsize=11];
+	          "jParentClassToTParentClass : ClassToTClass" -> "tParentClass : TClass" [color=black, label="target", fontsize=11];
+	          "jClassToTClass : ClassToTClass" -> "jClass : Class" [color=black, label="source", fontsize=11];
+	          "jClassToTClass : ClassToTClass" -> "tClass : TClass" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "classifierReference : ClassifierReference" [shape=record, color=green, label="{classifierReference : ClassifierReference | }"];
+	          "jParentClass : Class" [shape=record, color=black, label="{jParentClass : Class | }"];
+	          "nameSpace : NamespaceClassifierReference" [shape=record, color=green, label="{nameSpace : NamespaceClassifierReference | }"];
+	          "jClass : Class" [shape=record, color=black, label="{jClass : Class | }"];
+
+	          "jClass : Class" -> "nameSpace : NamespaceClassifierReference" [color=green, label="extends", fontsize=11];
+	          "nameSpace : NamespaceClassifierReference" -> "classifierReference : ClassifierReference" [color=green, label="classifierReferences", fontsize=11];
+	          "classifierReference : ClassifierReference" -> "jParentClass : Class" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tClass : TClass" [shape=record, color=black, label="{tClass : TClass | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tParentClass : TClass" [shape=record, color=black, label="{tParentClass : TClass | }"];
+
+	          "pg : TypeGraph" -> "tClass : TClass" [color=black, label="classes", fontsize=11];
+	          "tParentClass : TClass" -> "tClass : TClass" [color=green, label="childClasses", fontsize=11];
+	          "pg : TypeGraph" -> "tParentClass : TClass" [color=black, label="classes", fontsize=11];
+	}
+}

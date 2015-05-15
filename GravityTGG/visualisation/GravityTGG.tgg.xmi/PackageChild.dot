@@ -1,0 +1,28 @@
+digraph "PackageChild" {
+	label="_____________________________\n eq(jSubPackage.name,tSubPackage.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "tSubPackageToJSubPackage : ExtendedJamoppPackageElementToTPackage" [shape=hexagon, color=green];
+	          "tPackageToExtendedJamoppPackageElement : ExtendedJamoppPackageElementToTPackage" [shape=hexagon, color=black];
+
+	          "tSubPackageToJSubPackage : ExtendedJamoppPackageElementToTPackage" -> "tSubPackage : TPackage" [color=green, label="target", fontsize=11];
+	          "tSubPackageToJSubPackage : ExtendedJamoppPackageElementToTPackage" -> "jSubPackage : ExtendedJamoppPackageElement" [color=green, label="source", fontsize=11];
+	          "tPackageToExtendedJamoppPackageElement : ExtendedJamoppPackageElementToTPackage" -> "tPackage : TPackage" [color=black, label="target", fontsize=11];
+	          "tPackageToExtendedJamoppPackageElement : ExtendedJamoppPackageElementToTPackage" -> "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [color=black, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jSubPackage : ExtendedJamoppPackageElement" [shape=record, color=green, label="{jSubPackage : ExtendedJamoppPackageElement | }"];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [shape=record, color=black, label="{extendedJamoppJavaContainer : ExtendedJamoppJavaContainer | }"];
+	          "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [shape=record, color=black, label="{extendedJamoppPackageElement : ExtendedJamoppPackageElement | }"];
+
+	          "jSubPackage : ExtendedJamoppPackageElement" -> "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [color=green, label="predessor", fontsize=11];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" -> "extendedJamoppPackageElement : ExtendedJamoppPackageElement" [color=black, label="extendedJamoppPackageElement", fontsize=11];
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" -> "jSubPackage : ExtendedJamoppPackageElement" [color=green, label="extendedJamoppPackageElement", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tSubPackage : TPackage" [shape=record, color=green, label="{tSubPackage : TPackage | }"];
+	          "tPackage : TPackage" [shape=record, color=black, label="{tPackage : TPackage | }"];
+
+	          "tSubPackage : TPackage" -> "tPackage : TPackage" [color=green, label="parent", fontsize=11];
+	}
+}

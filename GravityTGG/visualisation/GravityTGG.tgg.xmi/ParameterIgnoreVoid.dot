@@ -1,0 +1,21 @@
+digraph "ParameterIgnoreVoid" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jParameterToTParameter : ExtendedParameterToTParameter" [shape=hexagon, color=black];
+
+	          "jParameterToTParameter : ExtendedParameterToTParameter" -> "jParameter : ExtendedParameter" [color=black, label="source", fontsize=11];
+	          "jParameterToTParameter : ExtendedParameterToTParameter" -> "tParameter : TParameter" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jType : Void" [shape=record, color=green, label="{jType : Void | }"];
+	          "jParameter : ExtendedParameter" [shape=record, color=black, label="{jParameter : ExtendedParameter | }"];
+
+	          "jParameter : ExtendedParameter" -> "jType : Void" [color=green, label="type", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tParameter : TParameter" [shape=record, color=black, label="{tParameter : TParameter | }"];
+
+
+	}
+}

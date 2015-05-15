@@ -1,0 +1,36 @@
+digraph "ReturnTypeCreateRule" {
+	label="_____________________________\n eq(jType.name,tType.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "jTypeToTType : ClassToTClass" [shape=hexagon, color=green];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" [shape=hexagon, color=black];
+
+	          "jTypeToTType : ClassToTClass" -> "jType : Class" [color=green, label="source", fontsize=11];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" -> "tMethodDefinition : TMethodDefinition" [color=black, label="target", fontsize=11];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" -> "jMethod : ExtendedClassMethod" [color=black, label="source", fontsize=11];
+	          "jTypeToTType : ClassToTClass" -> "tType : TClass" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "classifierReference : ClassifierReference" [shape=record, color=green, label="{classifierReference : ClassifierReference | }"];
+	          "jType : Class" [shape=record, color=black, label="{jType : Class | }"];
+	          "namespaceClassifierReference : NamespaceClassifierReference" [shape=record, color=green, label="{namespaceClassifierReference : NamespaceClassifierReference | }"];
+	          "jMethod : ExtendedClassMethod" [shape=record, color=black, label="{jMethod : ExtendedClassMethod | }"];
+
+	          "namespaceClassifierReference : NamespaceClassifierReference" -> "classifierReference : ClassifierReference" [color=green, label="classifierReferences", fontsize=11];
+	          "jMethod : ExtendedClassMethod" -> "namespaceClassifierReference : NamespaceClassifierReference" [color=green, label="typeReference", fontsize=11];
+	          "classifierReference : ClassifierReference" -> "jType : Class" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tClass : TClass" [shape=record, color=black, label="{tClass : TClass | }"];
+	          "tMethodDefinition : TMethodDefinition" [shape=record, color=black, label="{tMethodDefinition : TMethodDefinition | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tExistingType : TClass" [shape=record, color=blue, label="{tExistingType : TClass | }"];
+	          "tType : TClass" [shape=record, color=green, label="{tType : TClass | }"];
+
+	          "tClass : TClass" -> "tMethodDefinition : TMethodDefinition" [color=black, label="defines", fontsize=11];
+	          "pg : TypeGraph" -> "tClass : TClass" [color=black, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "tExistingType : TClass" [color=black, label="classes", fontsize=11];
+	          "tMethodDefinition : TMethodDefinition" -> "tType : TClass" [color=green, label="returnType", fontsize=11];
+	          "pg : TypeGraph" -> "tType : TClass" [color=green, label="classes", fontsize=11];
+	}
+}

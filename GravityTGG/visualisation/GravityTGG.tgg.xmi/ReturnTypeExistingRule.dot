@@ -1,0 +1,29 @@
+digraph "ReturnTypeExistingRule" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jTypeToTType : ClassToTClass" [shape=hexagon, color=black];
+	          "jMethodToTMethod : ClassMethodToTMethodDefinition" [shape=hexagon, color=black];
+
+	          "jTypeToTType : ClassToTClass" -> "tType : TClass" [color=black, label="target", fontsize=11];
+	          "jTypeToTType : ClassToTClass" -> "jType : Class" [color=black, label="source", fontsize=11];
+	          "jMethodToTMethod : ClassMethodToTMethodDefinition" -> "jMethod : ExtendedClassMethod" [color=black, label="source", fontsize=11];
+	          "jMethodToTMethod : ClassMethodToTMethodDefinition" -> "tMethodDefinition : TMethodDefinition" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "classifierReference : ClassifierReference" [shape=record, color=green, label="{classifierReference : ClassifierReference | }"];
+	          "namespaceClassifierReference : NamespaceClassifierReference" [shape=record, color=green, label="{namespaceClassifierReference : NamespaceClassifierReference | }"];
+	          "jType : Class" [shape=record, color=black, label="{jType : Class | }"];
+	          "jMethod : ExtendedClassMethod" [shape=record, color=black, label="{jMethod : ExtendedClassMethod | }"];
+
+	          "classifierReference : ClassifierReference" -> "jType : Class" [color=green, label="target", fontsize=11];
+	          "jMethod : ExtendedClassMethod" -> "namespaceClassifierReference : NamespaceClassifierReference" [color=green, label="typeReference", fontsize=11];
+	          "namespaceClassifierReference : NamespaceClassifierReference" -> "classifierReference : ClassifierReference" [color=green, label="classifierReferences", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tType : TClass" [shape=record, color=black, label="{tType : TClass | }"];
+	          "tMethodDefinition : TMethodDefinition" [shape=record, color=black, label="{tMethodDefinition : TMethodDefinition | }"];
+
+	          "tMethodDefinition : TMethodDefinition" -> "tType : TClass" [color=green, label="returnType", fontsize=11];
+	}
+}

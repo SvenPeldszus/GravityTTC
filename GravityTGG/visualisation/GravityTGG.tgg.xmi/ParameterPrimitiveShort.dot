@@ -1,0 +1,39 @@
+digraph "ParameterPrimitiveShort" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jParameterToTParameter : ExtendedParameterToTParameter" [shape=hexagon, color=black];
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" [shape=hexagon, color=black];
+	          "jTypeToTType : ShortToTClass" [shape=hexagon, color=green];
+
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" -> "tParameterList : TParameterList" [color=black, label="target", fontsize=11];
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" -> "jParameterList : ExtendedParameterList" [color=black, label="source", fontsize=11];
+	          "jParameterToTParameter : ExtendedParameterToTParameter" -> "jParameter : ExtendedParameter" [color=black, label="source", fontsize=11];
+	          "jTypeToTType : ShortToTClass" -> "jType : Short" [color=green, label="source", fontsize=11];
+	          "jTypeToTType : ShortToTClass" -> "tType : TClass" [color=green, label="target", fontsize=11];
+	          "jParameterToTParameter : ExtendedParameterToTParameter" -> "tParameter : TParameter" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jParameterList : ExtendedParameterList" [shape=record, color=black, label="{jParameterList : ExtendedParameterList | }"];
+	          "jType : Short" [shape=record, color=green, label="{jType : Short | }"];
+	          "jParameter : ExtendedParameter" [shape=record, color=black, label="{jParameter : ExtendedParameter | }"];
+
+	          "jParameter : ExtendedParameter" -> "jType : Short" [color=green, label="type", fontsize=11];
+	          "jParameterList : ExtendedParameterList" -> "jParameter : ExtendedParameter" [color=black, label="values", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tMethodSignature : TMethodSignature" [shape=record, color=black, label="{tMethodSignature : TMethodSignature | }"];
+	          "tMethod : TMethod" [shape=record, color=black, label="{tMethod : TMethod | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tParameterList : TParameterList" [shape=record, color=black, label="{tParameterList : TParameterList | }"];
+	          "tParameter : TParameter" [shape=record, color=black, label="{tParameter : TParameter | }"];
+	          "tType : TClass" [shape=record, color=black, label="{tType : TClass | tName == \"short\"}"];
+
+	          "pg : TypeGraph" -> "tMethod : TMethod" [color=black, label="methods", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tParameterList : TParameterList" [color=black, label="paramList", fontsize=11];
+	          "tParameterList : TParameterList" -> "tParameter : TParameter" [color=black, label="entries", fontsize=11];
+	          "tParameter : TParameter" -> "tType : TClass" [color=green, label="tClass", fontsize=11];
+	          "pg : TypeGraph" -> "tType : TClass" [color=black, label="classes", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tMethod : TMethod" [color=black, label="method", fontsize=11];
+	}
+}

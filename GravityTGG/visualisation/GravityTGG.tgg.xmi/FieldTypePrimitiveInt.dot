@@ -1,0 +1,30 @@
+digraph "FieldTypePrimitiveInt" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "tFieldSignatureToJField : FieldToTFieldSignature" [shape=hexagon, color=black];
+	          "jPrimitiveTypeToTPrimitiveType : IntToTClass" [shape=hexagon, color=green];
+
+	          "jPrimitiveTypeToTPrimitiveType : IntToTClass" -> "jPrimitiveType : Int" [color=green, label="source", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : IntToTClass" -> "tPrimitiveType : TClass" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jPrimitiveType : Int" [shape=record, color=green, label="{jPrimitiveType : Int | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "jField : Field" -> "jPrimitiveType : Int" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tPrimitiveType : TClass" [shape=record, color=black, label="{tPrimitiveType : TClass | tName == \"int\"}"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tField : TField" [shape=record, color=black, label="{tField : TField | }"];
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+
+	          "pg : TypeGraph" -> "tPrimitiveType : TClass" [color=black, label="classes", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tField : TField" [color=black, label="field", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tPrimitiveType : TClass" [color=green, label="type", fontsize=11];
+	          "pg : TypeGraph" -> "tField : TField" [color=black, label="fields", fontsize=11];
+	}
+}

@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activities="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//activities" xmlns:callExpressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//calls/callExpressions" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:expressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//expressions" xmlns:patternExpressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//patterns/patternExpressions" name="Refactorings" nsURI="platform:/plugin/Refactorings/model/Refactorings.ecore" nsPrefix="Refactorings">
+  <eClassifiers xsi:type="ecore:EClass" name="Refactoring">
+    <eOperations xsi:type="activities:MoflonEOperation" name="csc_isApplicable">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="child" eType="//Containers/TClassContainer"/>
+      <eParameters name="new_parent">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <activity owningOperation="//Refactoring/csc_isApplicable">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode37" comment="ActivityNode37" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.0" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.17">
+          <storyPattern comment="ActivityNode37">
+            <objectVariable name="pg" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0 //Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable type="//Search" name="search" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" bindingOperator="CREATE"/>
+            <objectVariable type="//Refactoring" name="this" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1 //Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2" bindingState="BOUND"/>
+            <linkVariable name="pg" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" type="//Search/pg" bindingOperator="CREATE"/>
+            <linkVariable name="search" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" type="//Refactoring/search" bindingOperator="CREATE"/>
+            <linkVariable name="pg" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" type="//Refactoring/pg"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode38" comment="ActivityNode38" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.1 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.2" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.18 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.21">
+          <storyPattern comment="ActivityNode38">
+            <objectVariable type="//Containers/TClassContainer" name="child" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0 //Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+            <objectVariable name="one" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="two" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode39" comment="ActivityNode39" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.3 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.4" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.6 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.16" forEach="true">
+          <storyPattern comment="ActivityNode39">
+            <objectVariable type="//Containers/TClassContainer" name="child" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0 //Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+            <objectVariable name="tChildOne" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tChildTwo" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.2" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode40" comment="ActivityNode40" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.5 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.6" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.3">
+          <storyPattern comment="ActivityNode40">
+            <objectVariable name="tChildOne" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tChildTwo" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tParent" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+            <linkVariable name="childClasses" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/childClasses"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode41" comment="ActivityNode41" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.7 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.8" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.15">
+          <storyPattern comment="ActivityNode41">
+            <objectVariable name="basePackageOne" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+              <bindingExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/getBasePackage">
+                <ownedParameterBindings parameter="//Search/getBasePackage/tClass">
+                  <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0"/>
+                </ownedParameterBindings>
+                <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1"/>
+              </bindingExpression>
+            </objectVariable>
+            <objectVariable name="basePackageTwo" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+              <bindingExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/getBasePackage">
+                <ownedParameterBindings parameter="//Search/getBasePackage/tClass">
+                  <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1"/>
+                </ownedParameterBindings>
+                <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1"/>
+              </bindingExpression>
+            </objectVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode51" comment="ActivityNode51" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.9 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.10" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.5 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.11 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.13" forEach="true">
+          <storyPattern comment="ActivityNode51">
+            <objectVariable type="//Containers/TClassContainer" name="child" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+            <objectVariable name="tChild" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode52" comment="ActivityNode52" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.11 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.12" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.9">
+          <storyPattern comment="ActivityNode52">
+            <objectVariable name="tChild" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tParentClass" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" bindingSemantics="NEGATIVE">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode53" comment="ActivityNode53" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.13 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.14" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.12">
+          <storyPattern comment="ActivityNode53">
+            <objectVariable name="tChild" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tObject" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+              <constraint>
+                <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                  <rightExpression xsi:type="expressions:LiteralExpression" value="&quot;java.lang.Object&quot;"/>
+                  <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1">
+                    <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                  </leftExpression>
+                </constraintExpression>
+              </constraint>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode54" comment="ActivityNode54" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.15 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.16" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.2 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.7" forEach="true">
+          <storyPattern comment="ActivityNode54">
+            <objectVariable name="a" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="b" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TClassContainer" name="child" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0 //Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" type="//Containers/TClassContainer/tClass"/>
+            <linkVariable name="tClass" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" type="//Containers/TClassContainer/tClass"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.17"/>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.14">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.1">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.8">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode56" comment="ActivityNode56" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.18 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.19" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode56">
+            <objectVariable name="pg" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable name="existingParent" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+              <constraint>
+                <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                  <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.2">
+                    <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                  </rightExpression>
+                  <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.1">
+                    <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+                  </leftExpression>
+                </constraintExpression>
+              </constraint>
+            </objectVariable>
+            <objectVariable name="new_parent" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="classes" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.1" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode57" comment="ActivityNode57" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.20" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.19">
+          <storyPattern comment="ActivityNode57">
+            <objectVariable name="new_parent" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="new_parent_package" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="existingParent" incomingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="existing_parent_package" outgoingLink="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <linkVariable name="containedClasses" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.0" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/containedClasses"/>
+            </linkVariable>
+            <linkVariable name="containedClasses" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.2" source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/containedClasses"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode58" outgoing="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.21 //Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.22" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.20">
+          <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/equivalent">
+            <ownedParameterBindings parameter="//Search/equivalent/package2">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.3"/>
+            </ownedParameterBindings>
+            <ownedParameterBindings parameter="//Search/equivalent/package1">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14/@storyPattern/@objectVariable.1"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1"/>
+          </statementExpression>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.22">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.10">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_isApplicable/@activity/@ownedActivityEdge.4">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.11" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.18" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.3" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.4" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.4" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.12" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.17" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.6" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.5" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.7" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.10" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.4" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.8" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.2" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.9" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.0"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.13" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.14" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.15"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.15" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.1" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.15" target="//Refactoring/csc_isApplicable/@activity/@ownedActivityNode.16" guard="SUCCESS"/>
+      </activity>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="csc_Perform" eType="//Containers/TClassContainer">
+      <eParameters name="child" eType="//Containers/TClassContainer"/>
+      <eParameters name="new_parent">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <activity owningOperation="//Refactoring/csc_Perform">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode41" comment="ActivityNode41" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.0" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.11">
+          <storyPattern comment="ActivityNode41">
+            <objectVariable name="pg" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0 //Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable type="//Search" name="search" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" bindingOperator="CREATE"/>
+            <objectVariable type="//Refactoring" name="this" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1 //Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2" bindingState="BOUND"/>
+            <objectVariable type="//Containers/TClassContainer" name="container" bindingOperator="CREATE"/>
+            <linkVariable name="pg" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" type="//Search/pg" bindingOperator="CREATE"/>
+            <linkVariable name="search" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" type="//Refactoring/search" bindingOperator="CREATE"/>
+            <linkVariable name="pg" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" type="//Refactoring/pg"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode42" comment="ActivityNode42" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.1" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode42">
+            <objectVariable name="new_parent" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0 //Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="pg" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TClassContainer" name="container" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+            <linkVariable name="classes" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" bindingOperator="CREATE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+            </linkVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2" type="//Containers/TClassContainer/tClass" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode45" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.2" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.1">
+          <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/linkClass">
+            <ownedParameterBindings parameter="//Search/linkClass/tClass">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1"/>
+          </statementExpression>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode46" comment="ActivityNode46" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.3 //Refactoring/csc_Perform/@activity/@ownedActivityEdge.4" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.2">
+          <storyPattern comment="ActivityNode46">
+            <objectVariable type="//Containers/TClassContainer" name="child" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+            <objectVariable name="new_parent" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="old_tParent" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.2 //Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.3" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tChild" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TClassContainer" name="container" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.3" bindingState="BOUND"/>
+            <linkVariable name="tClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.3" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+            <linkVariable name="childClasses" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" bindingOperator="CREATE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/childClasses"/>
+            </linkVariable>
+            <linkVariable name="parentClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.4" type="//Containers/TClassContainer/tClass" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode47" comment="ActivityNode47" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.5 //Refactoring/csc_Perform/@activity/@ownedActivityEdge.6" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.3 //Refactoring/csc_Perform/@activity/@ownedActivityEdge.4 //Refactoring/csc_Perform/@activity/@ownedActivityEdge.9" forEach="true">
+          <storyPattern comment="ActivityNode47">
+            <objectVariable type="//Containers/TClassContainer" name="child" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+            <objectVariable name="tChildClass" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode48" comment="ActivityNode48" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.7 //Refactoring/csc_Perform/@activity/@ownedActivityEdge.8" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.6">
+          <storyPattern comment="ActivityNode48">
+            <objectVariable name="tChildClass" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tParent" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode49" comment="ActivityNode49" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.9" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.8 //Refactoring/csc_Perform/@activity/@ownedActivityEdge.10">
+          <storyPattern comment="ActivityNode49">
+            <objectVariable name="new_parent" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tChildClass" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0 //Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TClassContainer" name="container" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+            <linkVariable name="childClasses" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/childClasses"/>
+            </linkVariable>
+            <linkVariable name="tClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.2" type="//Containers/TClassContainer/tClass" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode55" comment="ActivityNode55" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.10" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.7">
+          <storyPattern comment="ActivityNode55">
+            <objectVariable name="tChildClass" outgoingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tParent" incomingLink="//Refactoring/csc_Perform/@activity/@ownedActivityNode.7/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.1" source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.7/@storyPattern/@objectVariable.0" bindingOperator="DESTROY">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.5">
+          <returnValue xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.3"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Refactoring/csc_Perform/@activity/@ownedActivityEdge.11"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.1" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.2"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.2" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.3" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.8" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.5" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.4"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.7" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.6"/>
+        <ownedActivityEdge source="//Refactoring/csc_Perform/@activity/@ownedActivityNode.9" target="//Refactoring/csc_Perform/@activity/@ownedActivityNode.0"/>
+      </activity>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="pum_isApplicable">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="method">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+      </eParameters>
+      <eParameters name="parent">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <activity owningOperation="//Refactoring/pum_isApplicable">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode10" comment="ActivityNode10" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.0 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.1" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.22">
+          <storyPattern comment="ActivityNode10">
+            <objectVariable name="method" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+            </objectVariable>
+            <objectVariable name="tChild" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TMethodDefinitionContainer" name="tDefinitions" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2" bindingState="BOUND"/>
+            <objectVariable name="tMethodDefinition" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <linkVariable name="definitions" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.3" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+            </linkVariable>
+            <linkVariable name="defines" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.3" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="tMethodDefinition" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.3" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2" type="//Containers/TMethodDefinitionContainer/tMethodDefinition" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode11" comment="ActivityNode11" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.2 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.3" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.4 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.20" forEach="true">
+          <storyPattern comment="ActivityNode11">
+            <objectVariable name="parent" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tChild" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode12" comment="ActivityNode12" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.4 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.5" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.2">
+          <storyPattern comment="ActivityNode12">
+            <objectVariable name="basePackage" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="childsBasePackage" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+              <bindingExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/getBasePackage">
+                <ownedParameterBindings parameter="//Search/getBasePackage/tClass">
+                  <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.1"/>
+                </ownedParameterBindings>
+                <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1"/>
+              </bindingExpression>
+            </objectVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode13" comment="ActivityNode13" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.6" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.3">
+          <storyPattern comment="ActivityNode13">
+            <objectVariable type="//Containers/TAccessContainer" name="accessedMembers" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode14" comment="ActivityNode14" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.7 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.8" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.6 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.9" forEach="true">
+          <storyPattern comment="ActivityNode14">
+            <objectVariable name="activeClass" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.1" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="parent" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TMethodDefinitionContainer" name="tDefinitions" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.2" bindingState="BOUND"/>
+            <objectVariable name="tMethodDefinition" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.0 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <linkVariable name="defines" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.3" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="childClasses" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/childClasses"/>
+            </linkVariable>
+            <linkVariable name="tMethodDefinition" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.3" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.2" type="//Containers/TMethodDefinitionContainer/tMethodDefinition"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode15" comment="ActivityNode15" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.9 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.10" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.8 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.12 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.14" forEach="true">
+          <storyPattern comment="ActivityNode15">
+            <objectVariable name="accessed" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.3">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TAccessContainer" name="accessedMembers" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND"/>
+            <objectVariable name="definingClass" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.2" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="pg" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.2" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable name="tMethodDefinition" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.3" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <linkVariable name="tMember" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" type="//Containers/TAccessContainer/tMember" bindingOperator="CREATE"/>
+            <linkVariable name="defines" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="classes" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+            </linkVariable>
+            <linkVariable name="access" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.4">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode16" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.11 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.12" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.10">
+          <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/isChild">
+            <ownedParameterBindings parameter="//Search/isChild/child">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2"/>
+            </ownedParameterBindings>
+            <ownedParameterBindings parameter="//Search/isChild/parent">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.0"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1"/>
+          </statementExpression>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode17" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.13 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.14" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.11">
+          <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/isChild">
+            <ownedParameterBindings parameter="//Search/isChild/child">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2"/>
+            </ownedParameterBindings>
+            <ownedParameterBindings parameter="//Search/isChild/parent">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4/@storyPattern/@objectVariable.0"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1"/>
+          </statementExpression>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode4" comment="ActivityNode4" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.15" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.24">
+          <storyPattern comment="ActivityNode4">
+            <objectVariable name="pg" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable type="//Search" name="search" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0" bindingOperator="CREATE"/>
+            <objectVariable type="//Refactoring" name="this" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1 //Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.2" bindingState="BOUND"/>
+            <linkVariable name="pg" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" type="//Search/pg" bindingOperator="CREATE"/>
+            <linkVariable name="search" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" type="//Refactoring/search" bindingOperator="CREATE"/>
+            <linkVariable name="pg" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" type="//Refactoring/pg"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode5" comment="ActivityNode5" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.16 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.17" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.15">
+          <storyPattern comment="ActivityNode5">
+            <objectVariable name="method" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+            </objectVariable>
+            <objectVariable name="parent" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="signature" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9/@storyPattern/@objectVariable.1" bindingSemantics="NEGATIVE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode6" comment="ActivityNode6" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.18" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.17">
+          <storyPattern comment="ActivityNode6">
+            <objectVariable name="basePackage" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+              <bindingExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/getBasePackage">
+                <ownedParameterBindings parameter="//Search/getBasePackage/tClass">
+                  <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.0"/>
+                </ownedParameterBindings>
+                <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1"/>
+              </bindingExpression>
+            </objectVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode7" comment="ActivityNode7" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.19" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.18">
+          <storyPattern comment="ActivityNode7">
+            <objectVariable type="//Containers/TMethodDefinitionContainer" name="tDefinitions" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode8" comment="ActivityNode8" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.20 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.21" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.1 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.19" forEach="true">
+          <storyPattern comment="ActivityNode8">
+            <objectVariable name="parent" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tChild" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode9" comment="ActivityNode9" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.22 //Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.23" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.21">
+          <storyPattern comment="ActivityNode9">
+            <objectVariable name="method" incomingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+            </objectVariable>
+            <objectVariable name="tChild" outgoingLink="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="signature" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.0" source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.24"/>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.0">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.23">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.13">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.5">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.16">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_isApplicable/@activity/@ownedActivityEdge.7">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.15" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.2" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.3" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.2" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.2" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.18" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.3" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.20" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.4" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.6" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.6" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.6" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.7" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.17" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.7" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.5" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.19" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.9" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.10" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.10" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.11"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.11" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.1" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.12" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.0" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.13" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.16" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.14" target="//Refactoring/pum_isApplicable/@activity/@ownedActivityNode.8"/>
+      </activity>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="pum_Perform" eType="//Containers/TClassContainer">
+      <eParameters name="method">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+      </eParameters>
+      <eParameters name="parent">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <activity owningOperation="//Refactoring/pum_Perform">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode65" comment="ActivityNode65" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.0 //Refactoring/pum_Perform/@activity/@ownedActivityEdge.1" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.2 //Refactoring/pum_Perform/@activity/@ownedActivityEdge.6" forEach="true">
+          <storyPattern comment="ActivityNode65">
+            <objectVariable name="childsDefinition" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <objectVariable name="accessing" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+            </objectVariable>
+            <objectVariable name="pg" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable name="tClass" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.1" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@linkVariable.2">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="access" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+            </linkVariable>
+            <linkVariable name="classes" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.3" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.2">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+            </linkVariable>
+            <linkVariable name="defines" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode66" comment="ActivityNode66" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.2" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode66">
+            <objectVariable name="accessing" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0 //Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+            </objectVariable>
+            <objectVariable name="tMethodDefinition" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <objectVariable name="childsDefinition" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <linkVariable name="access" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+            </linkVariable>
+            <linkVariable name="access" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" bindingOperator="DESTROY">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember/access"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.3"/>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode18" comment="ActivityNode18" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.4 //Refactoring/pum_Perform/@activity/@ownedActivityEdge.5" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.9">
+          <storyPattern comment="ActivityNode18">
+            <objectVariable name="parent" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.2" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="method" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.2 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.5" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.3" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+            </objectVariable>
+            <objectVariable name="tMethodDefinition" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.0 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.4 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.3">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <objectVariable name="tmpChild" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.1 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.6" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.4 //Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.5">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TClassContainer" name="container" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@linkVariable.6" bindingState="BOUND"/>
+            <linkVariable name="defines" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="childClasses" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.3" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/childClasses"/>
+            </linkVariable>
+            <linkVariable name="signature" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0" bindingOperator="CREATE">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+            <linkVariable name="definitions" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+            </linkVariable>
+            <linkVariable name="defines" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.3" bindingOperator="DESTROY">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="signature" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.3" bindingOperator="DESTROY">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+            <linkVariable name="tClass" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.3" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.4" type="//Containers/TClassContainer/tClass" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.4">
+          <returnValue xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.4"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode20" comment="ActivityNode20" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.6 //Refactoring/pum_Perform/@activity/@ownedActivityEdge.7" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.5 //Refactoring/pum_Perform/@activity/@ownedActivityEdge.8" forEach="true">
+          <storyPattern comment="ActivityNode20">
+            <objectVariable name="parent" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.2" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="method" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0 //Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.3" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+            </objectVariable>
+            <objectVariable name="childsDefinition" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.4 //Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <objectVariable name="tChild" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.5" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.2 //Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.3 //Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.4">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable type="//Containers/TClassContainer" name="container" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.5" bindingState="BOUND"/>
+            <linkVariable name="signature" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+            <linkVariable name="definitions" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+            </linkVariable>
+            <linkVariable name="parentClass" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+            <linkVariable name="signature" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+            <linkVariable name="defines" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.3">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="tClass" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.3" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.4" type="//Containers/TClassContainer/tClass" bindingOperator="CREATE"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode21" comment="ActivityNode21" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.8" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.1">
+          <storyPattern comment="ActivityNode21">
+            <objectVariable name="tChild" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0 //Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="method" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.2" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+            </objectVariable>
+            <objectVariable name="childsDefinition" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.1 //Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.2" bindingOperator="DESTROY" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+            </objectVariable>
+            <linkVariable name="signature" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0" bindingOperator="DESTROY">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+            </linkVariable>
+            <linkVariable name="defines" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+            </linkVariable>
+            <linkVariable name="definitions" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.7">
+          <returnValue xsi:type="patternExpressions:ObjectVariableExpression" object="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.4"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode64" comment="ActivityNode64" outgoing="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.9" incoming="//Refactoring/pum_Perform/@activity/@ownedActivityEdge.3">
+          <storyPattern comment="ActivityNode64">
+            <objectVariable type="//Containers/TClassContainer" name="container" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0" bindingOperator="CREATE"/>
+            <objectVariable name="parent" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="pg" incomingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+            </objectVariable>
+            <objectVariable type="//Refactoring" name="this" outgoingLink="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@linkVariable.1" bindingState="BOUND"/>
+            <linkVariable name="tClass" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.1" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.0" type="//Containers/TClassContainer/tClass" bindingOperator="CREATE"/>
+            <linkVariable name="pg" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.2" source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8/@storyPattern/@objectVariable.3" type="//Refactoring/pg"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.1" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.2" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.4" guard="FAILURE"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.0" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.7" guard="END"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.6" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.5"/>
+        <ownedActivityEdge source="//Refactoring/pum_Perform/@activity/@ownedActivityNode.8" target="//Refactoring/pum_Perform/@activity/@ownedActivityNode.3"/>
+      </activity>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pg">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="search" eType="//Search"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Search">
+    <eOperations xsi:type="activities:MoflonEOperation" name="getBasePackage">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+      <eParameters name="tClass">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <activity owningOperation="//Search/getBasePackage">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode33" comment="ActivityNode33" outgoing="//Search/getBasePackage/@activity/@ownedActivityEdge.0" incoming="//Search/getBasePackage/@activity/@ownedActivityEdge.3">
+          <storyPattern comment="ActivityNode33">
+            <objectVariable type="//Search" name="this" bindingState="BOUND"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode34" comment="ActivityNode34" outgoing="//Search/getBasePackage/@activity/@ownedActivityEdge.1 //Search/getBasePackage/@activity/@ownedActivityEdge.2" incoming="//Search/getBasePackage/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode34">
+            <objectVariable name="tClass" incomingLink="//Search/getBasePackage/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="tPackage" outgoingLink="//Search/getBasePackage/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <linkVariable name="containedClasses" target="//Search/getBasePackage/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0" source="//Search/getBasePackage/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/containedClasses"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Search/getBasePackage/@activity/@ownedActivityEdge.3"/>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/getBasePackage/@activity/@ownedActivityEdge.1">
+          <returnValue xsi:type="expressions:LiteralExpression" value="null"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/getBasePackage/@activity/@ownedActivityEdge.2">
+          <returnValue xsi:type="callExpressions:MethodCallExpression" callee="//Search/getBasePackage.1">
+            <ownedParameterBindings parameter="//Search/getBasePackage.1/tPackage">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/getBasePackage/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/getBasePackage/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0"/>
+          </returnValue>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Search/getBasePackage/@activity/@ownedActivityNode.0" target="//Search/getBasePackage/@activity/@ownedActivityNode.1"/>
+        <ownedActivityEdge source="//Search/getBasePackage/@activity/@ownedActivityNode.1" target="//Search/getBasePackage/@activity/@ownedActivityNode.3" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/getBasePackage/@activity/@ownedActivityNode.1" target="//Search/getBasePackage/@activity/@ownedActivityNode.4" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/getBasePackage/@activity/@ownedActivityNode.2" target="//Search/getBasePackage/@activity/@ownedActivityNode.0"/>
+      </activity>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="getBasePackage">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+      <eParameters name="tPackage">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+      </eParameters>
+      <activity owningOperation="//Search/getBasePackage.1">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode35" comment="ActivityNode35" outgoing="//Search/getBasePackage.1/@activity/@ownedActivityEdge.0" incoming="//Search/getBasePackage.1/@activity/@ownedActivityEdge.3">
+          <storyPattern comment="ActivityNode35">
+            <objectVariable type="//Search" name="this" bindingState="BOUND"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode36" comment="ActivityNode36" outgoing="//Search/getBasePackage.1/@activity/@ownedActivityEdge.1 //Search/getBasePackage.1/@activity/@ownedActivityEdge.2" incoming="//Search/getBasePackage.1/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode36">
+            <objectVariable name="parent" outgoingLink="//Search/getBasePackage.1/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="tPackage" incomingLink="//Search/getBasePackage.1/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <linkVariable name="subpackage" target="//Search/getBasePackage.1/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Search/getBasePackage.1/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/subpackage"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Search/getBasePackage.1/@activity/@ownedActivityEdge.3"/>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/getBasePackage.1/@activity/@ownedActivityEdge.1">
+          <returnValue xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/getBasePackage.1/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/getBasePackage.1/@activity/@ownedActivityEdge.2">
+          <returnValue xsi:type="callExpressions:MethodCallExpression" callee="//Search/getBasePackage.1">
+            <ownedParameterBindings parameter="//Search/getBasePackage.1/tPackage">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/getBasePackage.1/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/getBasePackage.1/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0"/>
+          </returnValue>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Search/getBasePackage.1/@activity/@ownedActivityNode.0" target="//Search/getBasePackage.1/@activity/@ownedActivityNode.1"/>
+        <ownedActivityEdge source="//Search/getBasePackage.1/@activity/@ownedActivityNode.1" target="//Search/getBasePackage.1/@activity/@ownedActivityNode.3" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/getBasePackage.1/@activity/@ownedActivityNode.1" target="//Search/getBasePackage.1/@activity/@ownedActivityNode.4" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/getBasePackage.1/@activity/@ownedActivityNode.2" target="//Search/getBasePackage.1/@activity/@ownedActivityNode.0"/>
+      </activity>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="isChild">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="child">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <eParameters name="parent">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+      <activity owningOperation="//Search/isChild">
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode30" comment="ActivityNode30" outgoing="//Search/isChild/@activity/@ownedActivityEdge.0" incoming="//Search/isChild/@activity/@ownedActivityEdge.7">
+          <storyPattern comment="ActivityNode30">
+            <objectVariable type="//Search" name="this" bindingState="BOUND"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode31" comment="ActivityNode31" outgoing="//Search/isChild/@activity/@ownedActivityEdge.1 //Search/isChild/@activity/@ownedActivityEdge.2" incoming="//Search/isChild/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode31">
+            <objectVariable name="child" outgoingLink="//Search/isChild/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="parent" incomingLink="//Search/isChild/@activity/@ownedActivityNode.1/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Search/isChild/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1" source="//Search/isChild/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode32" comment="ActivityNode32" outgoing="//Search/isChild/@activity/@ownedActivityEdge.3 //Search/isChild/@activity/@ownedActivityEdge.4" incoming="//Search/isChild/@activity/@ownedActivityEdge.2 //Search/isChild/@activity/@ownedActivityEdge.5" forEach="true">
+          <storyPattern comment="ActivityNode32">
+            <objectVariable name="new_parent" outgoingLink="//Search/isChild/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <objectVariable name="parent" incomingLink="//Search/isChild/@activity/@ownedActivityNode.2/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+            </objectVariable>
+            <linkVariable name="parentClass" target="//Search/isChild/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.1" source="//Search/isChild/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/parentClass"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StatementNode" name="ActivityNode50" outgoing="//Search/isChild/@activity/@ownedActivityEdge.5 //Search/isChild/@activity/@ownedActivityEdge.6" incoming="//Search/isChild/@activity/@ownedActivityEdge.3">
+          <statementExpression xsi:type="callExpressions:MethodCallExpression" callee="//Search/isChild">
+            <ownedParameterBindings parameter="//Search/isChild/child">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/isChild/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.0"/>
+            </ownedParameterBindings>
+            <ownedParameterBindings parameter="//Search/isChild/parent">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/isChild/@activity/@ownedActivityNode.2/@storyPattern/@objectVariable.0"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/isChild/@activity/@ownedActivityNode.0/@storyPattern/@objectVariable.0"/>
+          </statementExpression>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Search/isChild/@activity/@ownedActivityEdge.7"/>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/isChild/@activity/@ownedActivityEdge.4">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/isChild/@activity/@ownedActivityEdge.1">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/isChild/@activity/@ownedActivityEdge.6">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.0" target="//Search/isChild/@activity/@ownedActivityNode.1"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.1" target="//Search/isChild/@activity/@ownedActivityNode.6" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.1" target="//Search/isChild/@activity/@ownedActivityNode.2" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.2" target="//Search/isChild/@activity/@ownedActivityNode.3" guard="EACH_TIME"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.2" target="//Search/isChild/@activity/@ownedActivityNode.5" guard="END"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.3" target="//Search/isChild/@activity/@ownedActivityNode.2" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.3" target="//Search/isChild/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/isChild/@activity/@ownedActivityNode.4" target="//Search/isChild/@activity/@ownedActivityNode.0"/>
+      </activity>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="linkClass">
+      <eParameters name="tClass">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eParameters>
+    </eOperations>
+    <eOperations xsi:type="activities:MoflonEOperation" name="equivalent">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eParameters name="package2">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+      </eParameters>
+      <eParameters name="package1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+      </eParameters>
+      <activity owningOperation="//Search/equivalent">
+        <ownedActivityNode xsi:type="activities:StartNode" outgoing="//Search/equivalent/@activity/@ownedActivityEdge.0"/>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode59" comment="ActivityNode59" outgoing="//Search/equivalent/@activity/@ownedActivityEdge.1 //Search/equivalent/@activity/@ownedActivityEdge.2" incoming="//Search/equivalent/@activity/@ownedActivityEdge.0">
+          <storyPattern comment="ActivityNode59">
+            <objectVariable name="package1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="package2" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable type="//Search" name="this" bindingState="BOUND"/>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/equivalent/@activity/@ownedActivityEdge.1">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode60" comment="ActivityNode60" outgoing="//Search/equivalent/@activity/@ownedActivityEdge.3 //Search/equivalent/@activity/@ownedActivityEdge.4" incoming="//Search/equivalent/@activity/@ownedActivityEdge.2">
+          <storyPattern comment="ActivityNode60">
+            <objectVariable name="package1" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+              <constraint>
+                <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+                  <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Search/equivalent/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.1">
+                    <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/tName"/>
+                  </rightExpression>
+                  <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//Search/equivalent/@activity/@ownedActivityNode.3/@storyPattern/@objectVariable.0">
+                    <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/tName"/>
+                  </leftExpression>
+                </constraintExpression>
+              </constraint>
+            </objectVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/equivalent/@activity/@ownedActivityEdge.3">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode61" comment="ActivityNode61" outgoing="//Search/equivalent/@activity/@ownedActivityEdge.5 //Search/equivalent/@activity/@ownedActivityEdge.6" incoming="//Search/equivalent/@activity/@ownedActivityEdge.4">
+          <storyPattern comment="ActivityNode61">
+            <objectVariable name="package1" incomingLink="//Search/equivalent/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="child1" outgoingLink="//Search/equivalent/@activity/@ownedActivityNode.5/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <linkVariable name="parent" target="//Search/equivalent/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.0" source="//Search/equivalent/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/parent"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode62" comment="ActivityNode62" outgoing="//Search/equivalent/@activity/@ownedActivityEdge.7 //Search/equivalent/@activity/@ownedActivityEdge.8" incoming="//Search/equivalent/@activity/@ownedActivityEdge.5">
+          <storyPattern comment="ActivityNode62">
+            <objectVariable name="package2" incomingLink="//Search/equivalent/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="child2" outgoingLink="//Search/equivalent/@activity/@ownedActivityNode.6/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <linkVariable name="parent" target="//Search/equivalent/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.0" source="//Search/equivalent/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/parent"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/equivalent/@activity/@ownedActivityEdge.7">
+          <returnValue xsi:type="callExpressions:MethodCallExpression" callee="//Search/equivalent">
+            <ownedParameterBindings parameter="//Search/equivalent/package2">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/equivalent/@activity/@ownedActivityNode.5/@storyPattern/@objectVariable.1"/>
+            </ownedParameterBindings>
+            <ownedParameterBindings parameter="//Search/equivalent/package1">
+              <valueExpression xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/equivalent/@activity/@ownedActivityNode.6/@storyPattern/@objectVariable.1"/>
+            </ownedParameterBindings>
+            <target xsi:type="patternExpressions:ObjectVariableExpression" object="//Search/equivalent/@activity/@ownedActivityNode.1/@storyPattern/@objectVariable.2"/>
+          </returnValue>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/equivalent/@activity/@ownedActivityEdge.8">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StoryNode" name="ActivityNode63" comment="ActivityNode63" outgoing="//Search/equivalent/@activity/@ownedActivityEdge.9 //Search/equivalent/@activity/@ownedActivityEdge.10" incoming="//Search/equivalent/@activity/@ownedActivityEdge.6">
+          <storyPattern comment="ActivityNode63">
+            <objectVariable name="package2" incomingLink="//Search/equivalent/@activity/@ownedActivityNode.9/@storyPattern/@linkVariable.0" bindingState="BOUND">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <objectVariable name="child2" outgoingLink="//Search/equivalent/@activity/@ownedActivityNode.9/@storyPattern/@linkVariable.0">
+              <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+            </objectVariable>
+            <linkVariable name="parent" target="//Search/equivalent/@activity/@ownedActivityNode.9/@storyPattern/@objectVariable.0" source="//Search/equivalent/@activity/@ownedActivityNode.9/@storyPattern/@objectVariable.1">
+              <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/parent"/>
+            </linkVariable>
+          </storyPattern>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/equivalent/@activity/@ownedActivityEdge.9">
+          <returnValue xsi:type="expressions:LiteralExpression" value="true"/>
+        </ownedActivityNode>
+        <ownedActivityNode xsi:type="activities:StopNode" incoming="//Search/equivalent/@activity/@ownedActivityEdge.10">
+          <returnValue xsi:type="expressions:LiteralExpression" value="false"/>
+        </ownedActivityNode>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.0" target="//Search/equivalent/@activity/@ownedActivityNode.1"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.1" target="//Search/equivalent/@activity/@ownedActivityNode.2" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.1" target="//Search/equivalent/@activity/@ownedActivityNode.3" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.3" target="//Search/equivalent/@activity/@ownedActivityNode.4" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.3" target="//Search/equivalent/@activity/@ownedActivityNode.5" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.5" target="//Search/equivalent/@activity/@ownedActivityNode.6" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.5" target="//Search/equivalent/@activity/@ownedActivityNode.9" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.6" target="//Search/equivalent/@activity/@ownedActivityNode.7" guard="SUCCESS"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.6" target="//Search/equivalent/@activity/@ownedActivityNode.8" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.9" target="//Search/equivalent/@activity/@ownedActivityNode.10" guard="FAILURE"/>
+        <ownedActivityEdge source="//Search/equivalent/@activity/@ownedActivityNode.9" target="//Search/equivalent/@activity/@ownedActivityNode.11" guard="SUCCESS"/>
+      </activity>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pg">
+      <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eSubpackages name="Containers" nsURI="platform:/plugin/Refactorings/model/Refactorings.ecore#//Containers" nsPrefix="Containers">
+    <eClassifiers xsi:type="ecore:EClass" name="CSCContainer" eSuperTypes="//Containers/RefactoringContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="new_parent" lowerBound="1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="child" lowerBound="1" eType="//Containers/TClassContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PUMContainer" eSuperTypes="//Containers/RefactoringContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RefactoringContainer" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TAccessContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tMember" upperBound="-1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMember"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TClassContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tClass" upperBound="-1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TMethodDefinitionContainer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="tMethodDefinition" upperBound="-1">
+        <eType xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

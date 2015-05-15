@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<breakpoints>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/FieldNameExistingImpl.java" type="1"/>
+<marker charStart="10507" lineNumber="274" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10507"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{FieldNameExistingImpl.java[FieldNameExistingImpl"/>
+<attrib name="charEnd" value="10551"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:FieldNameExistingImpl [line: 274] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.FieldNameExistingImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/FieldNameExistingImpl.java" type="1"/>
+<marker charStart="13042" lineNumber="331" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="13042"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{FieldNameExistingImpl.java[FieldNameExistingImpl"/>
+<attrib name="charEnd" value="13072"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:FieldNameExistingImpl [line: 331] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.FieldNameExistingImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/FieldTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="10191" lineNumber="269" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10191"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{FieldTypeExistingRuleImpl.java[FieldTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="10303"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:FieldTypeExistingRuleImpl [line: 269] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.FieldTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/FieldTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="13800" lineNumber="340" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="13800"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{FieldTypeExistingRuleImpl.java[FieldTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="13834"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:FieldTypeExistingRuleImpl [line: 340] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.FieldTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/FieldTypeLinkRuleImpl.java" type="1"/>
+<marker charStart="10327" lineNumber="271" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10327"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{FieldTypeLinkRuleImpl.java[FieldTypeLinkRuleImpl"/>
+<attrib name="charEnd" value="10439"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:FieldTypeLinkRuleImpl [line: 271] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.FieldTypeLinkRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/FieldTypeLinkRuleImpl.java" type="1"/>
+<marker charStart="13565" lineNumber="337" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="13565"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{FieldTypeLinkRuleImpl.java[FieldTypeLinkRuleImpl"/>
+<attrib name="charEnd" value="13595"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:FieldTypeLinkRuleImpl [line: 337] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.FieldTypeLinkRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ParamTypeCreateRuleImpl.java" type="1"/>
+<marker charStart="9023" lineNumber="254" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="9023"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ParamTypeCreateRuleImpl.java[ParamTypeCreateRuleImpl"/>
+<attrib name="charEnd" value="9142"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ParamTypeCreateRuleImpl [line: 254] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ParamTypeCreateRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ParamTypeCreateRuleImpl.java" type="1"/>
+<marker charStart="12095" lineNumber="317" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="12095"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ParamTypeCreateRuleImpl.java[ParamTypeCreateRuleImpl"/>
+<attrib name="charEnd" value="12127"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ParamTypeCreateRuleImpl [line: 317] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ParamTypeCreateRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ParamTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="8502" lineNumber="243" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="8502"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ParamTypeExistingRuleImpl.java[ParamTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="8621"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ParamTypeExistingRuleImpl [line: 243] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ParamTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ParamTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="12055" lineNumber="313" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="12055"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ParamTypeExistingRuleImpl.java[ParamTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="12089"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ParamTypeExistingRuleImpl [line: 313] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ParamTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ParamTypeLinkRuleImpl.java" type="1"/>
+<marker charStart="8782" lineNumber="248" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="8782"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ParamTypeLinkRuleImpl.java[ParamTypeLinkRuleImpl"/>
+<attrib name="charEnd" value="8854"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ParamTypeLinkRuleImpl [line: 248] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ParamTypeLinkRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ParamTypeLinkRuleImpl.java" type="1"/>
+<marker charStart="11910" lineNumber="312" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="11910"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ParamTypeLinkRuleImpl.java[ParamTypeLinkRuleImpl"/>
+<attrib name="charEnd" value="11940"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ParamTypeLinkRuleImpl [line: 312] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ParamTypeLinkRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeCreateRuleImpl.java" type="1"/>
+<marker charStart="10832" lineNumber="280" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10832"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeCreateRuleImpl.java[ReturnTypeCreateRuleImpl"/>
+<attrib name="charEnd" value="10944"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeCreateRuleImpl [line: 280] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeCreateRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeCreateRuleImpl.java" type="1"/>
+<marker charStart="13878" lineNumber="343" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="13878"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeCreateRuleImpl.java[ReturnTypeCreateRuleImpl"/>
+<attrib name="charEnd" value="13911"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeCreateRuleImpl [line: 343] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeCreateRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="10343" lineNumber="257" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10343"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeExistingRuleImpl.java[ReturnTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="10455"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeExistingRuleImpl [line: 257] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="10367" lineNumber="269" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10367"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeExistingRuleImpl.java[ReturnTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="10479"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeExistingRuleImpl [line: 269] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeExistingRuleImpl.java" type="1"/>
+<marker charStart="13886" lineNumber="338" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="13886"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeExistingRuleImpl.java[ReturnTypeExistingRuleImpl"/>
+<attrib name="charEnd" value="13921"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeExistingRuleImpl [line: 338] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeExistingRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeLinkRuleImpl.java" type="1"/>
+<marker charStart="10537" lineNumber="276" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="10537"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeLinkRuleImpl.java[ReturnTypeLinkRuleImpl"/>
+<attrib name="charEnd" value="10649"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeLinkRuleImpl [line: 276] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeLinkRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/GravityTGG/gen/GravityTGG/Rules/impl/ReturnTypeLinkRuleImpl.java" type="1"/>
+<marker charStart="13686" lineNumber="340" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="13686"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/gen&lt;GravityTGG.Rules.impl{ReturnTypeLinkRuleImpl.java[ReturnTypeLinkRuleImpl"/>
+<attrib name="charEnd" value="13717"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="message" value="Line breakpoint:ReturnTypeLinkRuleImpl [line: 340] - isApplicable_FWD(Match)"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="GravityTGG.Rules.impl.ReturnTypeLinkRuleImpl"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/.org.eclipse.jdt.core.external.folders/.link0/org/moflon/util/eMoflonEMFUtil.class" type="1"/>
+<marker charStart="14440" lineNumber="386" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="14440"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/E:\/MoflonDeveloper\/Dependencies\/bin&lt;org.moflon.util(eMoflonEMFUtil.class[eMoflonEMFUtil"/>
+<attrib name="charEnd" value="14482"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="message" value="Line breakpoint:eMoflonEMFUtil [line: 386] - getOppositeReferenceTyped(EObject, Class&lt;T&gt;, String)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="org.moflon.util.eMoflonEMFUtil"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=GravityTGG/E:\/MoflonDeveloper\/Dependencies\/bin&lt;org.moflon.util(eMoflonEMFUtil.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/.org.eclipse.jdt.core.external.folders/.link0/org/moflon/util/eMoflonEMFUtil.class" type="1"/>
+<marker charStart="14495" lineNumber="389" type="org.eclipse.jdt.debug.javaLineBreakpointMarker">
+<attrib name="charStart" value="14495"/>
+<attrib name="org.eclipse.jdt.debug.core.suspendPolicy" value="2"/>
+<attrib name="org.eclipse.jdt.debug.ui.JAVA_ELEMENT_HANDLE_ID" value="=GravityTGG/E:\/MoflonDeveloper\/Dependencies\/bin&lt;org.moflon.util(eMoflonEMFUtil.class[eMoflonEMFUtil"/>
+<attrib name="charEnd" value="14542"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.jdt.debug.core.installCount" value="1"/>
+<attrib name="message" value="Line breakpoint:eMoflonEMFUtil [line: 389] - getOppositeReferenceTyped(EObject, Class&lt;T&gt;, String)"/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.jdt.debug"/>
+<attrib name="org.eclipse.jdt.debug.core.typeName" value="org.moflon.util.eMoflonEMFUtil"/>
+<attrib name="org.eclipse.jdt.internal.core.JavaModelManager.handleId" value="=GravityTGG/E:\/MoflonDeveloper\/Dependencies\/bin&lt;org.moflon.util(eMoflonEMFUtil.class"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+</marker>
+</breakpoint>
+</breakpoints>

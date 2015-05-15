@@ -1,0 +1,36 @@
+digraph "FieldTypeCreateRule" {
+	label="_____________________________\n eq(jType.name,tType.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "jFieldToTFieldSignature : FieldToTFieldSignature" [shape=hexagon, color=black];
+	          "jTypeToTType : ClassToTClass" [shape=hexagon, color=green];
+
+	          "jTypeToTType : ClassToTClass" -> "jType : Class" [color=green, label="source", fontsize=11];
+	          "jFieldToTFieldSignature : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "jFieldToTFieldSignature : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	          "jTypeToTType : ClassToTClass" -> "tType : TClass" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jType : Class" [shape=record, color=black, label="{jType : Class | }"];
+	          "namespaceClassifierReference : NamespaceClassifierReference" [shape=record, color=green, label="{namespaceClassifierReference : NamespaceClassifierReference | }"];
+	          "classifierReference : ClassifierReference" [shape=record, color=green, label="{classifierReference : ClassifierReference | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "namespaceClassifierReference : NamespaceClassifierReference" -> "classifierReference : ClassifierReference" [color=green, label="classifierReferences", fontsize=11];
+	          "classifierReference : ClassifierReference" -> "jType : Class" [color=green, label="target", fontsize=11];
+	          "jField : Field" -> "namespaceClassifierReference : NamespaceClassifierReference" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tType : TClass" [shape=record, color=green, label="{tType : TClass | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "existingTClass : TClass" [shape=record, color=blue, label="{existingTClass : TClass | }"];
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+	          "tField : TField" [shape=record, color=black, label="{tField : TField | }"];
+
+	          "pg : TypeGraph" -> "tType : TClass" [color=green, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "existingTClass : TClass" [color=black, label="classes", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tType : TClass" [color=green, label="type", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tField : TField" [color=black, label="field", fontsize=11];
+	          "pg : TypeGraph" -> "tField : TField" [color=black, label="fields", fontsize=11];
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MoflonPropertyContainer:MoflonPropertiesContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:MoflonPropertyContainer="platform:/plugin/MoflonPropertyContainer/model/MoflonPropertyContainer.ecore" projectName="Refactorings">
+  <dependencies value="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore"/>
+  <dependencies value="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"/>
+  <genSdmRpCoverageInstrumentation/>
+  <skipValidation/>
+  <metaModelProject MetaModelProjectName="GravityMetaModels"/>
+  <replaceGenModel/>
+  <injectionErrorHandling/>
+  <listShuffling/>
+  <genTracingInstrumentation/>
+  <sdmCodegeneratorHandlerId value="DEMOCLES"/>
+  <core/>
+  <tGGBuildMode/>
+  <debugMode/>
+  <strictSDMConditionalBranching/>
+</MoflonPropertyContainer:MoflonPropertiesContainer>

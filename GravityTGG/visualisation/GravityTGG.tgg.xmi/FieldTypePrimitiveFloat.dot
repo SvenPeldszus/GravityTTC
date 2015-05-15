@@ -1,0 +1,30 @@
+digraph "FieldTypePrimitiveFloat" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jPrimitiveTypeToTPrimitiveType : FloatToTClass" [shape=hexagon, color=green];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" [shape=hexagon, color=black];
+
+	          "jPrimitiveTypeToTPrimitiveType : FloatToTClass" -> "jPrimitiveType : Float" [color=green, label="source", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : FloatToTClass" -> "tPrimitiveType : TClass" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jPrimitiveType : Float" [shape=record, color=green, label="{jPrimitiveType : Float | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "jField : Field" -> "jPrimitiveType : Float" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+	          "tField : TField" [shape=record, color=black, label="{tField : TField | }"];
+	          "tPrimitiveType : TClass" [shape=record, color=black, label="{tPrimitiveType : TClass | tName == \"float\"}"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+
+	          "tFieldSignature : TFieldSignature" -> "tField : TField" [color=black, label="field", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tPrimitiveType : TClass" [color=green, label="type", fontsize=11];
+	          "pg : TypeGraph" -> "tPrimitiveType : TClass" [color=black, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "tField : TField" [color=black, label="fields", fontsize=11];
+	}
+}

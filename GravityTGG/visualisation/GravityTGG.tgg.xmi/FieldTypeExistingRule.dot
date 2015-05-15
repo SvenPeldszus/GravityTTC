@@ -1,0 +1,29 @@
+digraph "FieldTypeExistingRule" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "tFieldSignatureToJField : FieldToTFieldSignature" [shape=hexagon, color=black];
+	          "jTypeToTType : ClassToTClass" [shape=hexagon, color=black];
+
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "jTypeToTType : ClassToTClass" -> "tType : TClass" [color=black, label="target", fontsize=11];
+	          "jTypeToTType : ClassToTClass" -> "jType : Class" [color=black, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "classifierReference : ClassifierReference" [shape=record, color=green, label="{classifierReference : ClassifierReference | }"];
+	          "namespaceClassifierReference : NamespaceClassifierReference" [shape=record, color=green, label="{namespaceClassifierReference : NamespaceClassifierReference | }"];
+	          "jType : Class" [shape=record, color=black, label="{jType : Class | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "namespaceClassifierReference : NamespaceClassifierReference" -> "classifierReference : ClassifierReference" [color=green, label="classifierReferences", fontsize=11];
+	          "classifierReference : ClassifierReference" -> "jType : Class" [color=green, label="target", fontsize=11];
+	          "jField : Field" -> "namespaceClassifierReference : NamespaceClassifierReference" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tType : TClass" [shape=record, color=black, label="{tType : TClass | }"];
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+
+	          "tFieldSignature : TFieldSignature" -> "tType : TClass" [color=green, label="type", fontsize=11];
+	}
+}

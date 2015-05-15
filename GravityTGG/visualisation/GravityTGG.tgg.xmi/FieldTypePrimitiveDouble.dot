@@ -1,0 +1,30 @@
+digraph "FieldTypePrimitiveDouble" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "tFieldSignatureToJField : FieldToTFieldSignature" [shape=hexagon, color=black];
+	          "jPrimitiveTypeToTPrimitiveType : DoubleToTClass" [shape=hexagon, color=green];
+
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	          "tFieldSignatureToJField : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : DoubleToTClass" -> "jPrimitiveType : Double" [color=green, label="source", fontsize=11];
+	          "jPrimitiveTypeToTPrimitiveType : DoubleToTClass" -> "tPrimitiveType : TClass" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jPrimitiveType : Double" [shape=record, color=green, label="{jPrimitiveType : Double | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "jField : Field" -> "jPrimitiveType : Double" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tField : TField" [shape=record, color=black, label="{tField : TField | }"];
+	          "tPrimitiveType : TClass" [shape=record, color=black, label="{tPrimitiveType : TClass | tName == \"double\"}"];
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+
+	          "pg : TypeGraph" -> "tField : TField" [color=black, label="fields", fontsize=11];
+	          "pg : TypeGraph" -> "tPrimitiveType : TClass" [color=black, label="classes", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tField : TField" [color=black, label="field", fontsize=11];
+	          "tFieldSignature : TFieldSignature" -> "tPrimitiveType : TClass" [color=green, label="type", fontsize=11];
+	}
+}

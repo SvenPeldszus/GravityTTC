@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: ExtendedJamopp;singleton:=true
+Export-Package: ExtendedJamopp.impl,
+ ExtendedJamopp,
+ ExtendedJamopp.util
+Bundle-Name: ExtendedJamopp
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.moflon.dependencies,
+ org.emftext.language.java
+Bundle-ManifestVersion: 2
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: TU Darmstadt

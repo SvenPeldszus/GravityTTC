@@ -1,0 +1,21 @@
+digraph "FieldTypeIgnoreVoid" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jFieldToTFieldSignature : FieldToTFieldSignature" [shape=hexagon, color=black];
+
+	          "jFieldToTFieldSignature : FieldToTFieldSignature" -> "jField : Field" [color=black, label="source", fontsize=11];
+	          "jFieldToTFieldSignature : FieldToTFieldSignature" -> "tFieldSignature : TFieldSignature" [color=black, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "type : Void" [shape=record, color=green, label="{type : Void | }"];
+	          "jField : Field" [shape=record, color=black, label="{jField : Field | }"];
+
+	          "jField : Field" -> "type : Void" [color=green, label="typeReference", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tFieldSignature : TFieldSignature" [shape=record, color=black, label="{tFieldSignature : TFieldSignature | }"];
+
+
+	}
+}

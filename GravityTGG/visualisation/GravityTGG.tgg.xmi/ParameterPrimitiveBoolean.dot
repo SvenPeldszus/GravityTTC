@@ -1,0 +1,39 @@
+digraph "ParameterPrimitiveBoolean" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "jTypeToTType : BooleanToTClass" [shape=hexagon, color=green];
+	          "jParameterToTParameter : ExtendedParameterToTParameter" [shape=hexagon, color=black];
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" [shape=hexagon, color=black];
+
+	          "jParameterToTParameter : ExtendedParameterToTParameter" -> "tParameter : TParameter" [color=black, label="target", fontsize=11];
+	          "jTypeToTType : BooleanToTClass" -> "jType : Boolean" [color=green, label="source", fontsize=11];
+	          "jTypeToTType : BooleanToTClass" -> "tType : TClass" [color=green, label="target", fontsize=11];
+	          "jParameterToTParameter : ExtendedParameterToTParameter" -> "jParameter : ExtendedParameter" [color=black, label="source", fontsize=11];
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" -> "tParameterList : TParameterList" [color=black, label="target", fontsize=11];
+	          "jParameterListToTParameterList : ExtendedParameterListToTParameterList" -> "jParameterList : ExtendedParameterList" [color=black, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jParameterList : ExtendedParameterList" [shape=record, color=black, label="{jParameterList : ExtendedParameterList | }"];
+	          "jType : Boolean" [shape=record, color=green, label="{jType : Boolean | }"];
+	          "jParameter : ExtendedParameter" [shape=record, color=black, label="{jParameter : ExtendedParameter | }"];
+
+	          "jParameter : ExtendedParameter" -> "jType : Boolean" [color=green, label="type", fontsize=11];
+	          "jParameterList : ExtendedParameterList" -> "jParameter : ExtendedParameter" [color=black, label="values", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tMethod : TMethod" [shape=record, color=black, label="{tMethod : TMethod | }"];
+	          "tMethodSignature : TMethodSignature" [shape=record, color=black, label="{tMethodSignature : TMethodSignature | }"];
+	          "tParameter : TParameter" [shape=record, color=black, label="{tParameter : TParameter | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+	          "tType : TClass" [shape=record, color=black, label="{tType : TClass | tName == \"boolean\"}"];
+	          "tParameterList : TParameterList" [shape=record, color=black, label="{tParameterList : TParameterList | }"];
+
+	          "pg : TypeGraph" -> "tMethod : TMethod" [color=black, label="methods", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tMethod : TMethod" [color=black, label="method", fontsize=11];
+	          "tParameter : TParameter" -> "tType : TClass" [color=green, label="tClass", fontsize=11];
+	          "pg : TypeGraph" -> "tType : TClass" [color=black, label="classes", fontsize=11];
+	          "tParameterList : TParameterList" -> "tParameter : TParameter" [color=black, label="entries", fontsize=11];
+	          "tMethodSignature : TMethodSignature" -> "tParameterList : TParameterList" [color=black, label="paramList", fontsize=11];
+	}
+}

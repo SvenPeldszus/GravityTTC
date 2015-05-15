@@ -1,0 +1,32 @@
+digraph "MethodNameExisting" {
+	label="_____________________________\n eq(jMethod.name,tMethod.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "tClassToJClass : ClassToTClass" [shape=hexagon, color=black];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" [shape=hexagon, color=green];
+	          "jMethodToTMethod : ClassMethodToTMethod" [shape=hexagon, color=green];
+
+	          "tClassToJClass : ClassToTClass" -> "tClass : TClass" [color=black, label="target", fontsize=11];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" -> "jMethod : ExtendedClassMethod" [color=green, label="source", fontsize=11];
+	          "jMethodToTMethodDefinition : ClassMethodToTMethodDefinition" -> "tMethodDefinition : TMethodDefinition" [color=green, label="target", fontsize=11];
+	          "tClassToJClass : ClassToTClass" -> "jClass : Class" [color=black, label="source", fontsize=11];
+	          "jMethodToTMethod : ClassMethodToTMethod" -> "tMethod : TMethod" [color=green, label="target", fontsize=11];
+	          "jMethodToTMethod : ClassMethodToTMethod" -> "jMethod : ExtendedClassMethod" [color=green, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "jMethod : ExtendedClassMethod" [shape=record, color=green, label="{jMethod : ExtendedClassMethod | }"];
+	          "jClass : Class" [shape=record, color=black, label="{jClass : Class | }"];
+
+	          "jClass : Class" -> "jMethod : ExtendedClassMethod" [color=green, label="members", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tMethodDefinition : TMethodDefinition" [shape=record, color=green, label="{tMethodDefinition : TMethodDefinition | }"];
+	          "tMethod : TMethod" [shape=record, color=black, label="{tMethod : TMethod | }"];
+	          "tClass : TClass" [shape=record, color=black, label="{tClass : TClass | }"];
+	          "pg : TypeGraph" [shape=record, color=black, label="{pg : TypeGraph | }"];
+
+	          "tClass : TClass" -> "tMethodDefinition : TMethodDefinition" [color=green, label="defines", fontsize=11];
+	          "pg : TypeGraph" -> "tClass : TClass" [color=black, label="classes", fontsize=11];
+	          "pg : TypeGraph" -> "tMethod : TMethod" [color=black, label="methods", fontsize=11];
+	}
+}

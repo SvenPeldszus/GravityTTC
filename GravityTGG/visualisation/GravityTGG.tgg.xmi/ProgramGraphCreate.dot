@@ -1,0 +1,35 @@
+digraph "ProgramGraphCreate" {
+	label="";
+
+	subgraph "Correspondence Domain" {
+	          "typeGraphToExtendedJamoppJavaContainer : ExtendedJamoppJavaContainerToTypeGraph" [shape=hexagon, color=green];
+
+	          "typeGraphToExtendedJamoppJavaContainer : ExtendedJamoppJavaContainerToTypeGraph" -> "typeGraph : TypeGraph" [color=green, label="target", fontsize=11];
+	          "typeGraphToExtendedJamoppJavaContainer : ExtendedJamoppJavaContainerToTypeGraph" -> "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [color=green, label="source", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "extendedJamoppJavaContainer : ExtendedJamoppJavaContainer" [shape=record, color=green, label="{extendedJamoppJavaContainer : ExtendedJamoppJavaContainer | }"];
+
+
+	}
+	subgraph "Target Domain" {
+	          "tChar : TClass" [shape=record, color=green, label="{tChar : TClass | tName := \"char\"}"];
+	          "tByte : TClass" [shape=record, color=green, label="{tByte : TClass | tName := \"byte\"}"];
+	          "tFloat : TClass" [shape=record, color=green, label="{tFloat : TClass | tName := \"float\"}"];
+	          "tDouble : TClass" [shape=record, color=green, label="{tDouble : TClass | tName := \"double\"}"];
+	          "tBoolean : TClass" [shape=record, color=green, label="{tBoolean : TClass | tName := \"boolean\"}"];
+	          "tLong : TClass" [shape=record, color=green, label="{tLong : TClass | tName := \"long\"}"];
+	          "typeGraph : TypeGraph" [shape=record, color=green, label="{typeGraph : TypeGraph | }"];
+	          "tInt : TClass" [shape=record, color=green, label="{tInt : TClass | tName := \"int\"}"];
+	          "tShort : TClass" [shape=record, color=green, label="{tShort : TClass | tName := \"short\"}"];
+
+	          "typeGraph : TypeGraph" -> "tBoolean : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tDouble : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tByte : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tLong : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tChar : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tFloat : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tInt : TClass" [color=green, label="classes", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tShort : TClass" [color=green, label="classes", fontsize=11];
+	}
+}

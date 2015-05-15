@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ExtendedJamopp:ExtendedJamoppJavaContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ExtendedJamopp="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore" xmlns:classifiers="http://www.emftext.org/java/classifiers" xmlns:expressions="http://www.emftext.org/java/expressions" xmlns:generics="http://www.emftext.org/java/generics" xmlns:imports="http://www.emftext.org/java/imports" xmlns:instantiations="http://www.emftext.org/java/instantiations" xmlns:literals="http://www.emftext.org/java/literals" xmlns:members="http://www.emftext.org/java/members" xmlns:operators="http://www.emftext.org/java/operators" xmlns:parameters="http://www.emftext.org/java/parameters" xmlns:references="http://www.emftext.org/java/references" xmlns:statements="http://www.emftext.org/java/statements" xmlns:types="http://www.emftext.org/java/types" roots="//@extendedJamoppPackageElement.0">
+  <compilationUnit name="foo.Foo.java">
+    <namespaces>foo</namespaces>
+    <imports xsi:type="imports:ClassifierImport" classifier="//@compilationUnit.1/@classifiers.0">
+      <namespaces>foo</namespaces>
+    </imports>
+    <classifiers xsi:type="classifiers:Class" name="Foo">
+      <members xsi:type="members:Field" name="b">
+        <initialValue xsi:type="instantiations:NewConstructorCall">
+          <typeReference xsi:type="types:NamespaceClassifierReference">
+            <classifierReferences target="//@compilationUnit.1/@classifiers.0"/>
+          </typeReference>
+        </initialValue>
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences target="//@compilationUnit.1/@classifiers.0"/>
+        </typeReference>
+      </members>
+      <members xsi:type="members:Field" name="s">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences>
+            <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.String.java#//@classifiers.0"/>
+          </classifierReferences>
+        </typeReference>
+      </members>
+      <members xsi:type="members:Field" name="i">
+        <initialValue xsi:type="literals:DecimalIntegerLiteral" decimalValue="0"/>
+        <typeReference xsi:type="types:Int"/>
+      </members>
+      <members xsi:type="members:Field" name="j">
+        <initialValue xsi:type="expressions:AdditiveExpression">
+          <children xsi:type="references:IdentifierReference" target="//@compilationUnit.0/@classifiers.0/@members.2"/>
+          <children xsi:type="literals:DecimalIntegerLiteral" decimalValue="1"/>
+          <additiveOperators xsi:type="operators:Addition"/>
+        </initialValue>
+        <typeReference xsi:type="types:Int"/>
+      </members>
+      <members xsi:type="members:Field" name="x">
+        <initialValue xsi:type="references:IdentifierReference" target="//@compilationUnit.0/@classifiers.0/@members.0">
+          <next xsi:type="references:MethodCall" target="//@compilationUnit.1/@classifiers.0/@members.0"/>
+        </initialValue>
+        <typeReference xsi:type="types:Int"/>
+      </members>
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="string" parameter_list="//@extendedParameterList.3">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences>
+            <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.String.java#//@classifiers.0"/>
+          </classifierReferences>
+        </typeReference>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="f">
+          <typeReference xsi:type="types:NamespaceClassifierReference">
+            <classifierReferences target="//@compilationUnit.0/@classifiers.0"/>
+          </typeReference>
+        </parameters>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="i">
+          <typeReference xsi:type="types:Int"/>
+        </parameters>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="references:StringReference" value="4"/>
+        </statements>
+      </members>
+      <defaultExtends xsi:type="types:ClassifierReference">
+        <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.Object.java#//@classifiers.0"/>
+      </defaultExtends>
+    </classifiers>
+  </compilationUnit>
+  <compilationUnit name="foo.Bar.java">
+    <namespaces>foo</namespaces>
+    <imports xsi:type="imports:ClassifierImport" classifier="//@compilationUnit.0/@classifiers.0">
+      <namespaces>foo</namespaces>
+    </imports>
+    <imports xsi:type="imports:ClassifierImport">
+      <namespaces>java</namespaces>
+      <namespaces>lang</namespaces>
+      <classifier xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.String.java#//@classifiers.0"/>
+    </imports>
+    <imports xsi:type="imports:ClassifierImport">
+      <namespaces>java</namespaces>
+      <namespaces>util</namespaces>
+      <classifier xsi:type="classifiers:Class" href="pathmap:/javaclass/java.util.ArrayList.java#//@classifiers.0"/>
+    </imports>
+    <imports xsi:type="imports:ClassifierImport">
+      <namespaces>java</namespaces>
+      <namespaces>util</namespaces>
+      <classifier xsi:type="classifiers:Interface" href="pathmap:/javaclass/java.util.List.java#//@classifiers.0"/>
+    </imports>
+    <classifiers xsi:type="classifiers:Class" name="Bar">
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="bb" parameter_list="//@extendedParameterList.1">
+        <typeReference xsi:type="types:Int"/>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="literals:DecimalIntegerLiteral" decimalValue="4"/>
+        </statements>
+      </members>
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="bar" parameter_list="//@extendedParameterList.2">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences target="//@compilationUnit.1/@classifiers.0"/>
+        </typeReference>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="instantiations:NewConstructorCall">
+            <typeReference xsi:type="types:NamespaceClassifierReference">
+              <classifierReferences target="//@compilationUnit.1/@classifiers.0"/>
+            </typeReference>
+          </returnValue>
+        </statements>
+      </members>
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="string" parameter_list="//@extendedParameterList.5">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences target="//@compilationUnit.0/@classifiers.0"/>
+        </typeReference>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="s">
+          <typeReference xsi:type="types:NamespaceClassifierReference">
+            <classifierReferences target="//@compilationUnit.0/@classifiers.0"/>
+          </typeReference>
+        </parameters>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.2/@parameters.0"/>
+        </statements>
+      </members>
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="string" parameter_list="//@extendedParameterList.4">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences target="//@compilationUnit.0/@classifiers.0"/>
+        </typeReference>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="s">
+          <typeReference xsi:type="types:NamespaceClassifierReference">
+            <classifierReferences>
+              <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.String.java#//@classifiers.0"/>
+            </classifierReferences>
+          </typeReference>
+        </parameters>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="b">
+          <typeReference xsi:type="types:NamespaceClassifierReference">
+            <classifierReferences target="//@compilationUnit.1/@classifiers.0"/>
+          </typeReference>
+        </parameters>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.3/@parameters.1"/>
+        </statements>
+      </members>
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="string" parameter_list="//@extendedParameterList.3">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences>
+            <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.String.java#//@classifiers.0"/>
+          </classifierReferences>
+        </typeReference>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="s">
+          <typeReference xsi:type="types:NamespaceClassifierReference">
+            <classifierReferences target="//@compilationUnit.0/@classifiers.0"/>
+          </typeReference>
+        </parameters>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="b">
+          <typeReference xsi:type="types:Int"/>
+        </parameters>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="expressions:AdditiveExpression">
+            <children xsi:type="references:StringReference" value="The Sring is: "/>
+            <children xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.4/@parameters.0"/>
+            <children xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.4/@parameters.1"/>
+            <additiveOperators xsi:type="operators:Addition"/>
+            <additiveOperators xsi:type="operators:Addition"/>
+          </returnValue>
+        </statements>
+      </members>
+      <members xsi:type="ExtendedJamopp:ExtendedClassMethod" name="toList" parameter_list="//@extendedParameterList.0">
+        <typeReference xsi:type="types:NamespaceClassifierReference">
+          <classifierReferences>
+            <typeArguments xsi:type="generics:QualifiedTypeArgument">
+              <typeReference xsi:type="types:NamespaceClassifierReference">
+                <classifierReferences>
+                  <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.Integer.java#//@classifiers.0"/>
+                </classifierReferences>
+              </typeReference>
+            </typeArguments>
+            <target xsi:type="classifiers:Interface" href="pathmap:/javaclass/java.util.List.java#//@classifiers.0"/>
+          </classifierReferences>
+        </typeReference>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="a">
+          <typeReference xsi:type="types:Int"/>
+        </parameters>
+        <parameters xsi:type="parameters:OrdinaryParameter" name="b">
+          <typeReference xsi:type="types:Int"/>
+        </parameters>
+        <statements xsi:type="statements:LocalVariableStatement">
+          <variable name="list">
+            <typeReference xsi:type="types:NamespaceClassifierReference">
+              <classifierReferences>
+                <typeArguments xsi:type="generics:QualifiedTypeArgument">
+                  <typeReference xsi:type="types:NamespaceClassifierReference">
+                    <classifierReferences>
+                      <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.Integer.java#//@classifiers.0"/>
+                    </classifierReferences>
+                  </typeReference>
+                </typeArguments>
+                <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.util.ArrayList.java#//@classifiers.0"/>
+              </classifierReferences>
+            </typeReference>
+            <initialValue xsi:type="instantiations:NewConstructorCall">
+              <typeReference xsi:type="types:NamespaceClassifierReference">
+                <classifierReferences>
+                  <typeArguments xsi:type="generics:QualifiedTypeArgument">
+                    <typeReference xsi:type="types:NamespaceClassifierReference">
+                      <classifierReferences>
+                        <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.Integer.java#//@classifiers.0"/>
+                      </classifierReferences>
+                    </typeReference>
+                  </typeArguments>
+                  <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.util.ArrayList.java#//@classifiers.0"/>
+                </classifierReferences>
+              </typeReference>
+            </initialValue>
+          </variable>
+        </statements>
+        <statements xsi:type="statements:ExpressionStatement">
+          <expression xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.5/@statements.0/@variable">
+            <next xsi:type="references:MethodCall">
+              <target xsi:type="members:ClassMethod" href="pathmap:/javaclass/java.util.ArrayList.java#//@classifiers.0/@members.27"/>
+              <arguments xsi:type="instantiations:NewConstructorCall">
+                <typeReference xsi:type="types:NamespaceClassifierReference">
+                  <classifierReferences>
+                    <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.Integer.java#//@classifiers.0"/>
+                  </classifierReferences>
+                </typeReference>
+                <arguments xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.5/@parameters.0"/>
+              </arguments>
+            </next>
+          </expression>
+        </statements>
+        <statements xsi:type="statements:ExpressionStatement">
+          <expression xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.5/@statements.0/@variable">
+            <next xsi:type="references:MethodCall">
+              <target xsi:type="members:ClassMethod" href="pathmap:/javaclass/java.util.ArrayList.java#//@classifiers.0/@members.27"/>
+              <arguments xsi:type="instantiations:NewConstructorCall">
+                <typeReference xsi:type="types:NamespaceClassifierReference">
+                  <classifierReferences>
+                    <target xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.Integer.java#//@classifiers.0"/>
+                  </classifierReferences>
+                </typeReference>
+                <arguments xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.5/@parameters.1"/>
+              </arguments>
+            </next>
+          </expression>
+        </statements>
+        <statements xsi:type="statements:Return">
+          <returnValue xsi:type="references:IdentifierReference" target="//@compilationUnit.1/@classifiers.0/@members.5/@statements.0/@variable"/>
+        </statements>
+      </members>
+      <extends xsi:type="types:NamespaceClassifierReference">
+        <classifierReferences target="//@compilationUnit.0/@classifiers.0"/>
+      </extends>
+    </classifiers>
+  </compilationUnit>
+  <extendedJamoppPackageElement compilationUnit="//@compilationUnit.0 //@compilationUnit.1" name="foo"/>
+  <extendedParameterList methods="//@compilationUnit.1/@classifiers.0/@members.5" first="//@extendedParameterList.0/@values.0">
+    <values next="//@extendedParameterList.0/@values.1" type="//@compilationUnit.1/@classifiers.0/@members.5/@parameters.1/@typeReference"/>
+    <values previous="//@extendedParameterList.0/@values.0" type="//@compilationUnit.1/@classifiers.0/@members.5/@parameters.0/@typeReference"/>
+  </extendedParameterList>
+  <extendedParameterList methods="//@compilationUnit.1/@classifiers.0/@members.0"/>
+  <extendedParameterList methods="//@compilationUnit.1/@classifiers.0/@members.1"/>
+  <extendedParameterList methods="//@compilationUnit.0/@classifiers.0/@members.5 //@compilationUnit.1/@classifiers.0/@members.4" first="//@extendedParameterList.3/@values.0">
+    <values next="//@extendedParameterList.3/@values.1" type="//@compilationUnit.0/@classifiers.0/@members.5/@parameters.1/@typeReference"/>
+    <values previous="//@extendedParameterList.3/@values.0" type="//@compilationUnit.0/@classifiers.0"/>
+  </extendedParameterList>
+  <extendedParameterList methods="//@compilationUnit.1/@classifiers.0/@members.3" first="//@extendedParameterList.4/@values.0">
+    <values next="//@extendedParameterList.4/@values.1" type="//@compilationUnit.1/@classifiers.0"/>
+    <values previous="//@extendedParameterList.4/@values.0">
+      <type xsi:type="classifiers:Class" href="pathmap:/javaclass/java.lang.String.java#//@classifiers.0"/>
+    </values>
+  </extendedParameterList>
+  <extendedParameterList methods="//@compilationUnit.1/@classifiers.0/@members.2" first="//@extendedParameterList.5/@values.0">
+    <values type="//@compilationUnit.0/@classifiers.0"/>
+  </extendedParameterList>
+</ExtendedJamopp:ExtendedJamoppJavaContainer>

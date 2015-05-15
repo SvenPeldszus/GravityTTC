@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MoflonPropertyContainer:MoflonPropertiesContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:MoflonPropertyContainer="platform:/plugin/MoflonPropertyContainer/model/MoflonPropertyContainer.ecore" projectName="GravityTGG">
+  <dependencies value="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore"/>
+  <dependencies value="platform:/plugin/MocaTree/model/MocaTree.ecore"/>
+  <dependencies value="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore"/>
+  <dependencies value="platform:/plugin/TGGLanguage/model/TGGLanguage.ecore"/>
+  <dependencies value="platform:/plugin/TGGRuntime/model/TGGRuntime.ecore"/>
+  <dependencies value="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore"/>
+  <dependencies value="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore"/>
+  <genSdmRpCoverageInstrumentation/>
+  <additionalDependencies value="platform:/plugin/org.emftext.language.java/metamodel/java.ecore"/>
+  <additionalDependencies value="platform:/plugin/org.emftext.commons.layout/metamodel/layout.ecore"/>
+  <skipValidation/>
+  <metaModelProject MetaModelProjectName="MetaModels"/>
+  <replaceGenModel/>
+  <injectionErrorHandling/>
+  <listShuffling/>
+  <genTracingInstrumentation/>
+  <sdmCodegeneratorHandlerId value="DEMOCLES_REVERSE_NAVI"/>
+  <core/>
+  <tGGBuildMode buildMode="FORWARD_AND_BACKWARD"/>
+  <importMappings key="java.annotations" value="org.emftext.language.java.annotions"/>
+  <importMappings key="java.arrays" value="org.emftext.language.java.arrays"/>
+  <importMappings key="java.classifiers" value="org.emftext.language.java.classifiers"/>
+  <importMappings key="java.commons" value="org.emftext.language.java.commons"/>
+  <importMappings key="java.containers" value="org.emftext.language.java.containers"/>
+  <importMappings key="java.expressions" value="org.emftext.language.java.expressions"/>
+  <importMappings key="java.generics" value="org.emftext.language.java.generics"/>
+  <importMappings key="java.imports" value="org.emftext.language.java.imports"/>
+  <importMappings key="java.instantiations" value="org.emftext.language.java.instantiations"/>
+  <importMappings key="java.literals" value="org.emftext.language.java.literals"/>
+  <importMappings key="java.members" value="org.emftext.language.java.members"/>
+  <importMappings key="java.modifiers" value="org.emftext.language.java.modifiers"/>
+  <importMappings key="java.operators" value="org.emftext.language.java.operators"/>
+  <importMappings key="java.parameters" value="org.emftext.language.java.parameters"/>
+  <importMappings key="java.references" value="org.emftext.language.java.references"/>
+  <importMappings key="java.statements" value="org.emftext.language.java.statements"/>
+  <importMappings key="java.types" value="org.emftext.language.java.types"/>
+  <importMappings key="java.variables" value="org.emftext.language.java.variables"/>
+  <additionalUsedGenPackages value="platform:/plugin/org.emftext.language.java/metamodel/java.genmodel"/>
+  <additionalUsedGenPackages value="platform:/plugin/org.emftext.commons.layout/metamodel/layout.genmodel"/>
+  <debugMode/>
+  <strictSDMConditionalBranching bool="false"/>
+</MoflonPropertyContainer:MoflonPropertiesContainer>

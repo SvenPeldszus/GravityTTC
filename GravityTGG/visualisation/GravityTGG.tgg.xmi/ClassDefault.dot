@@ -1,0 +1,38 @@
+digraph "ClassDefault" {
+	label="_____________________________\n eq(jClass.name,tClass.tName)";
+
+	subgraph "Correspondence Domain" {
+	          "typeGraphToJContainer : ExtendedJamoppJavaContainerToTypeGraph" [shape=hexagon, color=black];
+	          "jPackageToTPackage : ExtendedJamoppPackageElementToTPackage" [shape=hexagon, color=black];
+	          "jClassToTClass : ClassToTClass" [shape=hexagon, color=green];
+	          "compilationUnitToTClass : CompilationUnitToTClass" [shape=hexagon, color=green];
+
+	          "typeGraphToJContainer : ExtendedJamoppJavaContainerToTypeGraph" -> "jContainer : ExtendedJamoppJavaContainer" [color=black, label="source", fontsize=11];
+	          "typeGraphToJContainer : ExtendedJamoppJavaContainerToTypeGraph" -> "typeGraph : TypeGraph" [color=black, label="target", fontsize=11];
+	          "jPackageToTPackage : ExtendedJamoppPackageElementToTPackage" -> "tPackage : TPackage" [color=black, label="target", fontsize=11];
+	          "jPackageToTPackage : ExtendedJamoppPackageElementToTPackage" -> "jPackage : ExtendedJamoppPackageElement" [color=black, label="source", fontsize=11];
+	          "jClassToTClass : ClassToTClass" -> "tClass : TClass" [color=green, label="target", fontsize=11];
+	          "jClassToTClass : ClassToTClass" -> "jClass : Class" [color=green, label="source", fontsize=11];
+	          "compilationUnitToTClass : CompilationUnitToTClass" -> "compilationUnit : CompilationUnit" [color=green, label="source", fontsize=11];
+	          "compilationUnitToTClass : CompilationUnitToTClass" -> "tClass : TClass" [color=green, label="target", fontsize=11];
+	}
+	subgraph "Source Domain" {
+	          "compilationUnit : CompilationUnit" [shape=record, color=green, label="{compilationUnit : CompilationUnit | }"];
+	          "jClass : Class" [shape=record, color=green, label="{jClass : Class | }"];
+	          "jContainer : ExtendedJamoppJavaContainer" [shape=record, color=black, label="{jContainer : ExtendedJamoppJavaContainer | }"];
+	          "jPackage : ExtendedJamoppPackageElement" [shape=record, color=black, label="{jPackage : ExtendedJamoppPackageElement | }"];
+
+	          "compilationUnit : CompilationUnit" -> "jClass : Class" [color=green, label="classifiers", fontsize=11];
+	          "jPackage : ExtendedJamoppPackageElement" -> "compilationUnit : CompilationUnit" [color=green, label="compilationUnit", fontsize=11];
+	          "jContainer : ExtendedJamoppJavaContainer" -> "jPackage : ExtendedJamoppPackageElement" [color=black, label="extendedJamoppPackageElement", fontsize=11];
+	          "jContainer : ExtendedJamoppJavaContainer" -> "compilationUnit : CompilationUnit" [color=green, label="compilationUnit", fontsize=11];
+	}
+	subgraph "Target Domain" {
+	          "tPackage : TPackage" [shape=record, color=black, label="{tPackage : TPackage | }"];
+	          "typeGraph : TypeGraph" [shape=record, color=black, label="{typeGraph : TypeGraph | }"];
+	          "tClass : TClass" [shape=record, color=green, label="{tClass : TClass | }"];
+
+	          "tPackage : TPackage" -> "tClass : TClass" [color=green, label="containedClasses", fontsize=11];
+	          "typeGraph : TypeGraph" -> "tClass : TClass" [color=green, label="classes", fontsize=11];
+	}
+}
