@@ -61,18 +61,18 @@ public class TypeGraphBasicFactoryImpl extends EFactoryImpl implements
 			return createTClass();
 		case TypeGraphBasicPackage.TFIELD:
 			return createTField();
-		case TypeGraphBasicPackage.TMETHOD_DEFINITION:
-			return createTMethodDefinition();
-		case TypeGraphBasicPackage.TMETHOD_SIGNATURE:
-			return createTMethodSignature();
-		case TypeGraphBasicPackage.TPACKAGE:
-			return createTPackage();
 		case TypeGraphBasicPackage.TFIELD_DEFINITION:
 			return createTFieldDefinition();
 		case TypeGraphBasicPackage.TFIELD_SIGNATURE:
 			return createTFieldSignature();
 		case TypeGraphBasicPackage.TMETHOD:
 			return createTMethod();
+		case TypeGraphBasicPackage.TMETHOD_DEFINITION:
+			return createTMethodDefinition();
+		case TypeGraphBasicPackage.TMETHOD_SIGNATURE:
+			return createTMethodSignature();
+		case TypeGraphBasicPackage.TPACKAGE:
+			return createTPackage();
 		case TypeGraphBasicPackage.TPARAMETER:
 			return createTParameter();
 		case TypeGraphBasicPackage.TPARAMETER_LIST:
@@ -110,36 +110,6 @@ public class TypeGraphBasicFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMethodDefinition createTMethodDefinition() {
-		TMethodDefinitionImpl tMethodDefinition = new TMethodDefinitionImpl();
-		return tMethodDefinition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TMethodSignature createTMethodSignature() {
-		TMethodSignatureImpl tMethodSignature = new TMethodSignatureImpl();
-		return tMethodSignature;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TPackage createTPackage() {
-		TPackageImpl tPackage = new TPackageImpl();
-		return tPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TFieldDefinition createTFieldDefinition() {
 		TFieldDefinitionImpl tFieldDefinition = new TFieldDefinitionImpl();
 		return tFieldDefinition;
@@ -163,6 +133,36 @@ public class TypeGraphBasicFactoryImpl extends EFactoryImpl implements
 	public TMethod createTMethod() {
 		TMethodImpl tMethod = new TMethodImpl();
 		return tMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMethodDefinition createTMethodDefinition() {
+		TMethodDefinitionImpl tMethodDefinition = new TMethodDefinitionImpl();
+		return tMethodDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMethodSignature createTMethodSignature() {
+		TMethodSignatureImpl tMethodSignature = new TMethodSignatureImpl();
+		return tMethodSignature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TPackage createTPackage() {
+		TPackageImpl tPackage = new TPackageImpl();
+		return tPackage;
 	}
 
 	/**

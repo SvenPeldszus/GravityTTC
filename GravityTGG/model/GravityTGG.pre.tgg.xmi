@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <TGGLanguage:TripleGraphGrammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TGGLanguage="platform:/plugin/TGGLanguage/model/TGGLanguage.ecore" xmlns:csp="platform:/plugin/TGGLanguage/model/TGGLanguage.ecore#//csp" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:expressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//expressions" xmlns:patternExpressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//patterns/patternExpressions" name="GravityTGG">
-  <domain name="Source" metamodel="//@metamodel.0" type="SOURCE"/>
+  <domain name="Source" metamodel="//@metamodel.2" type="SOURCE"/>
   <domain name="Target" metamodel="//@metamodel.1" type="TARGET"/>
-  <domain name="Correspondence" metamodel="//@metamodel.2"/>
+  <domain name="Correspondence" metamodel="//@metamodel.0"/>
   <tggRule name="ClassDefault" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
     <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="compilationUnit" incomingLink="//@tggRule.0/@linkVariable.2 //@tggRule.0/@linkVariable.6 //@tggRule.0/@linkVariable.7" outgoingLink="//@tggRule.0/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
       <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
@@ -1493,13 +1493,13 @@
     </linkVariable>
     <csp/>
   </tggRule>
-  <metamodel name="ExtendedJamopp">
-    <outermostPackage href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#/"/>
+  <metamodel name="GravityTGG">
+    <outermostPackage href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#/"/>
   </metamodel>
   <metamodel name="TypeGraphBasic">
     <outermostPackage href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#/"/>
   </metamodel>
-  <metamodel name="GravityTGG">
-    <outermostPackage href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#/"/>
+  <metamodel name="ExtendedJamopp">
+    <outermostPackage href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#/"/>
   </metamodel>
 </TGGLanguage:TripleGraphGrammar>

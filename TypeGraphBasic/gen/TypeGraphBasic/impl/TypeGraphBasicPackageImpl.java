@@ -52,27 +52,6 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tMethodDefinitionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tMethodSignatureEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tPackageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass tFieldDefinitionEClass = null;
 
 	/**
@@ -95,6 +74,27 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 	 * @generated
 	 */
 	private EClass tMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tMethodDefinitionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tMethodSignatureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tPackageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -284,6 +284,129 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTFieldDefinition() {
+		return tFieldDefinitionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTFieldDefinition_Signature() {
+		return (EReference) tFieldDefinitionEClass.getEStructuralFeatures()
+				.get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTFieldDefinition_Hiding() {
+		return (EReference) tFieldDefinitionEClass.getEStructuralFeatures()
+				.get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTFieldDefinition_HiddenBy() {
+		return (EReference) tFieldDefinitionEClass.getEStructuralFeatures()
+				.get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTFieldSignature() {
+		return tFieldSignatureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTFieldSignature_Definitions() {
+		return (EReference) tFieldSignatureEClass.getEStructuralFeatures().get(
+				0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTFieldSignature_Field() {
+		return (EReference) tFieldSignatureEClass.getEStructuralFeatures().get(
+				1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTFieldSignature_Type() {
+		return (EReference) tFieldSignatureEClass.getEStructuralFeatures().get(
+				2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTMember() {
+		return tMemberEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTMember_Access() {
+		return (EReference) tMemberEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTMethod() {
+		return tMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTMethod_Signatures() {
+		return (EReference) tMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTMethod_TName() {
+		return (EAttribute) tMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTMethodDefinition() {
 		return tMethodDefinitionEClass;
 	}
@@ -430,129 +553,6 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 	 */
 	public EAttribute getTPackage_TName() {
 		return (EAttribute) tPackageEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTFieldDefinition() {
-		return tFieldDefinitionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTFieldDefinition_Signature() {
-		return (EReference) tFieldDefinitionEClass.getEStructuralFeatures()
-				.get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTFieldDefinition_Hiding() {
-		return (EReference) tFieldDefinitionEClass.getEStructuralFeatures()
-				.get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTFieldDefinition_HiddenBy() {
-		return (EReference) tFieldDefinitionEClass.getEStructuralFeatures()
-				.get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTFieldSignature() {
-		return tFieldSignatureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTFieldSignature_Definitions() {
-		return (EReference) tFieldSignatureEClass.getEStructuralFeatures().get(
-				0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTFieldSignature_Field() {
-		return (EReference) tFieldSignatureEClass.getEStructuralFeatures().get(
-				1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTFieldSignature_Type() {
-		return (EReference) tFieldSignatureEClass.getEStructuralFeatures().get(
-				2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTMember() {
-		return tMemberEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTMember_Access() {
-		return (EReference) tMemberEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTMethod() {
-		return tMethodEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTMethod_Signatures() {
-		return (EReference) tMethodEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTMethod_TName() {
-		return (EAttribute) tMethodEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -724,6 +724,23 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 		createEReference(tFieldEClass, TFIELD__SIGNATURES);
 		createEAttribute(tFieldEClass, TFIELD__TNAME);
 
+		tFieldDefinitionEClass = createEClass(TFIELD_DEFINITION);
+		createEReference(tFieldDefinitionEClass, TFIELD_DEFINITION__SIGNATURE);
+		createEReference(tFieldDefinitionEClass, TFIELD_DEFINITION__HIDING);
+		createEReference(tFieldDefinitionEClass, TFIELD_DEFINITION__HIDDEN_BY);
+
+		tFieldSignatureEClass = createEClass(TFIELD_SIGNATURE);
+		createEReference(tFieldSignatureEClass, TFIELD_SIGNATURE__DEFINITIONS);
+		createEReference(tFieldSignatureEClass, TFIELD_SIGNATURE__FIELD);
+		createEReference(tFieldSignatureEClass, TFIELD_SIGNATURE__TYPE);
+
+		tMemberEClass = createEClass(TMEMBER);
+		createEReference(tMemberEClass, TMEMBER__ACCESS);
+
+		tMethodEClass = createEClass(TMETHOD);
+		createEReference(tMethodEClass, TMETHOD__SIGNATURES);
+		createEAttribute(tMethodEClass, TMETHOD__TNAME);
+
 		tMethodDefinitionEClass = createEClass(TMETHOD_DEFINITION);
 		createEReference(tMethodDefinitionEClass, TMETHOD_DEFINITION__SIGNATURE);
 		createEReference(tMethodDefinitionEClass,
@@ -747,23 +764,6 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 		createEReference(tPackageEClass, TPACKAGE__SUBPACKAGE);
 		createEReference(tPackageEClass, TPACKAGE__PARENT);
 		createEAttribute(tPackageEClass, TPACKAGE__TNAME);
-
-		tFieldDefinitionEClass = createEClass(TFIELD_DEFINITION);
-		createEReference(tFieldDefinitionEClass, TFIELD_DEFINITION__SIGNATURE);
-		createEReference(tFieldDefinitionEClass, TFIELD_DEFINITION__HIDING);
-		createEReference(tFieldDefinitionEClass, TFIELD_DEFINITION__HIDDEN_BY);
-
-		tFieldSignatureEClass = createEClass(TFIELD_SIGNATURE);
-		createEReference(tFieldSignatureEClass, TFIELD_SIGNATURE__DEFINITIONS);
-		createEReference(tFieldSignatureEClass, TFIELD_SIGNATURE__FIELD);
-		createEReference(tFieldSignatureEClass, TFIELD_SIGNATURE__TYPE);
-
-		tMemberEClass = createEClass(TMEMBER);
-		createEReference(tMemberEClass, TMEMBER__ACCESS);
-
-		tMethodEClass = createEClass(TMETHOD);
-		createEReference(tMethodEClass, TMETHOD__SIGNATURES);
-		createEAttribute(tMethodEClass, TMETHOD__TNAME);
 
 		tParameterEClass = createEClass(TPARAMETER);
 		createEReference(tParameterEClass, TPARAMETER__NEXT);
@@ -813,10 +813,10 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		tMethodDefinitionEClass.getESuperTypes().add(this.getTMember());
-		tMethodSignatureEClass.getESuperTypes().add(this.getTSignature());
 		tFieldDefinitionEClass.getESuperTypes().add(this.getTMember());
 		tFieldSignatureEClass.getESuperTypes().add(this.getTSignature());
+		tMethodDefinitionEClass.getESuperTypes().add(this.getTMember());
+		tMethodSignatureEClass.getESuperTypes().add(this.getTSignature());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(tClassEClass, TClass.class, "TClass", !IS_ABSTRACT,
@@ -858,6 +858,65 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTField_TName(), ecorePackage.getEString(), "tName",
 				null, 1, 1, TField.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				!IS_ORDERED);
+
+		initEClass(tFieldDefinitionEClass, TFieldDefinition.class,
+				"TFieldDefinition", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTFieldDefinition_Signature(),
+				this.getTFieldSignature(),
+				this.getTFieldSignature_Definitions(), "signature", null, 1, 1,
+				TFieldDefinition.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTFieldDefinition_Hiding(),
+				this.getTFieldDefinition(),
+				this.getTFieldDefinition_HiddenBy(), "hiding", null, 0, 1,
+				TFieldDefinition.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTFieldDefinition_HiddenBy(),
+				this.getTFieldDefinition(), this.getTFieldDefinition_Hiding(),
+				"hiddenBy", null, 0, -1, TFieldDefinition.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tFieldSignatureEClass, TFieldSignature.class,
+				"TFieldSignature", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTFieldSignature_Definitions(),
+				this.getTFieldDefinition(),
+				this.getTFieldDefinition_Signature(), "definitions", null, 0,
+				-1, TFieldSignature.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTFieldSignature_Field(), this.getTField(),
+				this.getTField_Signatures(), "field", null, 1, 1,
+				TFieldSignature.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTFieldSignature_Type(), this.getTClass(), null,
+				"type", null, 1, 1, TFieldSignature.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tMemberEClass, TMember.class, "TMember", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTMember_Access(), this.getTMember(), null, "access",
+				null, 0, -1, TMember.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tMethodEClass, TMethod.class, "TMethod", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTMethod_Signatures(), this.getTMethodSignature(),
+				this.getTMethodSignature_Method(), "signatures", null, 0, -1,
+				TMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTMethod_TName(), ecorePackage.getEString(), "tName",
+				null, 1, 1, TMethod.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 
@@ -939,65 +998,6 @@ public class TypeGraphBasicPackageImpl extends EPackageImpl implements
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTPackage_TName(), ecorePackage.getEString(), "tName",
 				null, 1, 1, TPackage.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-				!IS_ORDERED);
-
-		initEClass(tFieldDefinitionEClass, TFieldDefinition.class,
-				"TFieldDefinition", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTFieldDefinition_Signature(),
-				this.getTFieldSignature(),
-				this.getTFieldSignature_Definitions(), "signature", null, 1, 1,
-				TFieldDefinition.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTFieldDefinition_Hiding(),
-				this.getTFieldDefinition(),
-				this.getTFieldDefinition_HiddenBy(), "hiding", null, 0, 1,
-				TFieldDefinition.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTFieldDefinition_HiddenBy(),
-				this.getTFieldDefinition(), this.getTFieldDefinition_Hiding(),
-				"hiddenBy", null, 0, -1, TFieldDefinition.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tFieldSignatureEClass, TFieldSignature.class,
-				"TFieldSignature", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTFieldSignature_Definitions(),
-				this.getTFieldDefinition(),
-				this.getTFieldDefinition_Signature(), "definitions", null, 0,
-				-1, TFieldSignature.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTFieldSignature_Field(), this.getTField(),
-				this.getTField_Signatures(), "field", null, 1, 1,
-				TFieldSignature.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTFieldSignature_Type(), this.getTClass(), null,
-				"type", null, 1, 1, TFieldSignature.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tMemberEClass, TMember.class, "TMember", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTMember_Access(), this.getTMember(), null, "access",
-				null, 0, -1, TMember.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tMethodEClass, TMethod.class, "TMethod", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTMethod_Signatures(), this.getTMethodSignature(),
-				this.getTMethodSignature_Method(), "signatures", null, 0, -1,
-				TMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTMethod_TName(), ecorePackage.getEString(), "tName",
-				null, 1, 1, TMethod.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				!IS_ORDERED);
 

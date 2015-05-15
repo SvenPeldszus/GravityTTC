@@ -193,7 +193,7 @@ public interface TypeGraphBasicPackage extends EPackage {
 	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMember()
 	 * @generated
 	 */
-	int TMEMBER = 7;
+	int TMEMBER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Access</b></em>' reference list.
@@ -223,6 +223,199 @@ public interface TypeGraphBasicPackage extends EPackage {
 	int TMEMBER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link TypeGraphBasic.impl.TFieldDefinitionImpl <em>TField Definition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see TypeGraphBasic.impl.TFieldDefinitionImpl
+	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldDefinition()
+	 * @generated
+	 */
+	int TFIELD_DEFINITION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_DEFINITION__ACCESS = TMEMBER__ACCESS;
+
+	/**
+	 * The feature id for the '<em><b>Signature</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_DEFINITION__SIGNATURE = TMEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Hiding</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_DEFINITION__HIDING = TMEMBER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Hidden By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_DEFINITION__HIDDEN_BY = TMEMBER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>TField Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_DEFINITION_FEATURE_COUNT = TMEMBER_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>TField Definition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_DEFINITION_OPERATION_COUNT = TMEMBER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link TypeGraphBasic.impl.TSignatureImpl <em>TSignature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see TypeGraphBasic.impl.TSignatureImpl
+	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTSignature()
+	 * @generated
+	 */
+	int TSIGNATURE = 11;
+
+	/**
+	 * The number of structural features of the '<em>TSignature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TSIGNATURE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>TSignature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TSIGNATURE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link TypeGraphBasic.impl.TFieldSignatureImpl <em>TField Signature</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see TypeGraphBasic.impl.TFieldSignatureImpl
+	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldSignature()
+	 * @generated
+	 */
+	int TFIELD_SIGNATURE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Definitions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_SIGNATURE__DEFINITIONS = TSIGNATURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Field</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_SIGNATURE__FIELD = TSIGNATURE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_SIGNATURE__TYPE = TSIGNATURE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>TField Signature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_SIGNATURE_FEATURE_COUNT = TSIGNATURE_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>TField Signature</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFIELD_SIGNATURE_OPERATION_COUNT = TSIGNATURE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link TypeGraphBasic.impl.TMethodImpl <em>TMethod</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see TypeGraphBasic.impl.TMethodImpl
+	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMethod()
+	 * @generated
+	 */
+	int TMETHOD = 5;
+
+	/**
+	 * The feature id for the '<em><b>Signatures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMETHOD__SIGNATURES = 0;
+
+	/**
+	 * The feature id for the '<em><b>TName</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMETHOD__TNAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>TMethod</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMETHOD_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>TMethod</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TMETHOD_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link TypeGraphBasic.impl.TMethodDefinitionImpl <em>TMethod Definition</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,7 +423,7 @@ public interface TypeGraphBasicPackage extends EPackage {
 	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMethodDefinition()
 	 * @generated
 	 */
-	int TMETHOD_DEFINITION = 2;
+	int TMETHOD_DEFINITION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Access</b></em>' reference list.
@@ -314,34 +507,6 @@ public interface TypeGraphBasicPackage extends EPackage {
 	int TMETHOD_DEFINITION_OPERATION_COUNT = TMEMBER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link TypeGraphBasic.impl.TSignatureImpl <em>TSignature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see TypeGraphBasic.impl.TSignatureImpl
-	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTSignature()
-	 * @generated
-	 */
-	int TSIGNATURE = 11;
-
-	/**
-	 * The number of structural features of the '<em>TSignature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TSIGNATURE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>TSignature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TSIGNATURE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link TypeGraphBasic.impl.TMethodSignatureImpl <em>TMethod Signature</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,7 +514,7 @@ public interface TypeGraphBasicPackage extends EPackage {
 	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMethodSignature()
 	 * @generated
 	 */
-	int TMETHOD_SIGNATURE = 3;
+	int TMETHOD_SIGNATURE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Method</b></em>' container reference.
@@ -404,7 +569,7 @@ public interface TypeGraphBasicPackage extends EPackage {
 	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTPackage()
 	 * @generated
 	 */
-	int TPACKAGE = 4;
+	int TPACKAGE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Contained Classes</b></em>' reference list.
@@ -459,171 +624,6 @@ public interface TypeGraphBasicPackage extends EPackage {
 	 * @ordered
 	 */
 	int TPACKAGE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link TypeGraphBasic.impl.TFieldDefinitionImpl <em>TField Definition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see TypeGraphBasic.impl.TFieldDefinitionImpl
-	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldDefinition()
-	 * @generated
-	 */
-	int TFIELD_DEFINITION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Access</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_DEFINITION__ACCESS = TMEMBER__ACCESS;
-
-	/**
-	 * The feature id for the '<em><b>Signature</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_DEFINITION__SIGNATURE = TMEMBER_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Hiding</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_DEFINITION__HIDING = TMEMBER_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Hidden By</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_DEFINITION__HIDDEN_BY = TMEMBER_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>TField Definition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_DEFINITION_FEATURE_COUNT = TMEMBER_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>TField Definition</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_DEFINITION_OPERATION_COUNT = TMEMBER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link TypeGraphBasic.impl.TFieldSignatureImpl <em>TField Signature</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see TypeGraphBasic.impl.TFieldSignatureImpl
-	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldSignature()
-	 * @generated
-	 */
-	int TFIELD_SIGNATURE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Definitions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_SIGNATURE__DEFINITIONS = TSIGNATURE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Field</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_SIGNATURE__FIELD = TSIGNATURE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_SIGNATURE__TYPE = TSIGNATURE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>TField Signature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_SIGNATURE_FEATURE_COUNT = TSIGNATURE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>TField Signature</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TFIELD_SIGNATURE_OPERATION_COUNT = TSIGNATURE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link TypeGraphBasic.impl.TMethodImpl <em>TMethod</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see TypeGraphBasic.impl.TMethodImpl
-	 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMethod()
-	 * @generated
-	 */
-	int TMETHOD = 8;
-
-	/**
-	 * The feature id for the '<em><b>Signatures</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TMETHOD__SIGNATURES = 0;
-
-	/**
-	 * The feature id for the '<em><b>TName</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TMETHOD__TNAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>TMethod</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TMETHOD_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>TMethod</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TMETHOD_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link TypeGraphBasic.impl.TParameterImpl <em>TParameter</em>}' class.
@@ -908,6 +908,145 @@ public interface TypeGraphBasicPackage extends EPackage {
 	EAttribute getTField_TName();
 
 	/**
+	 * Returns the meta object for class '{@link TypeGraphBasic.TFieldDefinition <em>TField Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TField Definition</em>'.
+	 * @see TypeGraphBasic.TFieldDefinition
+	 * @generated
+	 */
+	EClass getTFieldDefinition();
+
+	/**
+	 * Returns the meta object for the reference '{@link TypeGraphBasic.TFieldDefinition#getSignature <em>Signature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Signature</em>'.
+	 * @see TypeGraphBasic.TFieldDefinition#getSignature()
+	 * @see #getTFieldDefinition()
+	 * @generated
+	 */
+	EReference getTFieldDefinition_Signature();
+
+	/**
+	 * Returns the meta object for the reference '{@link TypeGraphBasic.TFieldDefinition#getHiding <em>Hiding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Hiding</em>'.
+	 * @see TypeGraphBasic.TFieldDefinition#getHiding()
+	 * @see #getTFieldDefinition()
+	 * @generated
+	 */
+	EReference getTFieldDefinition_Hiding();
+
+	/**
+	 * Returns the meta object for the reference list '{@link TypeGraphBasic.TFieldDefinition#getHiddenBy <em>Hidden By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Hidden By</em>'.
+	 * @see TypeGraphBasic.TFieldDefinition#getHiddenBy()
+	 * @see #getTFieldDefinition()
+	 * @generated
+	 */
+	EReference getTFieldDefinition_HiddenBy();
+
+	/**
+	 * Returns the meta object for class '{@link TypeGraphBasic.TFieldSignature <em>TField Signature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TField Signature</em>'.
+	 * @see TypeGraphBasic.TFieldSignature
+	 * @generated
+	 */
+	EClass getTFieldSignature();
+
+	/**
+	 * Returns the meta object for the reference list '{@link TypeGraphBasic.TFieldSignature#getDefinitions <em>Definitions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Definitions</em>'.
+	 * @see TypeGraphBasic.TFieldSignature#getDefinitions()
+	 * @see #getTFieldSignature()
+	 * @generated
+	 */
+	EReference getTFieldSignature_Definitions();
+
+	/**
+	 * Returns the meta object for the container reference '{@link TypeGraphBasic.TFieldSignature#getField <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Field</em>'.
+	 * @see TypeGraphBasic.TFieldSignature#getField()
+	 * @see #getTFieldSignature()
+	 * @generated
+	 */
+	EReference getTFieldSignature_Field();
+
+	/**
+	 * Returns the meta object for the reference '{@link TypeGraphBasic.TFieldSignature#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see TypeGraphBasic.TFieldSignature#getType()
+	 * @see #getTFieldSignature()
+	 * @generated
+	 */
+	EReference getTFieldSignature_Type();
+
+	/**
+	 * Returns the meta object for class '{@link TypeGraphBasic.TMember <em>TMember</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TMember</em>'.
+	 * @see TypeGraphBasic.TMember
+	 * @generated
+	 */
+	EClass getTMember();
+
+	/**
+	 * Returns the meta object for the reference list '{@link TypeGraphBasic.TMember#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Access</em>'.
+	 * @see TypeGraphBasic.TMember#getAccess()
+	 * @see #getTMember()
+	 * @generated
+	 */
+	EReference getTMember_Access();
+
+	/**
+	 * Returns the meta object for class '{@link TypeGraphBasic.TMethod <em>TMethod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TMethod</em>'.
+	 * @see TypeGraphBasic.TMethod
+	 * @generated
+	 */
+	EClass getTMethod();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link TypeGraphBasic.TMethod#getSignatures <em>Signatures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Signatures</em>'.
+	 * @see TypeGraphBasic.TMethod#getSignatures()
+	 * @see #getTMethod()
+	 * @generated
+	 */
+	EReference getTMethod_Signatures();
+
+	/**
+	 * Returns the meta object for the attribute '{@link TypeGraphBasic.TMethod#getTName <em>TName</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>TName</em>'.
+	 * @see TypeGraphBasic.TMethod#getTName()
+	 * @see #getTMethod()
+	 * @generated
+	 */
+	EAttribute getTMethod_TName();
+
+	/**
 	 * Returns the meta object for class '{@link TypeGraphBasic.TMethodDefinition <em>TMethod Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1079,145 +1218,6 @@ public interface TypeGraphBasicPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTPackage_TName();
-
-	/**
-	 * Returns the meta object for class '{@link TypeGraphBasic.TFieldDefinition <em>TField Definition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>TField Definition</em>'.
-	 * @see TypeGraphBasic.TFieldDefinition
-	 * @generated
-	 */
-	EClass getTFieldDefinition();
-
-	/**
-	 * Returns the meta object for the reference '{@link TypeGraphBasic.TFieldDefinition#getSignature <em>Signature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Signature</em>'.
-	 * @see TypeGraphBasic.TFieldDefinition#getSignature()
-	 * @see #getTFieldDefinition()
-	 * @generated
-	 */
-	EReference getTFieldDefinition_Signature();
-
-	/**
-	 * Returns the meta object for the reference '{@link TypeGraphBasic.TFieldDefinition#getHiding <em>Hiding</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Hiding</em>'.
-	 * @see TypeGraphBasic.TFieldDefinition#getHiding()
-	 * @see #getTFieldDefinition()
-	 * @generated
-	 */
-	EReference getTFieldDefinition_Hiding();
-
-	/**
-	 * Returns the meta object for the reference list '{@link TypeGraphBasic.TFieldDefinition#getHiddenBy <em>Hidden By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Hidden By</em>'.
-	 * @see TypeGraphBasic.TFieldDefinition#getHiddenBy()
-	 * @see #getTFieldDefinition()
-	 * @generated
-	 */
-	EReference getTFieldDefinition_HiddenBy();
-
-	/**
-	 * Returns the meta object for class '{@link TypeGraphBasic.TFieldSignature <em>TField Signature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>TField Signature</em>'.
-	 * @see TypeGraphBasic.TFieldSignature
-	 * @generated
-	 */
-	EClass getTFieldSignature();
-
-	/**
-	 * Returns the meta object for the reference list '{@link TypeGraphBasic.TFieldSignature#getDefinitions <em>Definitions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Definitions</em>'.
-	 * @see TypeGraphBasic.TFieldSignature#getDefinitions()
-	 * @see #getTFieldSignature()
-	 * @generated
-	 */
-	EReference getTFieldSignature_Definitions();
-
-	/**
-	 * Returns the meta object for the container reference '{@link TypeGraphBasic.TFieldSignature#getField <em>Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Field</em>'.
-	 * @see TypeGraphBasic.TFieldSignature#getField()
-	 * @see #getTFieldSignature()
-	 * @generated
-	 */
-	EReference getTFieldSignature_Field();
-
-	/**
-	 * Returns the meta object for the reference '{@link TypeGraphBasic.TFieldSignature#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see TypeGraphBasic.TFieldSignature#getType()
-	 * @see #getTFieldSignature()
-	 * @generated
-	 */
-	EReference getTFieldSignature_Type();
-
-	/**
-	 * Returns the meta object for class '{@link TypeGraphBasic.TMember <em>TMember</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>TMember</em>'.
-	 * @see TypeGraphBasic.TMember
-	 * @generated
-	 */
-	EClass getTMember();
-
-	/**
-	 * Returns the meta object for the reference list '{@link TypeGraphBasic.TMember#getAccess <em>Access</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Access</em>'.
-	 * @see TypeGraphBasic.TMember#getAccess()
-	 * @see #getTMember()
-	 * @generated
-	 */
-	EReference getTMember_Access();
-
-	/**
-	 * Returns the meta object for class '{@link TypeGraphBasic.TMethod <em>TMethod</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>TMethod</em>'.
-	 * @see TypeGraphBasic.TMethod
-	 * @generated
-	 */
-	EClass getTMethod();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link TypeGraphBasic.TMethod#getSignatures <em>Signatures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Signatures</em>'.
-	 * @see TypeGraphBasic.TMethod#getSignatures()
-	 * @see #getTMethod()
-	 * @generated
-	 */
-	EReference getTMethod_Signatures();
-
-	/**
-	 * Returns the meta object for the attribute '{@link TypeGraphBasic.TMethod#getTName <em>TName</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>TName</em>'.
-	 * @see TypeGraphBasic.TMethod#getTName()
-	 * @see #getTMethod()
-	 * @generated
-	 */
-	EAttribute getTMethod_TName();
 
 	/**
 	 * Returns the meta object for class '{@link TypeGraphBasic.TParameter <em>TParameter</em>}'.
@@ -1477,6 +1477,123 @@ public interface TypeGraphBasicPackage extends EPackage {
 		EAttribute TFIELD__TNAME = eINSTANCE.getTField_TName();
 
 		/**
+		 * The meta object literal for the '{@link TypeGraphBasic.impl.TFieldDefinitionImpl <em>TField Definition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see TypeGraphBasic.impl.TFieldDefinitionImpl
+		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldDefinition()
+		 * @generated
+		 */
+		EClass TFIELD_DEFINITION = eINSTANCE.getTFieldDefinition();
+
+		/**
+		 * The meta object literal for the '<em><b>Signature</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TFIELD_DEFINITION__SIGNATURE = eINSTANCE
+				.getTFieldDefinition_Signature();
+
+		/**
+		 * The meta object literal for the '<em><b>Hiding</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TFIELD_DEFINITION__HIDING = eINSTANCE
+				.getTFieldDefinition_Hiding();
+
+		/**
+		 * The meta object literal for the '<em><b>Hidden By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TFIELD_DEFINITION__HIDDEN_BY = eINSTANCE
+				.getTFieldDefinition_HiddenBy();
+
+		/**
+		 * The meta object literal for the '{@link TypeGraphBasic.impl.TFieldSignatureImpl <em>TField Signature</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see TypeGraphBasic.impl.TFieldSignatureImpl
+		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldSignature()
+		 * @generated
+		 */
+		EClass TFIELD_SIGNATURE = eINSTANCE.getTFieldSignature();
+
+		/**
+		 * The meta object literal for the '<em><b>Definitions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TFIELD_SIGNATURE__DEFINITIONS = eINSTANCE
+				.getTFieldSignature_Definitions();
+
+		/**
+		 * The meta object literal for the '<em><b>Field</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TFIELD_SIGNATURE__FIELD = eINSTANCE
+				.getTFieldSignature_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TFIELD_SIGNATURE__TYPE = eINSTANCE.getTFieldSignature_Type();
+
+		/**
+		 * The meta object literal for the '{@link TypeGraphBasic.impl.TMemberImpl <em>TMember</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see TypeGraphBasic.impl.TMemberImpl
+		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMember()
+		 * @generated
+		 */
+		EClass TMEMBER = eINSTANCE.getTMember();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TMEMBER__ACCESS = eINSTANCE.getTMember_Access();
+
+		/**
+		 * The meta object literal for the '{@link TypeGraphBasic.impl.TMethodImpl <em>TMethod</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see TypeGraphBasic.impl.TMethodImpl
+		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMethod()
+		 * @generated
+		 */
+		EClass TMETHOD = eINSTANCE.getTMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Signatures</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TMETHOD__SIGNATURES = eINSTANCE.getTMethod_Signatures();
+
+		/**
+		 * The meta object literal for the '<em><b>TName</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TMETHOD__TNAME = eINSTANCE.getTMethod_TName();
+
+		/**
 		 * The meta object literal for the '{@link TypeGraphBasic.impl.TMethodDefinitionImpl <em>TMethod Definition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1619,123 +1736,6 @@ public interface TypeGraphBasicPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TPACKAGE__TNAME = eINSTANCE.getTPackage_TName();
-
-		/**
-		 * The meta object literal for the '{@link TypeGraphBasic.impl.TFieldDefinitionImpl <em>TField Definition</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see TypeGraphBasic.impl.TFieldDefinitionImpl
-		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldDefinition()
-		 * @generated
-		 */
-		EClass TFIELD_DEFINITION = eINSTANCE.getTFieldDefinition();
-
-		/**
-		 * The meta object literal for the '<em><b>Signature</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TFIELD_DEFINITION__SIGNATURE = eINSTANCE
-				.getTFieldDefinition_Signature();
-
-		/**
-		 * The meta object literal for the '<em><b>Hiding</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TFIELD_DEFINITION__HIDING = eINSTANCE
-				.getTFieldDefinition_Hiding();
-
-		/**
-		 * The meta object literal for the '<em><b>Hidden By</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TFIELD_DEFINITION__HIDDEN_BY = eINSTANCE
-				.getTFieldDefinition_HiddenBy();
-
-		/**
-		 * The meta object literal for the '{@link TypeGraphBasic.impl.TFieldSignatureImpl <em>TField Signature</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see TypeGraphBasic.impl.TFieldSignatureImpl
-		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTFieldSignature()
-		 * @generated
-		 */
-		EClass TFIELD_SIGNATURE = eINSTANCE.getTFieldSignature();
-
-		/**
-		 * The meta object literal for the '<em><b>Definitions</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TFIELD_SIGNATURE__DEFINITIONS = eINSTANCE
-				.getTFieldSignature_Definitions();
-
-		/**
-		 * The meta object literal for the '<em><b>Field</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TFIELD_SIGNATURE__FIELD = eINSTANCE
-				.getTFieldSignature_Field();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TFIELD_SIGNATURE__TYPE = eINSTANCE.getTFieldSignature_Type();
-
-		/**
-		 * The meta object literal for the '{@link TypeGraphBasic.impl.TMemberImpl <em>TMember</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see TypeGraphBasic.impl.TMemberImpl
-		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMember()
-		 * @generated
-		 */
-		EClass TMEMBER = eINSTANCE.getTMember();
-
-		/**
-		 * The meta object literal for the '<em><b>Access</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TMEMBER__ACCESS = eINSTANCE.getTMember_Access();
-
-		/**
-		 * The meta object literal for the '{@link TypeGraphBasic.impl.TMethodImpl <em>TMethod</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see TypeGraphBasic.impl.TMethodImpl
-		 * @see TypeGraphBasic.impl.TypeGraphBasicPackageImpl#getTMethod()
-		 * @generated
-		 */
-		EClass TMETHOD = eINSTANCE.getTMethod();
-
-		/**
-		 * The meta object literal for the '<em><b>Signatures</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TMETHOD__SIGNATURES = eINSTANCE.getTMethod_Signatures();
-
-		/**
-		 * The meta object literal for the '<em><b>TName</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TMETHOD__TNAME = eINSTANCE.getTMethod_TName();
 
 		/**
 		 * The meta object literal for the '{@link TypeGraphBasic.impl.TParameterImpl <em>TParameter</em>}' class.

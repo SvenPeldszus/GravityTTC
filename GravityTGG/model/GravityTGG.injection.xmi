@@ -924,136 +924,136 @@
   <compilerInjectionEntries content="return true &amp;&amp; match.getObject(&quot;tParameter&quot;).eClass().equals(TypeGraphBasic.TypeGraphBasicPackage.eINSTANCE.getTParameter());">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkTypes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/checkAttributes_BWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkAttributes_FWD"/>
   </compilerInjectionEntries>
-  <compilerInjectionEntries content="// TODO: NICO!!!&#xA;return null;">
+  <compilerInjectionEntries content="throw new UnsupportedOperationException(&quot;developments on attribute synchronization with eMoflon not yet completed&quot;);">
     <eOperation href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/checkAttributes_BWD"/>
   </compilerInjectionEntries>
   <importInjectionEntries content="org.moflon.csp.*">

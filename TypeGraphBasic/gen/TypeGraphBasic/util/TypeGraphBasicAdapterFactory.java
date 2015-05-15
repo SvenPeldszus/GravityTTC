@@ -77,21 +77,6 @@ public class TypeGraphBasicAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTMethodDefinition(TMethodDefinition object) {
-			return createTMethodDefinitionAdapter();
-		}
-
-		@Override
-		public Adapter caseTMethodSignature(TMethodSignature object) {
-			return createTMethodSignatureAdapter();
-		}
-
-		@Override
-		public Adapter caseTPackage(TPackage object) {
-			return createTPackageAdapter();
-		}
-
-		@Override
 		public Adapter caseTFieldDefinition(TFieldDefinition object) {
 			return createTFieldDefinitionAdapter();
 		}
@@ -109,6 +94,21 @@ public class TypeGraphBasicAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseTMethod(TMethod object) {
 			return createTMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseTMethodDefinition(TMethodDefinition object) {
+			return createTMethodDefinitionAdapter();
+		}
+
+		@Override
+		public Adapter caseTMethodSignature(TMethodSignature object) {
+			return createTMethodSignatureAdapter();
+		}
+
+		@Override
+		public Adapter caseTPackage(TPackage object) {
+			return createTPackageAdapter();
 		}
 
 		@Override
@@ -179,48 +179,6 @@ public class TypeGraphBasicAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TMethodDefinition <em>TMethod Definition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see TypeGraphBasic.TMethodDefinition
-	 * @generated
-	 */
-	public Adapter createTMethodDefinitionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TMethodSignature <em>TMethod Signature</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see TypeGraphBasic.TMethodSignature
-	 * @generated
-	 */
-	public Adapter createTMethodSignatureAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TPackage <em>TPackage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see TypeGraphBasic.TPackage
-	 * @generated
-	 */
-	public Adapter createTPackageAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TFieldDefinition <em>TField Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -273,6 +231,48 @@ public class TypeGraphBasicAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TMethodDefinition <em>TMethod Definition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see TypeGraphBasic.TMethodDefinition
+	 * @generated
+	 */
+	public Adapter createTMethodDefinitionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TMethodSignature <em>TMethod Signature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see TypeGraphBasic.TMethodSignature
+	 * @generated
+	 */
+	public Adapter createTMethodSignatureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link TypeGraphBasic.TPackage <em>TPackage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see TypeGraphBasic.TPackage
+	 * @generated
+	 */
+	public Adapter createTPackageAdapter() {
 		return null;
 	}
 

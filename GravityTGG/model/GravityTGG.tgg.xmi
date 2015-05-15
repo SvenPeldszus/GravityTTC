@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TGGLanguage:TripleGraphGrammar xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TGGLanguage="platform:/plugin/TGGLanguage/model/TGGLanguage.ecore" xmlns:csp="platform:/plugin/TGGLanguage/model/TGGLanguage.ecore#//csp" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:expressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//expressions" xmlns:patternExpressions="platform:/plugin/SDMLanguage/model/SDMLanguage.ecore#//patterns/patternExpressions" name="GravityTGG">
+  <domain name="Source" metamodel="//@metamodel.2" type="SOURCE"/>
+  <domain name="Target" metamodel="//@metamodel.1" type="TARGET"/>
+  <domain name="Correspondence" metamodel="//@metamodel.0"/>
+  <tggRule name="ClassDefault" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="compilationUnit" incomingLink="//@tggRule.0/@linkVariable.2 //@tggRule.0/@linkVariable.6 //@tggRule.0/@linkVariable.7" outgoingLink="//@tggRule.0/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//containers/CompilationUnit"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="compilationUnitToTClass" outgoingLink="//@tggRule.0/@linkVariable.1 //@tggRule.0/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//CompilationUnitToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClass" incomingLink="//@tggRule.0/@linkVariable.0 //@tggRule.0/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClassToTClass" outgoingLink="//@tggRule.0/@linkVariable.3 //@tggRule.0/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jContainer" incomingLink="//@tggRule.0/@linkVariable.13" outgoingLink="//@tggRule.0/@linkVariable.5 //@tggRule.0/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jPackage" incomingLink="//@tggRule.0/@linkVariable.5 //@tggRule.0/@linkVariable.9" outgoingLink="//@tggRule.0/@linkVariable.7" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jPackageToTPackage" outgoingLink="//@tggRule.0/@linkVariable.8 //@tggRule.0/@linkVariable.9" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.0/@linkVariable.1 //@tggRule.0/@linkVariable.3 //@tggRule.0/@linkVariable.11 //@tggRule.0/@linkVariable.10" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tPackage" incomingLink="//@tggRule.0/@linkVariable.8" outgoingLink="//@tggRule.0/@linkVariable.10" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="typeGraph" incomingLink="//@tggRule.0/@linkVariable.12" outgoingLink="//@tggRule.0/@linkVariable.11" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="typeGraphToJContainer" outgoingLink="//@tggRule.0/@linkVariable.12 //@tggRule.0/@linkVariable.13" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classifiers" target="//@tggRule.0/@objectVariable.2" source="//@tggRule.0/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//containers/CompilationUnit/classifiers"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.0/@objectVariable.7" source="//@tggRule.0/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//CompilationUnitToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.0/@objectVariable.0" source="//@tggRule.0/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//CompilationUnitToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.0/@objectVariable.7" source="//@tggRule.0/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.0/@objectVariable.2" source="//@tggRule.0/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedJamoppPackageElement" target="//@tggRule.0/@objectVariable.5" source="//@tggRule.0/@objectVariable.4" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedJamoppPackageElement"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="compilationUnit" target="//@tggRule.0/@objectVariable.0" source="//@tggRule.0/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/compilationUnit"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="compilationUnit" target="//@tggRule.0/@objectVariable.0" source="//@tggRule.0/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement/compilationUnit"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.0/@objectVariable.8" source="//@tggRule.0/@objectVariable.6" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.0/@objectVariable.5" source="//@tggRule.0/@objectVariable.6" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="containedClasses" target="//@tggRule.0/@objectVariable.7" source="//@tggRule.0/@objectVariable.8" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/containedClasses"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.0/@objectVariable.7" source="//@tggRule.0/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.0/@objectVariable.9" source="//@tggRule.0/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.0/@objectVariable.4" source="//@tggRule.0/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/source"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.0/@csp/@variables.0 //@tggRule.0/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="name" objectVariable="jClass"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tClass"/>
+    </csp>
+  </tggRule>
+  <tggRule name="ParameterTypeLibCreate" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameter" incomingLink="//@tggRule.1/@linkVariable.3 //@tggRule.1/@linkVariable.11" outgoingLink="//@tggRule.1/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameter" incomingLink="//@tggRule.1/@linkVariable.2 //@tggRule.1/@linkVariable.13" outgoingLink="//@tggRule.1/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToTParameter" outgoingLink="//@tggRule.1/@linkVariable.2 //@tggRule.1/@linkVariable.3" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tExistingClass" incomingLink="//@tggRule.1/@linkVariable.8" bindingSemantics="NEGATIVE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      <constraint>
+        <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+          <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.1/@objectVariable.4">
+            <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/typeName"/>
+          </rightExpression>
+          <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.1/@objectVariable.3">
+            <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+          </leftExpression>
+        </constraintExpression>
+      </constraint>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedType" incomingLink="//@tggRule.1/@linkVariable.0 //@tggRule.1/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+      <attributeAssignment>
+        <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/isFromLib"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="true"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.1/@linkVariable.1 //@tggRule.1/@linkVariable.5 //@tggRule.1/@linkVariable.7" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedTypeToTClass" outgoingLink="//@tggRule.1/@linkVariable.4 //@tggRule.1/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" incomingLink="//@tggRule.1/@linkVariable.12" outgoingLink="//@tggRule.1/@linkVariable.6 //@tggRule.1/@linkVariable.7 //@tggRule.1/@linkVariable.8" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" outgoingLink="//@tggRule.1/@linkVariable.9 //@tggRule.1/@linkVariable.10" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethod" incomingLink="//@tggRule.1/@linkVariable.6 //@tggRule.1/@linkVariable.10" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToPg" outgoingLink="//@tggRule.1/@linkVariable.11 //@tggRule.1/@linkVariable.12" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameterList" incomingLink="//@tggRule.1/@linkVariable.9" outgoingLink="//@tggRule.1/@linkVariable.13" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedParameterType" target="//@tggRule.1/@objectVariable.4" source="//@tggRule.1/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter/extendedParameterType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="tClass" target="//@tggRule.1/@objectVariable.5" source="//@tggRule.1/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter/tClass"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.1/@objectVariable.1" source="//@tggRule.1/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.1/@objectVariable.0" source="//@tggRule.1/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.1/@objectVariable.4" source="//@tggRule.1/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.1/@objectVariable.5" source="//@tggRule.1/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.1/@objectVariable.9" source="//@tggRule.1/@objectVariable.7" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.1/@objectVariable.5" source="//@tggRule.1/@objectVariable.7" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.1/@objectVariable.3" source="//@tggRule.1/@objectVariable.7" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="paramList" target="//@tggRule.1/@objectVariable.11" source="//@tggRule.1/@objectVariable.8" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/paramList"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="method" target="//@tggRule.1/@objectVariable.9" source="//@tggRule.1/@objectVariable.8" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/method"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.1/@objectVariable.0" source="//@tggRule.1/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.1/@objectVariable.7" source="//@tggRule.1/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="entries" target="//@tggRule.1/@objectVariable.1" source="//@tggRule.1/@objectVariable.11" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList/entries"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.1/@csp/@variables.0 //@tggRule.1/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="typeName" objectVariable="extendedType"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tClass"/>
+    </csp>
+  </tggRule>
+  <tggRule name="FieldNameExisting" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jContainingClass" incomingLink="//@tggRule.2/@linkVariable.10" outgoingLink="//@tggRule.2/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jField" incomingLink="//@tggRule.2/@linkVariable.0 //@tggRule.2/@linkVariable.2 //@tggRule.2/@linkVariable.4 //@tggRule.2/@linkVariable.14" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jFieldToTField" outgoingLink="//@tggRule.2/@linkVariable.1 //@tggRule.2/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jFieldToTFieldDefinition" outgoingLink="//@tggRule.2/@linkVariable.3 //@tggRule.2/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" outgoingLink="//@tggRule.2/@linkVariable.5 //@tggRule.2/@linkVariable.6" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tContainingClass" incomingLink="//@tggRule.2/@linkVariable.5 //@tggRule.2/@linkVariable.9" outgoingLink="//@tggRule.2/@linkVariable.7 //@tggRule.2/@linkVariable.8" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tContainingClassToJContainingClass" outgoingLink="//@tggRule.2/@linkVariable.9 //@tggRule.2/@linkVariable.10" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tField" incomingLink="//@tggRule.2/@linkVariable.1 //@tggRule.2/@linkVariable.6 //@tggRule.2/@linkVariable.12" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tFieldDefinition" incomingLink="//@tggRule.2/@linkVariable.3 //@tggRule.2/@linkVariable.7 //@tggRule.2/@linkVariable.11" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tFieldSignature" incomingLink="//@tggRule.2/@linkVariable.8 //@tggRule.2/@linkVariable.13" outgoingLink="//@tggRule.2/@linkVariable.12 //@tggRule.2/@linkVariable.11" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tFieldSignatureToJField" outgoingLink="//@tggRule.2/@linkVariable.13 //@tggRule.2/@linkVariable.14" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldSignature"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="members" target="//@tggRule.2/@objectVariable.1" source="//@tggRule.2/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.2/@objectVariable.7" source="//@tggRule.2/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTField/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.2/@objectVariable.1" source="//@tggRule.2/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTField/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.2/@objectVariable.8" source="//@tggRule.2/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.2/@objectVariable.1" source="//@tggRule.2/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.2/@objectVariable.5" source="//@tggRule.2/@objectVariable.4" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.2/@objectVariable.7" source="//@tggRule.2/@objectVariable.4" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/fields"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="defines" target="//@tggRule.2/@objectVariable.8" source="//@tggRule.2/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="signature" target="//@tggRule.2/@objectVariable.9" source="//@tggRule.2/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.2/@objectVariable.5" source="//@tggRule.2/@objectVariable.6" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.2/@objectVariable.0" source="//@tggRule.2/@objectVariable.6" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="definitions" target="//@tggRule.2/@objectVariable.8" source="//@tggRule.2/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature/definitions"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.2/@objectVariable.7" source="//@tggRule.2/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature/field"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.2/@objectVariable.9" source="//@tggRule.2/@objectVariable.10" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.2/@objectVariable.1" source="//@tggRule.2/@objectVariable.10" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldSignature/source"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.2/@csp/@variables.0 //@tggRule.2/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="name" objectVariable="jField"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tField"/>
+    </csp>
+  </tggRule>
+  <tggRule name="ParameterTypeLibLink" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.3/@linkVariable.0 //@tggRule.3/@linkVariable.3 //@tggRule.3/@linkVariable.7" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedType" incomingLink="//@tggRule.3/@linkVariable.2 //@tggRule.3/@linkVariable.6" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+      <attributeAssignment>
+        <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/isFromLib"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="true"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" incomingLink="//@tggRule.3/@linkVariable.12" outgoingLink="//@tggRule.3/@linkVariable.0 //@tggRule.3/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameter" incomingLink="//@tggRule.3/@linkVariable.5 //@tggRule.3/@linkVariable.11" outgoingLink="//@tggRule.3/@linkVariable.2" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameter" incomingLink="//@tggRule.3/@linkVariable.4 //@tggRule.3/@linkVariable.10" outgoingLink="//@tggRule.3/@linkVariable.3" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToTParameter" outgoingLink="//@tggRule.3/@linkVariable.4 //@tggRule.3/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedTypeToTClass" outgoingLink="//@tggRule.3/@linkVariable.6 //@tggRule.3/@linkVariable.7" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" outgoingLink="//@tggRule.3/@linkVariable.8 //@tggRule.3/@linkVariable.9" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethod" incomingLink="//@tggRule.3/@linkVariable.1 //@tggRule.3/@linkVariable.9" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameterList" incomingLink="//@tggRule.3/@linkVariable.8" outgoingLink="//@tggRule.3/@linkVariable.10" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToPg" outgoingLink="//@tggRule.3/@linkVariable.11 //@tggRule.3/@linkVariable.12" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.3/@objectVariable.0" source="//@tggRule.3/@objectVariable.2" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.3/@objectVariable.8" source="//@tggRule.3/@objectVariable.2" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedParameterType" target="//@tggRule.3/@objectVariable.1" source="//@tggRule.3/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter/extendedParameterType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="tClass" target="//@tggRule.3/@objectVariable.0" source="//@tggRule.3/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter/tClass"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.3/@objectVariable.4" source="//@tggRule.3/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.3/@objectVariable.3" source="//@tggRule.3/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.3/@objectVariable.1" source="//@tggRule.3/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.3/@objectVariable.0" source="//@tggRule.3/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="paramList" target="//@tggRule.3/@objectVariable.9" source="//@tggRule.3/@objectVariable.7" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/paramList"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="method" target="//@tggRule.3/@objectVariable.8" source="//@tggRule.3/@objectVariable.7" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/method"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="entries" target="//@tggRule.3/@objectVariable.4" source="//@tggRule.3/@objectVariable.9" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList/entries"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.3/@objectVariable.3" source="//@tggRule.3/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.3/@objectVariable.2" source="//@tggRule.3/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph/target"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.3/@csp/@variables.0 //@tggRule.3/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="typeName" objectVariable="extendedType"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tClass"/>
+    </csp>
+  </tggRule>
+  <tggRule name="MethodDefinitionLinkSignature" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.4/@linkVariable.3 //@tggRule.4/@linkVariable.6 //@tggRule.4/@linkVariable.11 //@tggRule.4/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" incomingLink="//@tggRule.4/@linkVariable.2 //@tggRule.4/@linkVariable.8" outgoingLink="//@tggRule.4/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodSignature" outgoingLink="//@tggRule.4/@linkVariable.2 //@tggRule.4/@linkVariable.3" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="JMethodname" incomingLink="//@tggRule.4/@linkVariable.4 //@tggRule.4/@linkVariable.9" outgoingLink="//@tggRule.4/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethod" incomingLink="//@tggRule.4/@linkVariable.1 //@tggRule.4/@linkVariable.5 //@tggRule.4/@linkVariable.12" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="JMethodnameToTMethod" outgoingLink="//@tggRule.4/@linkVariable.4 //@tggRule.4/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParamList" incomingLink="//@tggRule.4/@linkVariable.7 //@tggRule.4/@linkVariable.10" outgoingLink="//@tggRule.4/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParamListToTMethodSignature" outgoingLink="//@tggRule.4/@linkVariable.7 //@tggRule.4/@linkVariable.8" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ejjc" outgoingLink="//@tggRule.4/@linkVariable.9 //@tggRule.4/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethod" outgoingLink="//@tggRule.4/@linkVariable.11 //@tggRule.4/@linkVariable.12" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethod"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedClassMethod" target="//@tggRule.4/@objectVariable.0" source="//@tggRule.4/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName/extendedClassMethod"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="method" target="//@tggRule.4/@objectVariable.4" source="//@tggRule.4/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/method"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.4/@objectVariable.1" source="//@tggRule.4/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.4/@objectVariable.0" source="//@tggRule.4/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.4/@objectVariable.3" source="//@tggRule.4/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.4/@objectVariable.4" source="//@tggRule.4/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.4/@objectVariable.0" source="//@tggRule.4/@objectVariable.6" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.4/@objectVariable.6" source="//@tggRule.4/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.4/@objectVariable.1" source="//@tggRule.4/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedMethodName" target="//@tggRule.4/@objectVariable.3" source="//@tggRule.4/@objectVariable.8" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedMethodName"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedParameterList" target="//@tggRule.4/@objectVariable.6" source="//@tggRule.4/@objectVariable.8" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedParameterList"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.4/@objectVariable.0" source="//@tggRule.4/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethod/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.4/@objectVariable.4" source="//@tggRule.4/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethod/target"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="MethodLinkClass" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodDefinition" incomingLink="//@tggRule.5/@linkVariable.4 //@tggRule.5/@linkVariable.6 //@tggRule.5/@linkVariable.0" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.5/@linkVariable.2 //@tggRule.5/@linkVariable.3 //@tggRule.5/@linkVariable.5 //@tggRule.5/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" incomingLink="//@tggRule.5/@linkVariable.1 //@tggRule.5/@linkVariable.7 //@tggRule.5/@linkVariable.12" outgoingLink="//@tggRule.5/@linkVariable.0" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodSignature" outgoingLink="//@tggRule.5/@linkVariable.1 //@tggRule.5/@linkVariable.2" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodDefinition" outgoingLink="//@tggRule.5/@linkVariable.3 //@tggRule.5/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClass" incomingLink="//@tggRule.5/@linkVariable.8" outgoingLink="//@tggRule.5/@linkVariable.5" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.5/@linkVariable.9" outgoingLink="//@tggRule.5/@linkVariable.6 //@tggRule.5/@linkVariable.7" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClassToTClass" outgoingLink="//@tggRule.5/@linkVariable.8 //@tggRule.5/@linkVariable.9" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParamList" incomingLink="//@tggRule.5/@linkVariable.11" outgoingLink="//@tggRule.5/@linkVariable.10" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParamListToTMethodSignature" outgoingLink="//@tggRule.5/@linkVariable.11 //@tggRule.5/@linkVariable.12" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="definitions" target="//@tggRule.5/@objectVariable.0" source="//@tggRule.5/@objectVariable.2" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.5/@objectVariable.2" source="//@tggRule.5/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.5/@objectVariable.1" source="//@tggRule.5/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.5/@objectVariable.1" source="//@tggRule.5/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.5/@objectVariable.0" source="//@tggRule.5/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="members" target="//@tggRule.5/@objectVariable.1" source="//@tggRule.5/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="defines" target="//@tggRule.5/@objectVariable.0" source="//@tggRule.5/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="signature" target="//@tggRule.5/@objectVariable.2" source="//@tggRule.5/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.5/@objectVariable.5" source="//@tggRule.5/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.5/@objectVariable.6" source="//@tggRule.5/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.5/@objectVariable.1" source="//@tggRule.5/@objectVariable.8" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.5/@objectVariable.8" source="//@tggRule.5/@objectVariable.9" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.5/@objectVariable.2" source="//@tggRule.5/@objectVariable.9" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/target"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="Inheritance" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="classifierReference" incomingLink="//@tggRule.6/@linkVariable.6" outgoingLink="//@tggRule.6/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//types/ClassifierReference"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClass" incomingLink="//@tggRule.6/@linkVariable.3" outgoingLink="//@tggRule.6/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClassToTClass" outgoingLink="//@tggRule.6/@linkVariable.2 //@tggRule.6/@linkVariable.3" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParentClass" incomingLink="//@tggRule.6/@linkVariable.0 //@tggRule.6/@linkVariable.5" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParentClassToTParentClass" outgoingLink="//@tggRule.6/@linkVariable.4 //@tggRule.6/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="nameSpace" incomingLink="//@tggRule.6/@linkVariable.1" outgoingLink="//@tggRule.6/@linkVariable.6" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#_Wo2ZQ9z1Ed2bJ_pQViWxFg"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" outgoingLink="//@tggRule.6/@linkVariable.7 //@tggRule.6/@linkVariable.8" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.6/@linkVariable.2 //@tggRule.6/@linkVariable.8 //@tggRule.6/@linkVariable.9" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParentClass" incomingLink="//@tggRule.6/@linkVariable.4 //@tggRule.6/@linkVariable.7" outgoingLink="//@tggRule.6/@linkVariable.9" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.6/@objectVariable.3" source="//@tggRule.6/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//types/ClassifierReference/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extends" target="//@tggRule.6/@objectVariable.5" source="//@tggRule.6/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//classifiers/Class/extends"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.6/@objectVariable.7" source="//@tggRule.6/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.6/@objectVariable.1" source="//@tggRule.6/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.6/@objectVariable.8" source="//@tggRule.6/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.6/@objectVariable.3" source="//@tggRule.6/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classifierReferences" target="//@tggRule.6/@objectVariable.0" source="//@tggRule.6/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#_Wo2ZRdz1Ed2bJ_pQViWxFg"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.6/@objectVariable.8" source="//@tggRule.6/@objectVariable.6" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.6/@objectVariable.7" source="//@tggRule.6/@objectVariable.6" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="childClasses" target="//@tggRule.6/@objectVariable.7" source="//@tggRule.6/@objectVariable.8" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/childClasses"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="ParameterListLinkFirst" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameter" incomingLink="//@tggRule.7/@linkVariable.0 //@tggRule.7/@linkVariable.4" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterList" incomingLink="//@tggRule.7/@linkVariable.2" outgoingLink="//@tggRule.7/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterListToTParameterList" outgoingLink="//@tggRule.7/@linkVariable.1 //@tggRule.7/@linkVariable.2" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToTParameter" outgoingLink="//@tggRule.7/@linkVariable.3 //@tggRule.7/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameter" incomingLink="//@tggRule.7/@linkVariable.3 //@tggRule.7/@linkVariable.5" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameterList" incomingLink="//@tggRule.7/@linkVariable.1" outgoingLink="//@tggRule.7/@linkVariable.5" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="first" target="//@tggRule.7/@objectVariable.0" source="//@tggRule.7/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList/first"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.7/@objectVariable.5" source="//@tggRule.7/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.7/@objectVariable.1" source="//@tggRule.7/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.7/@objectVariable.4" source="//@tggRule.7/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.7/@objectVariable.0" source="//@tggRule.7/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="first" target="//@tggRule.7/@objectVariable.4" source="//@tggRule.7/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList/first"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="ParameterTypeUserDefined" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.8/@linkVariable.2 //@tggRule.8/@linkVariable.6 //@tggRule.8/@linkVariable.8" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedType" incomingLink="//@tggRule.8/@linkVariable.1 //@tggRule.8/@linkVariable.5" outgoingLink="//@tggRule.8/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+      <attributeAssignment>
+        <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/isFromLib"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="false"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameter" incomingLink="//@tggRule.8/@linkVariable.4" outgoingLink="//@tggRule.8/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameter" incomingLink="//@tggRule.8/@linkVariable.3" outgoingLink="//@tggRule.8/@linkVariable.2" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToTParameter" outgoingLink="//@tggRule.8/@linkVariable.3 //@tggRule.8/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedTypeToTClass" outgoingLink="//@tggRule.8/@linkVariable.5 //@tggRule.8/@linkVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClass" incomingLink="//@tggRule.8/@linkVariable.0 //@tggRule.8/@linkVariable.7" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClassToTClass" outgoingLink="//@tggRule.8/@linkVariable.7 //@tggRule.8/@linkVariable.8" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="type" target="//@tggRule.8/@objectVariable.6" source="//@tggRule.8/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/type"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedParameterType" target="//@tggRule.8/@objectVariable.1" source="//@tggRule.8/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter/extendedParameterType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="tClass" target="//@tggRule.8/@objectVariable.0" source="//@tggRule.8/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter/tClass"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.8/@objectVariable.3" source="//@tggRule.8/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.8/@objectVariable.2" source="//@tggRule.8/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.8/@objectVariable.1" source="//@tggRule.8/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.8/@objectVariable.0" source="//@tggRule.8/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.8/@objectVariable.6" source="//@tggRule.8/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.8/@objectVariable.0" source="//@tggRule.8/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="MethodSignatureLinkDefinition" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.9/@linkVariable.2 //@tggRule.9/@linkVariable.4 //@tggRule.9/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodSignature" outgoingLink="//@tggRule.9/@linkVariable.1 //@tggRule.9/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterList" incomingLink="//@tggRule.9/@linkVariable.7" outgoingLink="//@tggRule.9/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodDefinition" incomingLink="//@tggRule.9/@linkVariable.5 //@tggRule.9/@linkVariable.3" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodDefinition" outgoingLink="//@tggRule.9/@linkVariable.4 //@tggRule.9/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterListToTParameterList" outgoingLink="//@tggRule.9/@linkVariable.6 //@tggRule.9/@linkVariable.7" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" incomingLink="//@tggRule.9/@linkVariable.1" outgoingLink="//@tggRule.9/@linkVariable.8 //@tggRule.9/@linkVariable.3" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameterList" incomingLink="//@tggRule.9/@linkVariable.6 //@tggRule.9/@linkVariable.8" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.9/@objectVariable.0" source="//@tggRule.9/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.9/@objectVariable.6" source="//@tggRule.9/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.9/@objectVariable.0" source="//@tggRule.9/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="definitions" target="//@tggRule.9/@objectVariable.3" source="//@tggRule.9/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/definitions"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.9/@objectVariable.0" source="//@tggRule.9/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.9/@objectVariable.3" source="//@tggRule.9/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.9/@objectVariable.7" source="//@tggRule.9/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.9/@objectVariable.2" source="//@tggRule.9/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="paramList" target="//@tggRule.9/@objectVariable.7" source="//@tggRule.9/@objectVariable.6" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/paramList"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="ParameterLinkListNext" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jNextParameter" incomingLink="//@tggRule.10/@linkVariable.0 //@tggRule.10/@linkVariable.4" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameter" incomingLink="//@tggRule.10/@linkVariable.2" outgoingLink="//@tggRule.10/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToTParameter" outgoingLink="//@tggRule.10/@linkVariable.1 //@tggRule.10/@linkVariable.2" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="nextPArameterToTnextPArameter" outgoingLink="//@tggRule.10/@linkVariable.3 //@tggRule.10/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tNextParameter" incomingLink="//@tggRule.10/@linkVariable.3 //@tggRule.10/@linkVariable.5" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameter" incomingLink="//@tggRule.10/@linkVariable.1" outgoingLink="//@tggRule.10/@linkVariable.5" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="next" target="//@tggRule.10/@objectVariable.0" source="//@tggRule.10/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter/next"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.10/@objectVariable.5" source="//@tggRule.10/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.10/@objectVariable.1" source="//@tggRule.10/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.10/@objectVariable.4" source="//@tggRule.10/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.10/@objectVariable.0" source="//@tggRule.10/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="next" target="//@tggRule.10/@objectVariable.4" source="//@tggRule.10/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter/next"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="FieldNameCreate" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tFieldSignature" incomingLink="//@tggRule.11/@linkVariable.3 //@tggRule.11/@linkVariable.7" outgoingLink="//@tggRule.11/@linkVariable.0 //@tggRule.11/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tFieldDefinition" incomingLink="//@tggRule.11/@linkVariable.5 //@tggRule.11/@linkVariable.8 //@tggRule.11/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jFieldToTFieldSignature" outgoingLink="//@tggRule.11/@linkVariable.2 //@tggRule.11/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jFieldToTFieldDefinition" outgoingLink="//@tggRule.11/@linkVariable.4 //@tggRule.11/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jContainingClass" incomingLink="//@tggRule.11/@linkVariable.14" outgoingLink="//@tggRule.11/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tContainingClass" incomingLink="//@tggRule.11/@linkVariable.13 //@tggRule.11/@linkVariable.15" outgoingLink="//@tggRule.11/@linkVariable.7 //@tggRule.11/@linkVariable.8" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jField" incomingLink="//@tggRule.11/@linkVariable.2 //@tggRule.11/@linkVariable.4 //@tggRule.11/@linkVariable.6 //@tggRule.11/@linkVariable.10" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//members/Field"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jFieldToTField" outgoingLink="//@tggRule.11/@linkVariable.9 //@tggRule.11/@linkVariable.10" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" outgoingLink="//@tggRule.11/@linkVariable.11 //@tggRule.11/@linkVariable.12 //@tggRule.11/@linkVariable.13" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tField" incomingLink="//@tggRule.11/@linkVariable.0 //@tggRule.11/@linkVariable.9 //@tggRule.11/@linkVariable.11" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jContainingClassToTContainingClass" outgoingLink="//@tggRule.11/@linkVariable.14 //@tggRule.11/@linkVariable.15" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tExistingField" incomingLink="//@tggRule.11/@linkVariable.12" bindingSemantics="NEGATIVE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField"/>
+      <constraint>
+        <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+          <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.11/@objectVariable.6">
+            <attribute href="http://www.emftext.org/java#//commons/NamedElement/name"/>
+          </rightExpression>
+          <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.11/@objectVariable.11">
+            <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TField/tName"/>
+          </leftExpression>
+        </constraintExpression>
+      </constraint>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="field" target="//@tggRule.11/@objectVariable.9" source="//@tggRule.11/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature/field"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="definitions" target="//@tggRule.11/@objectVariable.1" source="//@tggRule.11/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TFieldSignature/definitions"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.11/@objectVariable.6" source="//@tggRule.11/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.11/@objectVariable.0" source="//@tggRule.11/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.11/@objectVariable.6" source="//@tggRule.11/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.11/@objectVariable.1" source="//@tggRule.11/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTFieldDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="members" target="//@tggRule.11/@objectVariable.6" source="//@tggRule.11/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="signature" target="//@tggRule.11/@objectVariable.0" source="//@tggRule.11/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/signature"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="defines" target="//@tggRule.11/@objectVariable.1" source="//@tggRule.11/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.11/@objectVariable.9" source="//@tggRule.11/@objectVariable.7" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTField/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.11/@objectVariable.6" source="//@tggRule.11/@objectVariable.7" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//FieldToTField/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.11/@objectVariable.9" source="//@tggRule.11/@objectVariable.8" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/fields"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="fields" target="//@tggRule.11/@objectVariable.11" source="//@tggRule.11/@objectVariable.8" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/fields"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.11/@objectVariable.5" source="//@tggRule.11/@objectVariable.8" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.11/@objectVariable.4" source="//@tggRule.11/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.11/@objectVariable.5" source="//@tggRule.11/@objectVariable.10" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.11/@csp/@variables.0 //@tggRule.11/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="name" objectVariable="jField"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tField"/>
+    </csp>
+  </tggRule>
+  <tggRule name="MethodNameCreate" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethod" outgoingLink="//@tggRule.12/@linkVariable.0 //@tggRule.12/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.12/@linkVariable.0 //@tggRule.12/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethod" incomingLink="//@tggRule.12/@linkVariable.1 //@tggRule.12/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" incomingLink="//@tggRule.12/@linkVariable.5" outgoingLink="//@tggRule.12/@linkVariable.2" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ejjc" incomingLink="//@tggRule.12/@linkVariable.4" outgoingLink="//@tggRule.12/@linkVariable.3" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="ejjcToPg" outgoingLink="//@tggRule.12/@linkVariable.4 //@tggRule.12/@linkVariable.5" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.12/@objectVariable.1" source="//@tggRule.12/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.12/@objectVariable.2" source="//@tggRule.12/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.12/@objectVariable.2" source="//@tggRule.12/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedMethodName" target="//@tggRule.12/@objectVariable.1" source="//@tggRule.12/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedMethodName"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.12/@objectVariable.4" source="//@tggRule.12/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.12/@objectVariable.3" source="//@tggRule.12/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/target"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.12/@csp/@variables.0 //@tggRule.12/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="name" objectVariable="jMethod"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tMethod"/>
+    </csp>
+  </tggRule>
+  <tggRule name="Class1" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.13/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodDefinition" incomingLink="//@tggRule.13/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodDefinition" outgoingLink="//@tggRule.13/@linkVariable.0 //@tggRule.13/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.13/@objectVariable.0" source="//@tggRule.13/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.13/@objectVariable.1" source="//@tggRule.13/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/target"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="MethodSignatureCreate" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterListToTMethodSignature" outgoingLink="//@tggRule.14/@linkVariable.0 //@tggRule.14/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterList" incomingLink="//@tggRule.14/@linkVariable.0 //@tggRule.14/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterListToTParameterList" outgoingLink="//@tggRule.14/@linkVariable.2 //@tggRule.14/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" incomingLink="//@tggRule.14/@linkVariable.1" outgoingLink="//@tggRule.14/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameterList" incomingLink="//@tggRule.14/@linkVariable.2 //@tggRule.14/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.14/@objectVariable.1" source="//@tggRule.14/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.14/@objectVariable.3" source="//@tggRule.14/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.14/@objectVariable.4" source="//@tggRule.14/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.14/@objectVariable.1" source="//@tggRule.14/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="paramList" target="//@tggRule.14/@objectVariable.4" source="//@tggRule.14/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/paramList"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="PackageRoot" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppJavaContainer" incomingLink="//@tggRule.15/@linkVariable.6" outgoingLink="//@tggRule.15/@linkVariable.0 //@tggRule.15/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppPackageElement" incomingLink="//@tggRule.15/@linkVariable.0 //@tggRule.15/@linkVariable.1 //@tggRule.15/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tPackage" incomingLink="//@tggRule.15/@linkVariable.2 //@tggRule.15/@linkVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tPackageToExtendedJamoppPackageElement" outgoingLink="//@tggRule.15/@linkVariable.2 //@tggRule.15/@linkVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="typeGraph" incomingLink="//@tggRule.15/@linkVariable.5" outgoingLink="//@tggRule.15/@linkVariable.4" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="typeGraphToExtendedJamoppJavaContainer" outgoingLink="//@tggRule.15/@linkVariable.5 //@tggRule.15/@linkVariable.6" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedJamoppPackageElement" target="//@tggRule.15/@objectVariable.1" source="//@tggRule.15/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedJamoppPackageElement"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="roots" target="//@tggRule.15/@objectVariable.1" source="//@tggRule.15/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/roots"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.15/@objectVariable.2" source="//@tggRule.15/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.15/@objectVariable.1" source="//@tggRule.15/@objectVariable.3" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="packages" target="//@tggRule.15/@objectVariable.2" source="//@tggRule.15/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/packages"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.15/@objectVariable.4" source="//@tggRule.15/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.15/@objectVariable.0" source="//@tggRule.15/@objectVariable.5" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/source"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.15/@csp/@variables.0 //@tggRule.15/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="name" objectVariable="extendedJamoppPackageElement"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tPackage"/>
+    </csp>
+  </tggRule>
+  <tggRule name="PackageChild" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppJavaContainer" outgoingLink="//@tggRule.16/@linkVariable.0 //@tggRule.16/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppPackageElement" incomingLink="//@tggRule.16/@linkVariable.1 //@tggRule.16/@linkVariable.2 //@tggRule.16/@linkVariable.4" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jSubPackage" incomingLink="//@tggRule.16/@linkVariable.0 //@tggRule.16/@linkVariable.7" outgoingLink="//@tggRule.16/@linkVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tPackage" incomingLink="//@tggRule.16/@linkVariable.3 //@tggRule.16/@linkVariable.5" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tPackageToExtendedJamoppPackageElement" outgoingLink="//@tggRule.16/@linkVariable.3 //@tggRule.16/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tSubPackage" incomingLink="//@tggRule.16/@linkVariable.6" outgoingLink="//@tggRule.16/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tSubPackageToJSubPackage" outgoingLink="//@tggRule.16/@linkVariable.6 //@tggRule.16/@linkVariable.7" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedJamoppPackageElement" target="//@tggRule.16/@objectVariable.2" source="//@tggRule.16/@objectVariable.0" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedJamoppPackageElement"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedJamoppPackageElement" target="//@tggRule.16/@objectVariable.1" source="//@tggRule.16/@objectVariable.0" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedJamoppPackageElement"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="predessor" target="//@tggRule.16/@objectVariable.1" source="//@tggRule.16/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppPackageElement/predessor"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.16/@objectVariable.3" source="//@tggRule.16/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.16/@objectVariable.1" source="//@tggRule.16/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="parent" target="//@tggRule.16/@objectVariable.3" source="//@tggRule.16/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TPackage/parent"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.16/@objectVariable.5" source="//@tggRule.16/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.16/@objectVariable.2" source="//@tggRule.16/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppPackageElementToTPackage/source"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.16/@csp/@variables.0 //@tggRule.16/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="name" objectVariable="jSubPackage"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tSubPackage"/>
+    </csp>
+  </tggRule>
+  <tggRule name="ProgramGraphCreate" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppJavaContainer" incomingLink="//@tggRule.17/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="typeGraph" incomingLink="//@tggRule.17/@linkVariable.0" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="typeGraphToExtendedJamoppJavaContainer" outgoingLink="//@tggRule.17/@linkVariable.0 //@tggRule.17/@linkVariable.1" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.17/@objectVariable.1" source="//@tggRule.17/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.17/@objectVariable.0" source="//@tggRule.17/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/source"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="ReturnTypeUserDefined" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodName" outgoingLink="//@tggRule.18/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodDefinition" incomingLink="//@tggRule.18/@linkVariable.3" outgoingLink="//@tggRule.18/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.18/@linkVariable.0 //@tggRule.18/@linkVariable.4 //@tggRule.18/@linkVariable.8" outgoingLink="//@tggRule.18/@linkVariable.2" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodDefinition" outgoingLink="//@tggRule.18/@linkVariable.3 //@tggRule.18/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedType" incomingLink="//@tggRule.18/@linkVariable.2" outgoingLink="//@tggRule.18/@linkVariable.5" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+      <attributeAssignment>
+        <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/isFromLib"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="false"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jType" incomingLink="//@tggRule.18/@linkVariable.5 //@tggRule.18/@linkVariable.6" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tType" incomingLink="//@tggRule.18/@linkVariable.1 //@tggRule.18/@linkVariable.7" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jTypeToTType" outgoingLink="//@tggRule.18/@linkVariable.6 //@tggRule.18/@linkVariable.7" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedParameterList" outgoingLink="//@tggRule.18/@linkVariable.8" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedClassMethod" target="//@tggRule.18/@objectVariable.2" source="//@tggRule.18/@objectVariable.0" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName/extendedClassMethod"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="returnType" target="//@tggRule.18/@objectVariable.6" source="//@tggRule.18/@objectVariable.1" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition/returnType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedReturnType" target="//@tggRule.18/@objectVariable.4" source="//@tggRule.18/@objectVariable.2" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod/extendedReturnType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.18/@objectVariable.1" source="//@tggRule.18/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.18/@objectVariable.2" source="//@tggRule.18/@objectVariable.3" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="type" target="//@tggRule.18/@objectVariable.5" source="//@tggRule.18/@objectVariable.4" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/type"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.18/@objectVariable.5" source="//@tggRule.18/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.18/@objectVariable.6" source="//@tggRule.18/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.18/@objectVariable.2" source="//@tggRule.18/@objectVariable.8" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList/methods"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <tggRule name="ReturnTypeFromLibCreate" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClass" incomingLink="//@tggRule.19/@linkVariable.2" outgoingLink="//@tggRule.19/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.19/@linkVariable.3 //@tggRule.19/@linkVariable.10" outgoingLink="//@tggRule.19/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClassToTClass" outgoingLink="//@tggRule.19/@linkVariable.2 //@tggRule.19/@linkVariable.3" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tType" incomingLink="//@tggRule.19/@linkVariable.4 //@tggRule.19/@linkVariable.9 //@tggRule.19/@linkVariable.12" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedType" incomingLink="//@tggRule.19/@linkVariable.5 //@tggRule.19/@linkVariable.8" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+      <attributeAssignment>
+        <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/isFromLib"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="true"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodDefinition" incomingLink="//@tggRule.19/@linkVariable.1 //@tggRule.19/@linkVariable.6" outgoingLink="//@tggRule.19/@linkVariable.4" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.19/@linkVariable.0 //@tggRule.19/@linkVariable.7" outgoingLink="//@tggRule.19/@linkVariable.5" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodDefinition" outgoingLink="//@tggRule.19/@linkVariable.6 //@tggRule.19/@linkVariable.7" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedTypeToTType" outgoingLink="//@tggRule.19/@linkVariable.8 //@tggRule.19/@linkVariable.9" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tExistingType" incomingLink="//@tggRule.19/@linkVariable.11" bindingSemantics="NEGATIVE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+      <constraint>
+        <constraintExpression xsi:type="expressions:ComparisonExpression" operator="EQUAL">
+          <rightExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.19/@objectVariable.4">
+            <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/typeName"/>
+          </rightExpression>
+          <leftExpression xsi:type="patternExpressions:AttributeValueExpression" object="//@tggRule.19/@objectVariable.9">
+            <attribute href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/tName"/>
+          </leftExpression>
+        </constraintExpression>
+      </constraint>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" outgoingLink="//@tggRule.19/@linkVariable.10 //@tggRule.19/@linkVariable.11 //@tggRule.19/@linkVariable.12" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="members" target="//@tggRule.19/@objectVariable.6" source="//@tggRule.19/@objectVariable.0" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="defines" target="//@tggRule.19/@objectVariable.5" source="//@tggRule.19/@objectVariable.1" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.19/@objectVariable.0" source="//@tggRule.19/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.19/@objectVariable.1" source="//@tggRule.19/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="returnType" target="//@tggRule.19/@objectVariable.3" source="//@tggRule.19/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition/returnType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedReturnType" target="//@tggRule.19/@objectVariable.4" source="//@tggRule.19/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod/extendedReturnType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.19/@objectVariable.5" source="//@tggRule.19/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.19/@objectVariable.6" source="//@tggRule.19/@objectVariable.7" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.19/@objectVariable.4" source="//@tggRule.19/@objectVariable.8" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.19/@objectVariable.3" source="//@tggRule.19/@objectVariable.8" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.19/@objectVariable.1" source="//@tggRule.19/@objectVariable.10" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.19/@objectVariable.9" source="//@tggRule.19/@objectVariable.10" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.19/@objectVariable.3" source="//@tggRule.19/@objectVariable.10" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.19/@csp/@variables.0 //@tggRule.19/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="typeName" objectVariable="extendedType"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tType"/>
+    </csp>
+  </tggRule>
+  <tggRule name="ReturnTypeFromLibLink" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClass" incomingLink="//@tggRule.20/@linkVariable.2" outgoingLink="//@tggRule.20/@linkVariable.0" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="http://www.emftext.org/java#//classifiers/Class"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tClass" incomingLink="//@tggRule.20/@linkVariable.3 //@tggRule.20/@linkVariable.4" outgoingLink="//@tggRule.20/@linkVariable.1" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jClassToTClass" outgoingLink="//@tggRule.20/@linkVariable.2 //@tggRule.20/@linkVariable.3" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" outgoingLink="//@tggRule.20/@linkVariable.4 //@tggRule.20/@linkVariable.5" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tType" incomingLink="//@tggRule.20/@linkVariable.5 //@tggRule.20/@linkVariable.6 //@tggRule.20/@linkVariable.11" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedType" incomingLink="//@tggRule.20/@linkVariable.7 //@tggRule.20/@linkVariable.10" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType"/>
+      <attributeAssignment>
+        <attribute href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedType/isFromLib"/>
+        <valueExpression xsi:type="expressions:LiteralExpression" value="true"/>
+      </attributeAssignment>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodDefinition" incomingLink="//@tggRule.20/@linkVariable.1 //@tggRule.20/@linkVariable.9" outgoingLink="//@tggRule.20/@linkVariable.6" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethod" incomingLink="//@tggRule.20/@linkVariable.0 //@tggRule.20/@linkVariable.8" outgoingLink="//@tggRule.20/@linkVariable.7" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodToTMethodDefinition" outgoingLink="//@tggRule.20/@linkVariable.8 //@tggRule.20/@linkVariable.9" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedTypeToTType" outgoingLink="//@tggRule.20/@linkVariable.10 //@tggRule.20/@linkVariable.11" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="members" target="//@tggRule.20/@objectVariable.7" source="//@tggRule.20/@objectVariable.0" domain="//@domain.0">
+      <type href="http://www.emftext.org/java#//members/MemberContainer/members"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="defines" target="//@tggRule.20/@objectVariable.6" source="//@tggRule.20/@objectVariable.1" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TClass/defines"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.20/@objectVariable.0" source="//@tggRule.20/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.20/@objectVariable.1" source="//@tggRule.20/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassToTClass/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.20/@objectVariable.1" source="//@tggRule.20/@objectVariable.3" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="classes" target="//@tggRule.20/@objectVariable.4" source="//@tggRule.20/@objectVariable.3" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/classes"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="returnType" target="//@tggRule.20/@objectVariable.4" source="//@tggRule.20/@objectVariable.6" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodDefinition/returnType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedReturnType" target="//@tggRule.20/@objectVariable.5" source="//@tggRule.20/@objectVariable.7" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedClassMethod/extendedReturnType"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.20/@objectVariable.7" source="//@tggRule.20/@objectVariable.8" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.20/@objectVariable.6" source="//@tggRule.20/@objectVariable.8" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ClassMethodToTMethodDefinition/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.20/@objectVariable.5" source="//@tggRule.20/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.20/@objectVariable.4" source="//@tggRule.20/@objectVariable.9" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedTypeToTClass/target"/>
+    </linkVariable>
+    <csp>
+      <constraints variables="//@tggRule.20/@csp/@variables.0 //@tggRule.20/@csp/@variables.1" name="eq">
+        <signature type=""/>
+        <signature type="" index="1"/>
+        <allowedAdornments value="BB"/>
+        <allowedAdornments value="BF"/>
+        <allowedAdornments value="FB"/>
+        <modelgenAdornments value="BB"/>
+        <modelgenAdornments value="BF"/>
+        <modelgenAdornments value="FB"/>
+        <modelgenAdornments value="FF"/>
+      </constraints>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="typeName" objectVariable="extendedType"/>
+      <variables xsi:type="csp:AttributeVariable" type="String" attribute="tName" objectVariable="tType"/>
+    </csp>
+  </tggRule>
+  <tggRule name="ParameterCreateNew" correspondence="//@domain.2" source="//@domain.0" target="//@domain.1">
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppJavaContainer" incomingLink="//@tggRule.21/@linkVariable.3" outgoingLink="//@tggRule.21/@linkVariable.0 //@tggRule.21/@linkVariable.1" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="pg" incomingLink="//@tggRule.21/@linkVariable.4 //@tggRule.21/@linkVariable.9" outgoingLink="//@tggRule.21/@linkVariable.2" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="extendedJamoppJavaContainerToPg" outgoingLink="//@tggRule.21/@linkVariable.3 //@tggRule.21/@linkVariable.4" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethodSignature" incomingLink="//@tggRule.21/@linkVariable.7" outgoingLink="//@tggRule.21/@linkVariable.5 //@tggRule.21/@linkVariable.10" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterListToTMethodSignature" outgoingLink="//@tggRule.21/@linkVariable.6 //@tggRule.21/@linkVariable.7" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToPg" outgoingLink="//@tggRule.21/@linkVariable.8 //@tggRule.21/@linkVariable.9" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodName" incomingLink="//@tggRule.21/@linkVariable.1 //@tggRule.21/@linkVariable.17" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedMethodName"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tMethod" incomingLink="//@tggRule.21/@linkVariable.2 //@tggRule.21/@linkVariable.18 //@tggRule.21/@linkVariable.10" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethod"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameter" incomingLink="//@tggRule.21/@linkVariable.8 //@tggRule.21/@linkVariable.12 //@tggRule.21/@linkVariable.16" bindingOperator="CREATE" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameter" incomingLink="//@tggRule.21/@linkVariable.11 //@tggRule.21/@linkVariable.15" bindingOperator="CREATE" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="tParameterList" incomingLink="//@tggRule.21/@linkVariable.5 //@tggRule.21/@linkVariable.13" outgoingLink="//@tggRule.21/@linkVariable.11" domain="//@domain.1">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterList" incomingLink="//@tggRule.21/@linkVariable.0 //@tggRule.21/@linkVariable.6 //@tggRule.21/@linkVariable.14" outgoingLink="//@tggRule.21/@linkVariable.12" domain="//@domain.0">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterListToTParameterList" outgoingLink="//@tggRule.21/@linkVariable.13 //@tggRule.21/@linkVariable.14" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jParameterToTParameter" outgoingLink="//@tggRule.21/@linkVariable.15 //@tggRule.21/@linkVariable.16" bindingOperator="CREATE" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter"/>
+    </objectVariable>
+    <objectVariable xsi:type="TGGLanguage:TGGObjectVariable" name="jMethodNameToTMethod" outgoingLink="//@tggRule.21/@linkVariable.17 //@tggRule.21/@linkVariable.18" domain="//@domain.2">
+      <type xsi:type="ecore:EClass" href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod"/>
+    </objectVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedParameterList" target="//@tggRule.21/@objectVariable.11" source="//@tggRule.21/@objectVariable.0" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedParameterList"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="extendedMethodName" target="//@tggRule.21/@objectVariable.6" source="//@tggRule.21/@objectVariable.0" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedJamoppJavaContainer/extendedMethodName"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="methods" target="//@tggRule.21/@objectVariable.7" source="//@tggRule.21/@objectVariable.1" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TypeGraph/methods"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.21/@objectVariable.0" source="//@tggRule.21/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.21/@objectVariable.1" source="//@tggRule.21/@objectVariable.2" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedJamoppJavaContainerToTypeGraph/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="paramList" target="//@tggRule.21/@objectVariable.10" source="//@tggRule.21/@objectVariable.3" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/paramList"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.21/@objectVariable.11" source="//@tggRule.21/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.21/@objectVariable.3" source="//@tggRule.21/@objectVariable.4" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTMethodSignature/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.21/@objectVariable.8" source="//@tggRule.21/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.21/@objectVariable.1" source="//@tggRule.21/@objectVariable.5" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTypeGraph/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="method" target="//@tggRule.21/@objectVariable.7" source="//@tggRule.21/@objectVariable.3" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TMethodSignature/method"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="entries" target="//@tggRule.21/@objectVariable.9" source="//@tggRule.21/@objectVariable.10" bindingOperator="CREATE" domain="//@domain.1">
+      <type href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#//TParameterList/entries"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="values" target="//@tggRule.21/@objectVariable.8" source="//@tggRule.21/@objectVariable.11" bindingOperator="CREATE" domain="//@domain.0">
+      <type href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#//ExtendedParameterList/values"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.21/@objectVariable.10" source="//@tggRule.21/@objectVariable.12" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.21/@objectVariable.11" source="//@tggRule.21/@objectVariable.12" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterListToTParameterList/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.21/@objectVariable.9" source="//@tggRule.21/@objectVariable.13" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/target"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.21/@objectVariable.8" source="//@tggRule.21/@objectVariable.13" bindingOperator="CREATE" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedParameterToTParameter/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="source" target="//@tggRule.21/@objectVariable.6" source="//@tggRule.21/@objectVariable.14" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod/source"/>
+    </linkVariable>
+    <linkVariable xsi:type="TGGLanguage:TGGLinkVariable" name="target" target="//@tggRule.21/@objectVariable.7" source="//@tggRule.21/@objectVariable.14" domain="//@domain.2">
+      <type href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//ExtendedMethodNameToTMethod/target"/>
+    </linkVariable>
+    <csp/>
+  </tggRule>
+  <metamodel name="GravityTGG">
+    <outermostPackage href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#/"/>
+  </metamodel>
+  <metamodel name="TypeGraphBasic">
+    <outermostPackage href="platform:/plugin/TypeGraphBasic/model/TypeGraphBasic.ecore#/"/>
+  </metamodel>
+  <metamodel name="ExtendedJamopp">
+    <outermostPackage href="platform:/plugin/ExtendedJamopp/model/ExtendedJamopp.ecore#/"/>
+  </metamodel>
+</TGGLanguage:TripleGraphGrammar>

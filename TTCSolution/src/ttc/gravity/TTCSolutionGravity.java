@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.moflon.util.eMoflonEMFUtil;
+import org.moflon.core.utilities.eMoflonEMFUtil;
 
 import ttc.gravity.convert.JavaSourceToEMFConverter;
 import ttc.testdsl.tTCTest.Create_Superclass_Refactoring;
