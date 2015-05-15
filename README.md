@@ -1,7 +1,7 @@
 # GravityTTC
 Solution for the Java Refactoring Case at TTC'15
 
-Contents of the Repository:
+# Contents of the Repository:
   
   - ExtendedJamopp      
       - Generated sourcecode of the preprocessed JaMoPP Meta Model
@@ -35,7 +35,7 @@ Contents of the Repository:
       - Solution description paper
       
       
-Required Programs:
+# Required Programs:
 
   - Java JDK8 (available at: "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html")
   - Eclipse Modeling Tools (available at: "http://www.eclipse.org/downloads/")
