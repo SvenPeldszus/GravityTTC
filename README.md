@@ -3,35 +3,35 @@ Solution for the Java Refactoring Case at TTC'15
 
 Contents of the Repository:
   
-  ExtendedJamopp      
+  - ExtendedJamopp      
       - Generated sourcecode of the preprocessed JaMoPP Meta Model
   
-  GravityMetaModels
+  - GravityMetaModels
       - Contains the visual specification of TGGs, SDMs and Meta Models
         (Open the GravityMetaModels.eap with Enterprise Architect to explore the specifications)
   
-  GravityTGG
+  - GravityTGG
       - Genrated code of the transformation from preprocesssed JaMoPP to PG using TGGs
   
-  org.emftext.language.java.recource.bcel
+  - org.emftext.language.java.recource.bcel
       - Apache BCEL 6 Beta for JaMoPP running with Java 8
       
-  Refactorings
+  - Refactorings
       - Generated sourcecode of the Refactorings using SDMs
       
-  TTCSolution
-      - 
+  - TTCSolution
+      - Connecting all the code fragments and implementing the TestInterface
       
-  TypeGraphBasic
+  - TypeGraphBasic
       - Generated sourcecode representing the TypeGraph
       
-  GravityTTC.jar
+  - GravityTTC.jar
       - Compiled solution (executable with ARTE)
       
-  README.md
+  - README.md
       - this README
       
-  SolutionGravityTCC.pdf
+  - SolutionGravityTCC.pdf
       - Solution description paper
       
       
