@@ -39,21 +39,21 @@ Solution for the Java Refactoring Case at TTC'15
 
   - Java JDK8 (available at: "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html")
   - Eclipse Modeling Tools (available at: "http://www.eclipse.org/downloads/"), with installed plug-ins: 
-      - JaMoPP (available in Market Place)
+      - JaMoPP (available in "Eclipse Marketplace)
       - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
   - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html"), with installed plug-in:
       - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
 
 # How to build the solution
 
-The Java sources available in this repository already contain all necessary generated code. To build the solution the projects have to be built with eclipse as eclipse plug-in projects are used. The solution jar file can be generated with the "build.xml" ant script located in the project "TTCSolution".
+The Java sources available in this repository already contain all necessary generated code. To build the solution the projects have to be built with Eclipse as Elipse plug-in projects are used. The solution jar file can be generated with the "build.xml" ant script located in the project "TTCSolution".
 
 To generate the java source code from the visual representation, the specification contained in "GravityMetaModels.eap" have to be exported. There are two possible ways to export these specifications:
 
-  1. In eclipse: right-click on "GravityMetaModels.eap" and choose "eMoflon"->"export and build"
+  1. In Eclipse: right-click on "GravityMetaModels.eap" and choose "eMoflon"->"export and build"
   2. In Enterprise Architect: press "Export All" in the "Add-Ins" window in the tab "eMoflon Global Function"
   
-After the export the eclipse workspace has to be refreshed. With this refresh the generated eMoflon projects are checked for modifications. If the specification has changed for a project this one is higlithed with "***".
+After the export the Eclipse workspace has to be refreshed. With this refresh the generated eMoflon projects are checked for modifications. If the specification has changed for a project this one is higlithed with "***".
 
 To generate code for this project right-clock on the project and choose "eMoflon"->"Build"
 
