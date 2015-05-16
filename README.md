@@ -53,8 +53,8 @@ To generate the java source code from the visual representation, the specificati
   1. In Eclipse: right-click on "GravityMetaModels.eap" and choose "eMoflon"->"export and build"
   2. In Enterprise Architect: press "Export All" in the "Add-Ins" window in the tab "eMoflon Global Function"
   
-After the export the Eclipse workspace has to be refreshed. With this refresh the generated eMoflon projects are checked for modifications. If the specification has changed for a project this one is higlithed with "***".
+After the export the Eclipse workspace has to be refreshed. With this refresh the generated eMoflon projects are checked for modifications. If the specification has changed for a project this project is highlighted with "***".
 
-To generate code for this project right-clock on the project and choose "eMoflon"->"Build"
+To generate Java source code for a project witrh changes, right-clock on the project and choose "eMoflon"->"Build"
 
 In the "ExtendedJamopp" project the used EMF versions of JaMoPP and eMoflon do not harmonize and the generated eMoflon source code references some fields not available in JaMoPP. These fields have to be manual deleted.
