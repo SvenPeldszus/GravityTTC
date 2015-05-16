@@ -2,7 +2,7 @@ package org.moflon.tie;
 
 import java.io.IOException;
 import org.apache.log4j.BasicConfigurator;
-import org.moflon.util.eMoflonEMFUtil;
+import org.moflon.core.utilities.eMoflonEMFUtil;
 import org.moflon.ide.debug.DebugSynchronizationHelper;
 
 import org.moflon.tgg.algorithm.modelgenerator.*;
@@ -10,7 +10,6 @@ import org.moflon.tgg.algorithm.modelgenerator.controller.*;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 

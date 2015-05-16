@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="ASCII"?>
+<analysis:StaticAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:analysis="platform:/plugin/TGGLanguage/model/TGGLanguage.ecore#//analysis">
+  <sourceRules>
+    <rules ruleName="ClassDefault">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_FWD_EMoflonEdge_0"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_FWD_EMoflonEdge_1"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_FWD_EMoflonEdge_2"/>
+    </rules>
+    <rules ruleName="ParameterTypeLibCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_FWD_EMoflonEdge_3"/>
+    </rules>
+    <rules ruleName="FieldNameExisting">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_FWD_EMoflonEdge_4"/>
+    </rules>
+    <rules ruleName="ParameterTypeLibLink">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isAppropriate_FWD_EMoflonEdge_5"/>
+    </rules>
+    <rules ruleName="MethodDefinitionLinkSignature">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_FWD_EMoflonEdge_6"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_FWD_EMoflonEdge_7"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_FWD_EMoflonEdge_8"/>
+    </rules>
+    <rules ruleName="MethodLinkClass">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_FWD_EMoflonEdge_9"/>
+    </rules>
+    <rules ruleName="Inheritance">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_FWD_EMoflonEdge_10"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_FWD_EMoflonEdge_11"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_FWD_EMoflonEdge_12"/>
+    </rules>
+    <rules ruleName="ParameterListLinkFirst">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isAppropriate_FWD_EMoflonEdge_13"/>
+    </rules>
+    <rules ruleName="ParameterTypeUserDefined">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_FWD_EMoflonEdge_14"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_FWD_EMoflonEdge_15"/>
+    </rules>
+    <rules ruleName="MethodSignatureLinkDefinition">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_FWD_EMoflonEdge_16"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_FWD_EMoflonEdge_17"/>
+    </rules>
+    <rules ruleName="ParameterLinkListNext">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_FWD_EMoflonEdge_18"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_FWD_EMoflonEdge_19"/>
+    </rules>
+    <rules ruleName="FieldNameCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_FWD_EMoflonEdge_20"/>
+    </rules>
+    <rules ruleName="MethodNameCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isAppropriate_FWD_EMoflonEdge_21"/>
+    </rules>
+    <rules ruleName="Class1">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isAppropriate_FWD_ExtendedClassMethod_0"/>
+    </rules>
+    <rules ruleName="MethodSignatureCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isAppropriate_FWD_ExtendedParameterList_0"/>
+    </rules>
+    <rules ruleName="PackageRoot">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_FWD_EMoflonEdge_22"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_FWD_EMoflonEdge_23"/>
+    </rules>
+    <rules ruleName="PackageChild">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_FWD_EMoflonEdge_24"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_FWD_EMoflonEdge_25"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_FWD_EMoflonEdge_26"/>
+    </rules>
+    <rules ruleName="ProgramGraphCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isAppropriate_FWD_ExtendedJamoppJavaContainer_0"/>
+    </rules>
+    <rules ruleName="ReturnTypeUserDefined">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_FWD_EMoflonEdge_27"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_FWD_EMoflonEdge_28"/>
+    </rules>
+    <rules ruleName="ReturnTypeFromLibCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_FWD_EMoflonEdge_29"/>
+    </rules>
+    <rules ruleName="ReturnTypeFromLibLink">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isAppropriate_FWD_EMoflonEdge_30"/>
+    </rules>
+    <rules ruleName="ParameterCreateNew">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isAppropriate_FWD_EMoflonEdge_31"/>
+    </rules>
+  </sourceRules>
+  <targetRules>
+    <rules ruleName="ClassDefault">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_BWD_EMoflonEdge_0"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_BWD_EMoflonEdge_1"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ClassDefault/isAppropriate_BWD_EMoflonEdge_2"/>
+    </rules>
+    <rules ruleName="ParameterTypeLibCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_BWD_EMoflonEdge_3"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibCreate/isAppropriate_BWD_EMoflonEdge_4"/>
+    </rules>
+    <rules ruleName="FieldNameExisting">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_BWD_EMoflonEdge_5"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_BWD_EMoflonEdge_6"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_BWD_EMoflonEdge_7"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_BWD_EMoflonEdge_8"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_BWD_EMoflonEdge_9"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameExisting/isAppropriate_BWD_EMoflonEdge_10"/>
+    </rules>
+    <rules ruleName="ParameterTypeLibLink">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeLibLink/isAppropriate_BWD_EMoflonEdge_11"/>
+    </rules>
+    <rules ruleName="MethodDefinitionLinkSignature">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_BWD_EMoflonEdge_12"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodDefinitionLinkSignature/isAppropriate_BWD_EMoflonEdge_13"/>
+    </rules>
+    <rules ruleName="MethodLinkClass">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_BWD_EMoflonEdge_14"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodLinkClass/isAppropriate_BWD_EMoflonEdge_15"/>
+    </rules>
+    <rules ruleName="Inheritance">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_BWD_EMoflonEdge_16"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Inheritance/isAppropriate_BWD_EMoflonEdge_17"/>
+    </rules>
+    <rules ruleName="ParameterListLinkFirst">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterListLinkFirst/isAppropriate_BWD_EMoflonEdge_18"/>
+    </rules>
+    <rules ruleName="ParameterTypeUserDefined">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterTypeUserDefined/isAppropriate_BWD_EMoflonEdge_19"/>
+    </rules>
+    <rules ruleName="MethodSignatureLinkDefinition">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_BWD_EMoflonEdge_20"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureLinkDefinition/isAppropriate_BWD_EMoflonEdge_21"/>
+    </rules>
+    <rules ruleName="ParameterLinkListNext">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_BWD_EMoflonEdge_22"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterLinkListNext/isAppropriate_BWD_EMoflonEdge_23"/>
+    </rules>
+    <rules ruleName="FieldNameCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_24"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_25"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_26"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_27"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_28"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_29"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/FieldNameCreate/isAppropriate_BWD_EMoflonEdge_30"/>
+    </rules>
+    <rules ruleName="MethodNameCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodNameCreate/isAppropriate_BWD_EMoflonEdge_31"/>
+    </rules>
+    <rules ruleName="Class1">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/Class1/isAppropriate_BWD_TMethodDefinition_0"/>
+    </rules>
+    <rules ruleName="MethodSignatureCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/MethodSignatureCreate/isAppropriate_BWD_EMoflonEdge_32"/>
+    </rules>
+    <rules ruleName="PackageRoot">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageRoot/isAppropriate_BWD_EMoflonEdge_33"/>
+    </rules>
+    <rules ruleName="PackageChild">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_BWD_EMoflonEdge_34"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/PackageChild/isAppropriate_BWD_EMoflonEdge_35"/>
+    </rules>
+    <rules ruleName="ProgramGraphCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ProgramGraphCreate/isAppropriate_BWD_TypeGraph_0"/>
+    </rules>
+    <rules ruleName="ReturnTypeUserDefined">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeUserDefined/isAppropriate_BWD_EMoflonEdge_36"/>
+    </rules>
+    <rules ruleName="ReturnTypeFromLibCreate">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_BWD_EMoflonEdge_37"/>
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibCreate/isAppropriate_BWD_EMoflonEdge_38"/>
+    </rules>
+    <rules ruleName="ReturnTypeFromLibLink">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ReturnTypeFromLibLink/isAppropriate_BWD_EMoflonEdge_39"/>
+    </rules>
+    <rules ruleName="ParameterCreateNew">
+      <isAppropriateMethods href="platform:/plugin/GravityTGG/model/GravityTGG.ecore#//Rules/ParameterCreateNew/isAppropriate_BWD_EMoflonEdge_40"/>
+    </rules>
+  </targetRules>
+</analysis:StaticAnalysis>

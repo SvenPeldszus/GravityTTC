@@ -1,8 +1,7 @@
 package org.moflon.tie;
 
 import java.io.IOException;
-import org.apache.log4j.BasicConfigurator;
-import org.moflon.util.eMoflonEMFUtil;
+import org.moflon.core.utilities.eMoflonEMFUtil;
 import org.moflon.ide.debug.DebugSynchronizationHelper;
 import org.eclipse.emf.ecore.EObject;
 import org.emftext.language.java.JavaPackage;

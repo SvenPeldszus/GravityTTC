@@ -1,10 +1,10 @@
 package org.moflon.tie;
 
 import java.io.IOException;
-import org.apache.log4j.BasicConfigurator;
-import org.moflon.util.eMoflonEMFUtil;
-import org.moflon.ide.debug.DebugSynchronizationHelper;
 
+import org.apache.log4j.BasicConfigurator;
+import org.moflon.core.utilities.eMoflonEMFUtil;
+import org.moflon.ide.debug.DebugSynchronizationHelper;
 import org.moflon.tgg.algorithm.modelgenerator.ModelGenerator;
 import org.moflon.tgg.algorithm.modelgenerator.controller.*;
 

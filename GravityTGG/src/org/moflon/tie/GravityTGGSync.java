@@ -21,40 +21,22 @@ import java.util.List;
 
 import java.util.regex.Pattern;
 
-import org.apache.log4j.BasicConfigurator;
 import org.moflon.tgg.algorithm.datastructures.SynchronizationProtocol;
-import org.moflon.util.eMoflonEMFUtil;
+import org.moflon.core.utilities.eMoflonEMFUtil;
 import org.moflon.ide.debug.DebugSynchronizationHelper;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.eclipse.emf.ecore.EObject;
 import org.emftext.language.java.JavaPackage;
 
-import ttc.testdsl.tTCTest.Classes;
 import ttc.testdsl.tTCTest.Create_Superclass_Refactoring;
 import ttc.testdsl.tTCTest.Java_Class;
 import ttc.testdsl.tTCTest.Java_Method;
 import ttc.testdsl.tTCTest.Pull_Up_Refactoring;
-import ttc.testdsl.tTCTest.TTCTestFactory;
 import GravityTGG.GravityTGGPackage;
 import Refactorings.Refactoring;
 import Refactorings.RefactoringsFactory;
 import Refactorings.Containers.ContainersFactory;
 import Refactorings.Containers.TClassContainer;
-import TGGRuntime.CorrespondenceModel;
 import TypeGraphBasic.TClass;
 import TypeGraphBasic.TMethod;
 import TypeGraphBasic.TMethodSignature;
@@ -221,18 +203,6 @@ public class GravityTGGSync extends DebugSynchronizationHelper {
 		if(leaf!=null){
 			csc_new_parent.setPackage(leaf);
 			leaf.getContainedClasses().add(csc_new_parent);
-		}
-	}
-	
-	private void loadTriple(String corr){ 
-		try {
-			loadCorr(corr);
-			CorrespondenceModel corrModel = (CorrespondenceModel) getCorr();
-			setSrc(corrModel.getSource());
-			setTrg(corrModel.getTarget());
-		} catch (IllegalArgumentException iae) {
-			System.err.println("Unable to load input triple for " + corr
-					+ ", " + iae.getMessage());
 		}
 	}
 }

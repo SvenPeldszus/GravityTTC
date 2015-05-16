@@ -80,31 +80,6 @@ public class TypeGraphBasicSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case TypeGraphBasicPackage.TMETHOD_DEFINITION: {
-			TMethodDefinition tMethodDefinition = (TMethodDefinition) theEObject;
-			T result = caseTMethodDefinition(tMethodDefinition);
-			if (result == null)
-				result = caseTMember(tMethodDefinition);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TypeGraphBasicPackage.TMETHOD_SIGNATURE: {
-			TMethodSignature tMethodSignature = (TMethodSignature) theEObject;
-			T result = caseTMethodSignature(tMethodSignature);
-			if (result == null)
-				result = caseTSignature(tMethodSignature);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case TypeGraphBasicPackage.TPACKAGE: {
-			TPackage tPackage = (TPackage) theEObject;
-			T result = caseTPackage(tPackage);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case TypeGraphBasicPackage.TFIELD_DEFINITION: {
 			TFieldDefinition tFieldDefinition = (TFieldDefinition) theEObject;
 			T result = caseTFieldDefinition(tFieldDefinition);
@@ -133,6 +108,31 @@ public class TypeGraphBasicSwitch<T> extends Switch<T> {
 		case TypeGraphBasicPackage.TMETHOD: {
 			TMethod tMethod = (TMethod) theEObject;
 			T result = caseTMethod(tMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TypeGraphBasicPackage.TMETHOD_DEFINITION: {
+			TMethodDefinition tMethodDefinition = (TMethodDefinition) theEObject;
+			T result = caseTMethodDefinition(tMethodDefinition);
+			if (result == null)
+				result = caseTMember(tMethodDefinition);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TypeGraphBasicPackage.TMETHOD_SIGNATURE: {
+			TMethodSignature tMethodSignature = (TMethodSignature) theEObject;
+			T result = caseTMethodSignature(tMethodSignature);
+			if (result == null)
+				result = caseTSignature(tMethodSignature);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case TypeGraphBasicPackage.TPACKAGE: {
+			TPackage tPackage = (TPackage) theEObject;
+			T result = caseTPackage(tPackage);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -201,51 +201,6 @@ public class TypeGraphBasicSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>TMethod Definition</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>TMethod Definition</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTMethodDefinition(TMethodDefinition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>TMethod Signature</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>TMethod Signature</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTMethodSignature(TMethodSignature object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>TPackage</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>TPackage</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTPackage(TPackage object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>TField Definition</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -302,6 +257,51 @@ public class TypeGraphBasicSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTMethod(TMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TMethod Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TMethod Definition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTMethodDefinition(TMethodDefinition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TMethod Signature</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TMethod Signature</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTMethodSignature(TMethodSignature object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TPackage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TPackage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTPackage(TPackage object) {
 		return null;
 	}
 

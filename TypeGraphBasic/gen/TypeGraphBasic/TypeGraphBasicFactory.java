@@ -41,33 +41,6 @@ public interface TypeGraphBasicFactory extends EFactory {
 	TField createTField();
 
 	/**
-	 * Returns a new object of class '<em>TMethod Definition</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TMethod Definition</em>'.
-	 * @generated
-	 */
-	TMethodDefinition createTMethodDefinition();
-
-	/**
-	 * Returns a new object of class '<em>TMethod Signature</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TMethod Signature</em>'.
-	 * @generated
-	 */
-	TMethodSignature createTMethodSignature();
-
-	/**
-	 * Returns a new object of class '<em>TPackage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TPackage</em>'.
-	 * @generated
-	 */
-	TPackage createTPackage();
-
-	/**
 	 * Returns a new object of class '<em>TField Definition</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -93,6 +66,33 @@ public interface TypeGraphBasicFactory extends EFactory {
 	 * @generated
 	 */
 	TMethod createTMethod();
+
+	/**
+	 * Returns a new object of class '<em>TMethod Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TMethod Definition</em>'.
+	 * @generated
+	 */
+	TMethodDefinition createTMethodDefinition();
+
+	/**
+	 * Returns a new object of class '<em>TMethod Signature</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TMethod Signature</em>'.
+	 * @generated
+	 */
+	TMethodSignature createTMethodSignature();
+
+	/**
+	 * Returns a new object of class '<em>TPackage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TPackage</em>'.
+	 * @generated
+	 */
+	TPackage createTPackage();
 
 	/**
 	 * Returns a new object of class '<em>TParameter</em>'.

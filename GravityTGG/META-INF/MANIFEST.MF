@@ -10,11 +10,15 @@ Export-Package: GravityTGG,
  GravityTGG.impl,
  GravityTGG.util,
  gravity,
- org.moflon.tie
+ org.moflon.tie,
+ ttc.testdsl.tTCTest,
+ ttc.testdsl.tTCTest.impl,
+ ttc.testdsl.tTCTest.util,
+ ttc.testsuite.interfaces
 Bundle-Name: GravityTGG
 Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: lib/TTCTestInterface.jar,.
 Require-Bundle: org.apache.log4j,
- org.moflon.dependencies,
  DebugLanguage,
  TGGLanguage,
  org.eclipse.emf.common,
@@ -27,7 +31,7 @@ Require-Bundle: org.apache.log4j,
  org.eclipse.emf.ecore.xmi,
  SDMLanguage;bundle-version="1.0.0",
  MocaTree;bundle-version="1.0.0",
- ttc.testdsl
+ org.moflon.core.utilities
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
