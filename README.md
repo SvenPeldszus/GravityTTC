@@ -38,13 +38,11 @@ Solution for the Java Refactoring Case at TTC'15
 # Required Programs:
 
   - Java JDK8 (available at: "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html")
-  - Eclipse Modeling Tools (available at: "http://www.eclipse.org/downloads/")
-        With installed plug-ins: 
-          - JaMoPP (available in Market Place)
-          - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
-  - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html")
-        With installed plug-in:
-          - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
+  - Eclipse Modeling Tools (available at: "http://www.eclipse.org/downloads/"), with installed plug-ins: 
+      - JaMoPP (available in Market Place)
+      - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
+  - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html"), with installed plug-in:
+      - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
 
 # How to build the solution
 
