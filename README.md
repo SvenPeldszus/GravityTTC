@@ -45,3 +45,18 @@ Solution for the Java Refactoring Case at TTC'15
   - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html")
         With installed plug-in:
           - Moflon (available at: "http://www.emoflon.org/emoflon/installation/")
+
+# How to build the soltution
+
+The Java sources available in this repository already contain all necessary generated code. To build the solution the projects have to be built with eclipse as eclipse plug-in projects are used. The solution jar file can be generated with the "build.xml" ant script located in the project "TTCSolution".
+
+To generate the java source code from the visual representation, the specification contained in "GravityMetaModels.eap" have to be exported. There are two possible ways to export these specifications:
+
+  1. In eclipse: right-click on "GravityMetaModels.eap" and choose "eMoflon"->"export and build"
+  2. In Enterprise Architect: press "Export All" in the "Add-Ins" window in the tab "eMoflon Global Function"
+  
+After the export the eclipse workspace has to be refreshed. With this refresh the generated eMoflon projects are checked for modifications. If the specification has changed for a project this one is higlithed with "***".
+
+To generate code for this project right-clock on the project and choose "eMoflon"->"Build"
+
+In the "ExtendedJamopp" project the used EMF versions of JaMoPP and eMoflon donot harmonize and the generated eMoflon source code references some fields not available in JaMoPP. These fields have to be manual deleted.
