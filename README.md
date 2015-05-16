@@ -4,26 +4,26 @@ Solution for the Java Refactoring Case at TTC'15
 # Contents of the Repository:
   
   - ExtendedJamopp      
-      - Generated sourcecode of the preprocessed JaMoPP Meta Model
+      - Generated source code of the preprocessed JaMoPP Meta Model
   
   - GravityMetaModels
       - Contains the visual specification of TGGs, SDMs and Meta Models
         (Open the GravityMetaModels.eap with Enterprise Architect to explore the specifications)
   
   - GravityTGG
-      - Genrated code of the transformation from preprocesssed JaMoPP to PG using TGGs
+      - Genrated code of the transformation from preprocessed JaMoPP to PG using TGGs
   
   - org.emftext.language.java.recource.bcel
       - Apache BCEL 6 Beta for JaMoPP running with Java 8
       
   - Refactorings
-      - Generated sourcecode of the Refactorings using SDMs
+      - Generated source code of the Refactorings using SDMs
       
   - TTCSolution
-      - Connecting all the code fragments and implementing the TestInterface
+      - Connecting all the code fragments and implementing the “TestInterface”
       
   - TypeGraphBasic
-      - Generated sourcecode representing the TypeGraph
+      - Generated source code representing the TypeGraph
       
   - GravityTTC.jar
       - Compiled solution (executable with ARTE)
@@ -41,12 +41,12 @@ Solution for the Java Refactoring Case at TTC'15
   - Eclipse Modeling Tools (available at: "http://www.eclipse.org/downloads/")
         With installed plug-ins: 
           - JaMoPP (available in Market Place)
-          - Moflon (available at: "http://www.emoflon.org/emoflon/installation/")
+          - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
   - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html")
         With installed plug-in:
-          - Moflon (available at: "http://www.emoflon.org/emoflon/installation/")
+          - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
 
-# How to build the soltution
+# How to build the solution
 
 The Java sources available in this repository already contain all necessary generated code. To build the solution the projects have to be built with eclipse as eclipse plug-in projects are used. The solution jar file can be generated with the "build.xml" ant script located in the project "TTCSolution".
 
@@ -59,4 +59,4 @@ After the export the eclipse workspace has to be refreshed. With this refresh th
 
 To generate code for this project right-clock on the project and choose "eMoflon"->"Build"
 
-In the "ExtendedJamopp" project the used EMF versions of JaMoPP and eMoflon donot harmonize and the generated eMoflon source code references some fields not available in JaMoPP. These fields have to be manual deleted.
+In the "ExtendedJamopp" project the used EMF versions of JaMoPP and eMoflon do not harmonize and the generated eMoflon source code references some fields not available in JaMoPP. These fields have to be manual deleted.
