@@ -58,3 +58,9 @@ After the export the Eclipse workspace has to be refreshed. With this refresh th
 To generate Java source code for a project witrh changes, right-clock on the project and choose "eMoflon"->"Build"
 
 In the "ExtendedJamopp" project the used EMF versions of JaMoPP and eMoflon do not harmonize and the generated eMoflon source code references some fields not available in JaMoPP. These fields have to be manual deleted.
+
+# SHARE
+
+A virtual machine to explore our solution without installing the required programs and cloning this repository is available at SHARE:
+
+http://is.ieis.tue.nl/staff/pvgorp/share/?page=ConfigureNewSession&vdi=XP-TUe_TTC15-Refactoring.vdi
