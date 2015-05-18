@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project TTCSolution">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="GravityTTC.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="ttc.gravity.TTCSolutionGravity"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+            <fileset dir="../ExtendedJamopp/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.language.java_1.4.0.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.commons.layout_1.4.1.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+            <fileset dir="../plugins/org.moflon.core.utilities_1.0.0.201505131659"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.moflon.core.utilities_1.0.0.201505131659/lib/antlr-3.5.2-complete.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.moflon.core.utilities_1.0.0.201505131659/lib/antlr-4.2.1-complete.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.apache.commons.io_2.2.0.v201405211200.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.apache.commons.lang3_3.1.0.v201403281430.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../GravityTGG/lib/TTCTestInterface.jar"/>
+            <fileset dir="../GravityTGG/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/DebugLanguage_1.0.0.201505131659.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/TGGLanguage_1.0.0.201505131659.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.pde.core/.external_libraries/TGGLanguage_1.0.0.201505131659/lib/democles.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.pde.core/.external_libraries/TGGLanguage_1.0.0.201505131659/lib/javabdd-1.0b2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.pde.core/.external_libraries/TGGLanguage_1.0.0.201505131659/lib/RTED_v1.1.jar"/>
+            <fileset dir="../Refactorings/bin"/>
+            <fileset dir="../TypeGraphBasic/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/TGGRuntime_1.0.0.201505131659.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/SDMLanguage_1.0.0.201505131659.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/MocaTree_1.0.0.201505131659.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.antlr.runtime_3.2.0.v201101311130.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.language.java.resource_1.4.0.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.language.java.resource.java_1.4.0.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.commons.antlr3_4_0_3.4.0.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.commons.jdt_1.4.1.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.jdt.core_3.10.2.v20150120-1634.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.jdt.compiler.apt_1.1.0.v20150122-0735.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.jdt.compiler.tool_1.0.300.v20150114-1827.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.commons.jdt.edit_1.4.1.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.emf.edit_2.10.1.v20150123-0452.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.eclipse.emf.ecore.change_2.10.0.v20150123-0348.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.commons.layout.edit_1.4.1.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.language.java.edit_1.4.0.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.language.java.resource.java.ui_1.4.0.v201207310007.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../plugins/org.emftext.language.java.resource.jdt_1.4.0.v201207310007.jar"/>
+            <fileset dir="../org.emftext.language.java.resource.bcel/bin"/>
+        	<zipfileset file="META-INF/services/ttc.testsuite.interfaces.TestInterface" prefix="META-INF/services/"/>
+        	<zipfileset file="../GravityTGG/model/GravityTGG.sma.xmi" prefix="GravityTGG/model/"/>
+       	 </jar>
+    </target>
+</project>
