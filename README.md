@@ -40,9 +40,11 @@ Solution for the Java Refactoring Case at TTC'15
   - Java JDK8 (available at: "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html")
   - Eclipse Modeling Tools (available at: "http://www.eclipse.org/downloads/"), with installed plug-ins: 
       - JaMoPP (available in "Eclipse Marketplace)
-      - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
+      - eMoflon (available at: "http://www.moflon.org/fileadmin/download/moflon-ide/eclipse-plugin/emoflon_ttc2015/update-site2/" (Eclipse Update-Site)
   - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html"), with installed plug-in:
-      - eMoflon (available at: "http://www.emoflon.org/emoflon/installation/")
+      - eMoflon (available at: "http://tiny.cc/emoflon-ide-generic/emoflon_ttc2015/ea-ecore-addin/ea-ecore-addin.zip")
+
+Note: Please install the eMoflon plugins from the locations provided in this readme. As eMflon currently gets restructured, some referenced Eclipse plugins will maybe be non existent any longer and have to be replaced with the latest ones.
 
 # How to build the solution
 
