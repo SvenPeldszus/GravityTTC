@@ -44,7 +44,7 @@ Solution for the Java Refactoring Case at TTC'15
   - Enterprise Architect (Free 30 day trial avaivable at "http://www.sparxsystems.com/products/ea/trial.html"), with installed plug-in:
       - eMoflon (available at: "http://tiny.cc/emoflon-ide-generic/emoflon_ttc2015/ea-ecore-addin/ea-ecore-addin.zip")
 
-Note: Please install the eMoflon plugins from the locations provided in this readme. As eMflon currently gets restructured, some referenced Eclipse plugins will maybe be non existent any longer and have to be replaced with the latest ones.
+Note: Please install the eMoflon plugins from the locations provided in this readme. As eMflon currently gets restructured, some referenced Eclipse plugins will maybe be non existent any longer and have to be replaced with the latest ones, if you use the official Beta release.
 
 # How to build the solution
 
