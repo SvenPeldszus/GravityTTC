@@ -33,6 +33,12 @@ Solution for the Java Refactoring Case at TTC'15
       
   - SolutionGravityTCC.pdf
       - Solution description paper
+  
+  - ea-ecore-addin.zip
+      - The EnterpriseArchitect eMoflon Plugin Version used to create the solution
+  
+  - eclipse-update-site
+      - The eMoflon Eclipse Plugin Version used to create the solution
       
       
 # Required Programs:
